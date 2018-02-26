@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+	<title>Document</title>
+</head>
+<style>
+body{
+	margin:0;
+	padding:0;
+	font-family: '微软雅黑'
+}
+	.page_header_title{
+		position: fixed;
+		  top:0px;
+		  left:0px;	
+		  width:100%;
+		  background:#fff;
+		  border-bottom:#e5e5e5 1px solid;
+		  z-index:200000;
+	}
+	.page_header_title .page_title{
+		position: absolute;
+		top:50%;
+		left:0px;
+		width:100%;
+		-webkit-transform:translate(0,-50%);
+	    -moz-transform:translate(0,-50%);
+	    transform:translate(0,-50%);
+    text-align: center;
+    font-size:14px;
+    line-height:normal;
+    margin:0px;
+    padding:0px;
+    color:#333;
+    z-index:9;
+	}
+	.page_header_title .page_return_btn{
+		position: absolute;
+	    top:50%;
+	    left:15px;
+	    width:14px;
+	    height:14px;
+	    -webkit-transform:translate(0,-50%);
+	    -moz-transform:translate(0,-50%);
+	    transform:translate(0,-50%);
+	    line-height:20px;
+	    text-align: center;
+	    overflow:hidden;
+	    z-index:999;
+	}
+	.page_header_title .page_return_btn.pointy::Before, .page_header_title .page_return_btn.pointy::after {
+    width: 200%;
+    left: -50%;
+}
+.page_header_title .page_return_btn::before{
+	transform: rotate(45deg);
+}
+.page_header_title .page_return_btn::after{
+	transform: rotate(-45deg);
+}
+.page_header_title .page_return_btn::before, .page_header_title .page_return_btn::after{
+	content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;
+    background: #333;
+}
+.ifrname_page{
+	width:100%;
+	border:none;
+}
+
+</style>
+<body>
+<header class="page_header_title">
+    <a class="page_return_btn pointy"><i class='close'></i></a>
+    <h1 class="page_title">理财列表</h1>
+</header>
+
+<iframe class="ifrname_page" src="https://creditcard.cmbc.com.cn/wsonline/login/login.jhtml?id=51&TMHEncryptStrRequest=LOBWjVfD%20y89lQYWR56BRpc0monP5u2Cw11Uski0ffPCbJQliiScPO1oGH2RK767cEXK1P3wlEQM/z95TEPNrO/7NN/gy1vsh%20DTQltYm9kCYJAg3BcXw64w%20enFYKsxQhALH22QpZlWH3/c8qHxhCUPBr5DJcEmYlCXd1f4nRwRnmy6fQLoyqM6v2qNkFreYkCVusElYLBBynVVwo%20IN6ufph1PWGgNq%209Air1q24CRzzF51838lW3wjYDc3aHh2Ks6bvvKf3XtBRJyEr0PR%20X5jtXZSgBkGuwYhbSASU9CpnG47ho9PumDL09odNezwrPzVskxhMZHvkhYpS%20jGg==&time=1498013919366"></iframe>
+
+
+</body>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+var iframe = (function(){
+	function init(opt){
+		new ifrnameFun(opt);
+	}
+
+	function ifrnameFun(opt){
+		this.el = $('.ifrname_page');
+		this.height = opt.height;
+		this.title = opt.title;
+		this.returnUrl = opt.returnUrl;
+		this.headerDom = $('.page_header_title');
+		this.a = this.headerDom.find('.page_return_btn');
+		this.titleDom = this.headerDom.find('.page_title');
+		this.winHeight = $(window).height();
+		this.init();
+	}
+
+	ifrnameFun.prototype = {
+		init:function(){
+			var that = this;
+			this.titleDom.text(this.title);
+			if(this.height == 0){
+				//表示没有头部
+				var headerHeight = this.headerDom.height();
+				this.el.css({
+					marginTop:headerHeight,
+					height:this.winHeight - headerHeight
+				});
+
+				this.a.attr('href',this.returnUrl);
+			}else{
+				this.headerDom.css({
+					height:this.height,
+				});
+				this.el.css({
+					marginTop:this.height,
+					height:this.winHeight - this.height
+				})
+				this.a.attr('href',this.returnUrl);
+			}
+			
+		}
+	}
+
+	return{
+		init:init
+	}
+})();
+
+iframe.init({
+	el:'ifrname_page',
+	height:60,
+	title:'信用卡',
+	returnUrl:'https://www.baidu.com'
+})
+</script>
+</html>

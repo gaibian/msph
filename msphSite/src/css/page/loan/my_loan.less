@@ -1,0 +1,105 @@
+@import "../../common/init.less";
+@import "../../common/template/page_title.less";
+/*当前页面less*/
+.page_content_box{
+  width:100%;
+  margin-top:44px;
+  .nav_tab_box{
+    position: relative;
+    width:100%;
+    height:1.06rem;
+    background:#fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom:@border-color 1px solid;
+    margin-bottom:0.2rem;
+    .tab_btn_box{
+      width:100%;
+      height:1.06rem;
+      line-height:1.06rem;
+      overflow:hidden;
+      .tab_btn{
+        float:left;
+        width:50%;
+        font-size:0.28rem;
+        color:@font-color;
+        text-align:center;
+      }
+    }
+    .move_line{
+      position: absolute;
+      bottom:0px;
+      left:0px;
+      width:50%;
+      height:4px;
+      background:#3e92e8;
+    }
+  }
+  .tab_content_box{
+    width:100%;
+    overflow:hidden;
+    .tab_content{
+      float:left;
+      width:100%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .content_ul{
+        width:100%;
+        .content_li{
+          position:relative;
+          width:100%;
+          background:#fff;
+          margin-bottom:0.2rem;
+          .content_left_box{
+            width:5rem;
+            padding-left:0.3rem;
+            .title_box{
+              padding-top:0.3rem;
+              padding-bottom:0.2rem;
+              .title{
+                font-size:0.34rem;
+                color:#000;
+              }
+            }
+            .user_infor_box{
+              width:100%;
+              padding-bottom:0.3rem;
+              p{
+                font-size:0.24rem;
+                color:@font-fcolor;
+                margin:0;
+                padding:0px;
+              }
+            }
+          }
+          .content_right_box{
+            .box_right_position(0.3rem);
+            .state_box{
+              width:1.4rem;
+              text-align: center;
+              font-size:0.24rem;
+              color:#fc7f24;
+              margin-bottom:0.12rem;
+            }
+            .details_btn{
+              width:1.4rem;
+              height:0.46rem;
+              -webkit-border-radius: 0.6rem/0.23rem;
+              -moz-border-radius: 0.6rem/0.23rem;
+              border-radius: 0.6rem/0.23rem;
+              line-height:0.46rem;
+              text-align: center;
+              font-size:0.20rem;
+              color:#fff;
+              background-image:-webkit-linear-gradient(to left,#238fea ,#2caffa);
+              background-image:-moz-linear-gradient(to left,#238fea ,#2caffa);
+              background-image:linear-gradient(to left,#238fea ,#2caffa);
+            }
+          }
+        }
+      }
+    }
+  }
+}

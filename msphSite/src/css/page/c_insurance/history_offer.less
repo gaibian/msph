@@ -1,0 +1,71 @@
+@import "../../common/init.less";
+@import "../../common/template/page_title.less";
+
+.page_content{
+  width:100%;
+  margin-top:44px;
+  padding-top:0.2rem;
+}
+.his_offer_box{
+  position: relative;
+  display:block;
+  width:7.5rem;
+  line-height:0.4rem;
+  overflow:hidden;
+  padding:0.3rem 0rem;
+  box-sizing:border-box;
+  background:#fff;
+  margin-bottom:0.2rem;
+  p{
+    width:100%;
+    font-size:0.32rem;
+    color:#333;
+    margin:0.16rem 0;
+    padding:0 0.3rem;
+    font-weight:bold;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow:hidden;
+    span{
+      display:block;
+      float:left;
+      font-weight: normal;
+    }
+    span:nth-child(1){
+      width:20%;
+      font-weight: bold;
+    }
+    span:last-child{
+      width:70%;
+      padding-left:0.3rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .text_hidden;
+    }
+  }
+  p.time{
+    text-align: left;
+    padding-right:0.3rem;
+    font-size:0.28rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color:#666;
+    font-weight:normal;
+  }
+  .right_icon:before{
+    position: absolute;
+    top:50%;
+    right:0.3rem;
+    -webkit-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    content: "\e62a";
+    font-size:0.4rem;
+    color:#999;
+  }
+}

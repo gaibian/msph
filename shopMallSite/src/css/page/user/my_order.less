@@ -1,0 +1,185 @@
+@import "../../common/init.less";
+@import "../../common/template/page_title.less";
+
+body{
+  background:#f6f6f6;
+}
+.page{
+  width:100%;
+  max-width: 7.5rem;
+  overflow:hidden;
+  margin:0 auto;
+}
+.page_content{
+  width:100%;
+  margin-top:44px;
+  .content_box{
+    width:100%;
+    .nav_tab_box{
+      position: relative;
+      width:100%;
+      background:#fff;
+      height:1.06rem;
+      line-height:1.06rem;
+      overflow:hidden;
+      .ul{
+        width:100%;
+        overflow:hidden;
+        li{
+          float:left;
+          width:25%;
+          text-align: center;
+          font-size:0.28rem;
+          color:#333;
+        }
+        li.active{
+          color:#f8640c;
+        }
+      }
+      .move_line{
+        width:25%;
+        position: absolute;
+        left:0px;
+        bottom:0px;
+        height:0.04rem;
+        background:#f8640c;
+      }
+    }
+    .content_list_box{
+      width:100%;
+      margin-top:0.2rem;
+      .content_box{
+        width:100%;
+        .shop_list{
+          width:100%;
+          padding:0 0.3rem;
+          background:#fff;
+          margin-top:0.2rem;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          .order_number_box{
+            width:100%;
+            padding:0.4rem 0;
+            overflow: hidden;
+            border-bottom:#ccc 1px solid;
+            .order_number{
+              float:left;
+              width:60%;
+              font-size:0.24rem;
+              color:#333;
+            }
+            .state_text{
+              float:right;
+              width:30%;
+              text-align: right;
+              font-size:0.24rem;
+              color:#f8640c;
+            }
+          }
+          .shop_product{
+            width:100%;
+            height:1.6rem;
+            overflow: hidden;
+            border-bottom:#ccc 1px solid;
+            padding:0.4rem 0;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+          }
+          .img_box{
+            float:left;
+            width:1.6rem;
+            height:1.6rem;
+            overflow: hidden;
+            font-size:0;
+          }
+          .title_content{
+            float:left;
+            width:3.1rem;
+            margin-left:0.2rem;
+            .title{
+              width:100%;
+              font-size:0.24rem;
+              color:#333;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+              overflow: hidden;
+              line-height:0.32rem;
+            }
+            .note_div{
+              width:100%;
+              margin-top:0.18rem;
+              span{
+                font-size:0.24rem;
+                color:#999;
+              }
+            }
+          }
+          .right_content{
+            float:right;
+            width:1.8rem;
+            text-align: right;
+            .price{
+              font-size:0.28rem;
+              color:#333;
+            }
+            .n_price{
+              font-size:0.28rem;
+              color:#999;
+            }
+            .j_num{
+              font-size:0.28rem;
+              color:#999;
+              margin-top:0.12rem;
+            }
+          }
+          .all_btn_box{
+            width:100%;
+            padding:0.4rem 0;
+            height:0.6rem;
+            line-height:0.6rem;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            .all_price_box{
+              float:left;
+              width:50%;
+              font-size:0.22rem;
+              color:#333;
+            }
+            .btn_box{
+              float:left;
+              width:50%;
+              text-align: right;
+              .btn{
+                width:1.4rem;
+                height:0.6rem;
+                border-radius:0.06rem;
+                line-height:0.6rem;
+                text-align: center;
+                font-size:0.28rem;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+              }
+              .cancel_btn{
+                color:#666;
+                border:#333 1px solid;
+                margin-right:0.2rem;
+              }
+              .payment_btn{
+                color:#f8640c;
+                border:#f8640c 1px solid;
+              }
+            }
+          }
+        }
+        .shop_list:last-child{
+          border-bottom:none;
+        }
+      }
+    }
+  }
+}

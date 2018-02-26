@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <title>补充车辆信息</title>
+    <script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="http://cdn.msphcn.com/dist/bin/rem.js"></script>
+<link href="http://cdn.msphcn.com/dist/bin/mui.min.css" rel="stylesheet">
+<link href="http://cdn.msphcn.com/dist/bin/public.css" rel="stylesheet">
+<link href="http://cdn.msphcn.com/dist/bin/mui.picker.css" rel="stylesheet">
+<link href="http://cdn.msphcn.com/dist/bin/mui.poppicker.css" rel="stylesheet">
+<script src="http://cdn.msphcn.com/dist/bin/mui.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.pullToRefresh.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/city.data.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.picker.min.js"></script>
+<link rel="shortcut icon" href="/jsybStatic/users_ico.ico"><link href="/jsybStatic/css/c_insurance\car_message.css?3b7b55167cc1a7b478c1" rel="stylesheet"></head>
+<body>
+<section class="page_form_box">
+<section class="form_box">
+    <h1 class="form_header_box">
+        <span>信息补充</span>
+        <em>保险公司要求补充以下必填信息</em>
+    </h1>
+    <form class="form" data-btn="sendBtn">
+        <div class="input_box">
+            <p class="input_title">被保人身份证有效止期</p>
+            <div class="input">
+                <input type="text" data-toggle="true" checkType="ownerIDCardValidDate" placeholder="请输入被保人身份证有效止期">
+            </div>
+        </div>
+        <div class="input_box">
+            <p class="input_title">被保人身份证地址</p>
+            <div class="input">
+                <input type="text" data-toggle="true" checkType="insuredAddress" placeholder="请输入被保人身份证有效止期">
+            </div>
+        </div>
+        <div class="input_box">
+            <p class="input_title">被保人邮箱</p>
+            <div class="input">
+                <input type="text" data-toggle="true" checkType="insuredEmail" placeholder="请输入被保人邮箱">
+            </div>
+        </div>
+    </form>
+</section>
+<section class="load_img_box">
+    <header class="load_img_title">
+        <h2 class="title">图像补充</h2>
+        <p class="note_text">小提示： 过户车以及过保车请上传带有当日验车码的车辆图像。</p>
+    </header>
+    <article class="load_img" action="{:U('Wap/User/real_name_save')}" method="post" onsubmit="return check_upload_form()">
+        <ul class="load_ul">
+            <li class="load_li upload_area">
+                <img class="lazy used_img xsz_img" width="100%" height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTY2MDBERTZDODI0MTFFN0JBMzNGOThFN0Q2REQwMTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTY2MDBERTdDODI0MTFFN0JBMzNGOThFN0Q2REQwMTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFNjYwMERFNEM4MjQxMUU3QkEzM0Y5OEU3RDZERDAxNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFNjYwMERFNUM4MjQxMUU3QkEzM0Y5OEU3RDZERDAxNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgXrqd0AAAAQSURBVHjaYvj//z8DQIABAAj8Av7bok0WAAAAAElFTkSuQmCC" data-src="/jsybStatic/./img/d38bd1c09a64337844d949b952b8b750.jpg">
+                <input class="input xsz_file" type="file" value="" style="display: none;">
+                <input type="hidden" name="idcard_yq_img" id="idcard_yq_img" value=""/>
+                <div class="load_text_show">右前侧视图</div>
+            </li>
+            <li class="load_li upload_area">
+                <img class="lazy used_img xsz_img" width="100%" height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTY2MDBERTZDODI0MTFFN0JBMzNGOThFN0Q2REQwMTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTY2MDBERTdDODI0MTFFN0JBMzNGOThFN0Q2REQwMTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFNjYwMERFNEM4MjQxMUU3QkEzM0Y5OEU3RDZERDAxNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFNjYwMERFNUM4MjQxMUU3QkEzM0Y5OEU3RDZERDAxNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgXrqd0AAAAQSURBVHjaYvj//z8DQIABAAj8Av7bok0WAAAAAElFTkSuQmCC" data-src="/jsybStatic/./img/5a8e1cf8b7e147e59f664f7e09d60f2b.jpg">
+                <input class="input xsz_file" type="file" value="" style="display: none;">
+                <input type="hidden" name="idcard_zq_img" id="idcard_zq_img" value=""/>
+                <div class="load_text_show">右前侧视图</div>
+            </li>
+            <li class="load_li upload_area">
+                <img class="lazy used_img xsz_img" width="100%" height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTY2MDBERTZDODI0MTFFN0JBMzNGOThFN0Q2REQwMTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTY2MDBERTdDODI0MTFFN0JBMzNGOThFN0Q2REQwMTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFNjYwMERFNEM4MjQxMUU3QkEzM0Y5OEU3RDZERDAxNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFNjYwMERFNUM4MjQxMUU3QkEzM0Y5OEU3RDZERDAxNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgXrqd0AAAAQSURBVHjaYvj//z8DQIABAAj8Av7bok0WAAAAAElFTkSuQmCC" data-src="/jsybStatic/./img/3485e8011ef85643411e9774b43572c0.jpg">
+                <input class="input xsz_file" type="file" value="" style="display: none;">
+                <input type="hidden" name="idcard_zh_img" id="idcard_zh_img" value=""/>
+                <div class="load_text_show">右前侧视图</div>
+            </li>
+            <li class="load_li upload_area">
+                <img class="lazy used_img xsz_img" width="100%" height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTY2MDBERTZDODI0MTFFN0JBMzNGOThFN0Q2REQwMTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTY2MDBERTdDODI0MTFFN0JBMzNGOThFN0Q2REQwMTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFNjYwMERFNEM4MjQxMUU3QkEzM0Y5OEU3RDZERDAxNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFNjYwMERFNUM4MjQxMUU3QkEzM0Y5OEU3RDZERDAxNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgXrqd0AAAAQSURBVHjaYvj//z8DQIABAAj8Av7bok0WAAAAAElFTkSuQmCC" data-src="/jsybStatic/./img/b5be812c61e92b455a34a14d33b5824f.jpg">
+                <input class="input xsz_file" type="file" value="" style="display: none;">
+                <input type="hidden" name="idcard_yh_img" id="idcard_yh_img" value=""/>
+                <div class="load_text_show">右前侧视图</div>
+            </li>
+            <li class="load_li upload_area">
+                <img class="lazy used_img xsz_img" width="100%" height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTY2MDBERTZDODI0MTFFN0JBMzNGOThFN0Q2REQwMTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTY2MDBERTdDODI0MTFFN0JBMzNGOThFN0Q2REQwMTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFNjYwMERFNEM4MjQxMUU3QkEzM0Y5OEU3RDZERDAxNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFNjYwMERFNUM4MjQxMUU3QkEzM0Y5OEU3RDZERDAxNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PgXrqd0AAAAQSURBVHjaYvj//z8DQIABAAj8Av7bok0WAAAAAElFTkSuQmCC" data-src="/jsybStatic/./img/e8275203ab12fac0ffc610a71070b184.jpg">
+                <input class="input xsz_file" type="file" value="" style="display: none;">
+                <input type="hidden" name="idcard_ch_img" id="idcard_ch_img" value=""/>
+                <div class="load_text_show">右前侧视图</div>
+            </li>
+        </ul>
+    </article>
+</section>
+    <div class="sumbit_infor_btn sendBtn">提交补充信息</div>
+</section>
+<section class="prompt_text_box">
+    <h2 class="title">温馨提示</h2>
+    <article class="text_infor_box">
+        <div class="text_box">
+            1.拍照时在前后车身45度角，距离车辆2米左右的位置对车辆进行整体拍摄，连带车辆前后牌照拍摄4张（左前角、左后角、后前角、右后角），同时拍摄车架号；
+        </div>
+        <div class="text_box">
+            2.拍摄照片要求：<br>
+            a.在光线充足的环境下拍摄;<br>
+            b.不得遮挡整体车身（包括车牌号）;<br>
+            c.照片能反应车辆整体情况、车辆受损部位和程度的情况、车辆特殊设备的情况、验车日期（验车码);<br>
+            d.照片要清晰、完整;<br>
+            e.验车照片仅限当天使用，隔日登录系统会自动清空之前拍摄过的照片;
+        </div>
+    </article>
+</section>
+<script type="text/javascript" src="/jsybStatic/js/c_insurance\car_message.js?3b7b55167cc1a7b478c1"></script></body>
+<script>
+    console.log(verify);
+    /*$(function(){
+        //上传照片
+        $(".upload_area").each(function(){
+            var xsz_upload = $(this).find(".xsz_upload");
+            var xsz_file = $(this).find(".xsz_file");
+            var xsz_img = $(this).find(".xsz_img");
+            var input_img = $(this).find("input[type=hidden]");
+            xsz_upload.on("click",function(){
+                xsz_file.trigger("click");
+            });
+            var insure_img_upload;
+            var MODULE_COROLLER_METHOD = "{:U('Wap/User/upload_idcard')}";
+            xsz_file.on("change", function() {
+                insure_img_upload = new mui.PicUpload({"MODULE_COROLLER_METHOD":MODULE_COROLLER_METHOD, "FILE_ID":xsz_file, "IMG_ID":xsz_img,
+                    'callback':function(data){
+                        var data_res = data;
+                        if(data_res.status) {
+                            input_img.val(data.msg);
+                        } else {
+                            mui.toast(data_res.msg);
+                        }
+                        loadClose();
+                    }
+                });
+            });
+        });
+    });
+    function check_upload_form(){
+        var validate_msg;
+        if($("#idcard_yq_img").val() == ""){
+            validate_msg = "请上传右前侧视图";
+        }else if($("#idcard_zq_img").val() == ""){
+            validate_msg = "请上传左前侧视图";
+        }else if($("#idcard_zh_img").val() == ""){
+            validate_msg = '请上传左后侧视图';
+        }else if($("#idcard_yh_img").val() == ""){
+            validate_msg = '请上传右后侧视图';
+        }else if($("#idcard_ch_img").val() == ""){
+            validate_msg = '请上传车辆车架号';
+        }
+        if(validate_msg==''){
+            return true;
+        }else{
+            mui.toast(validate_msg);
+            return false;
+        }
+    }*/
+</script>
+</html>

@@ -1,0 +1,253 @@
+/*车险查询*/
+.query_content_box{
+  width:100%;
+  background:#fff;
+  margin-top:0.2rem;
+  padding:0 0.3rem 0.3rem 0.3rem;
+}
+@main-color:#248fea;
+@font-color:#333;
+@font-fcolor:#999;
+@border-color:#e5e5e5;  //边框颜色
+.query_content_title_box{
+  width:100%;
+  overflow:hidden;
+  height:1.08rem;
+  border-bottom:@border-color 1px solid;
+  .tit_box{
+    float:left;
+    position: relative;
+    width:50%;
+    height:1.08rem;
+    line-height:1.08rem;
+    font-size:0.3rem;
+    padding-left:0.25rem;
+    color:@font-color;
+    .head_icon_bg{
+      position: absolute;
+      left:0px;
+      top:50%;
+      margin-top:-0.15rem;
+      display:inline-block;
+      width:0.1rem;
+      height:0.3rem;
+      background:#248fea;
+      border-radius: 30% 30%;
+    }
+    .see_more{
+      position: absolute;
+      top:0;
+      right:0;
+      font-size:0.22rem;
+      color:#248fea;
+      .icon{
+        width:0.32rem;
+        height:0.32rem;
+        border-radius:50%;
+        line-height:0.32rem;
+        text-align: center;
+        margin-left:0.12rem;
+        color:#fff;
+        background:@main-color;
+        font-size:0.28rem;
+      }
+    }
+  }
+}
+.header_right_text{
+  float:left;
+  width:50%;
+  font-size:0.22rem;
+  color:@font-fcolor;
+  text-align: right;
+  height:1.08rem;
+  line-height:1.08rem;
+}
+
+.choice_box{
+  width:100%;
+  margin-bottom:0.4rem;
+  .city_content{
+    width:100%;
+    height:1.02rem;
+    line-height:1.02rem;
+    border-bottom:@border-color 1px solid;
+    .city_left{
+      float:left;
+      width:30%;
+      font-size:0.28rem;
+      color:@font-color;
+    }
+    .choice_btn{
+      float:right;
+      width:40%;
+      font-size:0.28rem;
+      text-align: right;
+      color:@font-fcolor;
+    }
+  }
+  .car_plate{
+    position:relative;
+    width:100%;
+    height:1.02rem;
+    line-height:1.02rem;
+    border-bottom:@border-color 1px solid;
+    .car_left{
+      float:left;
+      width:40%;
+      .tit{
+        float:left;
+        font-size:0.28rem;
+        color:@font-color;
+        border:1px solid transparent;
+      }
+      .plate_num{
+        position: relative;
+        float:left;
+        border:#666 1px solid;
+        border-radius:5px;
+        text-align: center;
+        height:0.5rem;
+        line-height:0.5rem;
+        margin-top:0.26rem;
+        font-size:0;
+        margin-left:0.2rem;
+        background:#fff;
+        padding-left:0.2rem;
+        padding-right:0.4rem;
+        
+        .down_css{
+          position: absolute;
+          top:0.21rem;
+          right:0.1rem;
+          display:inline-block;
+          border-top:0.08rem solid #666;
+          border-right:0.08rem solid #fff;
+          border-left:0.08rem solid #fff;
+        }
+      }
+    }
+    .car_right{
+      float:left;
+      width:28%;
+      input{
+        display:block;
+        width:100%;
+        height:0.4rem;
+        line-height:0.4rem;
+        margin-top:0.31rem;
+        border:none;
+        outline:none;
+        font-size:0.28rem;
+        text-align: left;
+        padding:0;
+      }
+    }
+    .licence{
+      position:absolute;
+      top:50%;
+      right:0px;
+      -webkit-transform:translate(0,-50%);
+      -moz-transform:translate(0,-50%);
+      transform:translate(0,-50%);
+      float:right;
+      width:32%;
+      height:30px;
+      line-height:30px;
+
+      .mui-switch{
+        float:left;
+        margin-top:3px;
+      }
+      .mui-switch .mui-switch-handle{
+        
+
+      }
+      span{
+        display:inline-block!important;
+        color:#333;
+        float:right;
+        margin-right:5px;
+        font-size:0.28rem;
+        line-height:30px;
+      }
+    }
+  }
+}
+.query_btn{
+  width:100%;
+  height:0.8rem;
+  justify-content: center;
+  line-height:normal;
+  display:flex;
+  align-items:center;
+  background-image:-webkit-linear-gradient(to left,#238fea ,#2caffa);
+  background-image:-moz-linear-gradient(to left,#238fea ,#2caffa);
+  background-image:linear-gradient(to left,#238fea ,#2caffa);
+  -webkit-border-radius: 3.6rem/0.4rem;
+  -moz-border-radius: 3.6rem/0.4rem;
+  border-radius: 3.6rem/0.4rem;
+  font-size:0.28rem;
+  color:#fff;
+  margin-top:0.3rem;
+  .btn{
+    flex:1;
+    text-align: center;
+  }
+}
+.fun_box{
+  width:100%;
+  overflow:hidden;
+  font-size:0.28rem;
+  color:@font-color;
+  margin-top:0.43rem;
+  .fun_left{
+    position: relative;
+    float:left;
+    width:50%;
+    height:0.5rem;
+    line-height:0.5rem;
+    padding-left:0.55rem;
+    .photo_bg{
+      position: absolute;
+      top:50%;
+      left:0px;
+      -webkit-transform: translate(0,-50%);
+      -moz-transform: translate(0,-50%);
+      -ms-transform: translate(0,-50%);
+      -o-transform: translate(0,-50%);
+      transform: translate(0,-50%);
+      display:inline-block;
+      width:0.4rem;
+      height:0.34rem;
+      background:url('../../../img/icons/photo.png') no-repeat;
+      background-size:cover;
+    }
+  }
+  .fun_right{
+    position: relative;
+    float:right;
+    padding-left:0.55rem;
+    height:0.5rem;
+    line-height:0.5rem;
+    .record_bg{
+      position: absolute;
+      top:50%;
+      left:0px;
+      -webkit-transform: translate(0,-50%);
+      -moz-transform: translate(0,-50%);
+      -ms-transform: translate(0,-50%);
+      -o-transform: translate(0,-50%);
+      transform: translate(0,-50%);
+      display:inline-block;
+      width:0.36rem;
+      height:0.36rem;
+      background:url('../../../img/icons/time.png') no-repeat;
+      background-size:cover;
+    }
+  }
+}
+#plateNoPrefix{
+  font-size:0.24rem;
+  color:#666;
+}

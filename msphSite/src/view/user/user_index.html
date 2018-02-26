@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <title>用户中心</title>
+    @@include('../common/layout.html')
+</head>
+<body>
+<section class="user_header_box">
+    <div class="news_box"><i class="news_bg"></i><em class="num">3</em></div>
+    <div class="header_box">
+        <div class="img_box"><img width="100%" height="100%" src="../../img/user_header_img.jpg"></div>
+        <div class="user_name">ToTo喵喵</div>
+        <div class="rz_status active">未实名认证</div>
+    </div>
+</section>
+<section class="user_list_box">
+    <div class="list_content_box">
+        <a class="list_name">
+            <i class="icon_bg car_bg"></i>
+            <p class="title">我的车险</p>
+            <i class="icon_right mui-icon mui-icon-arrowright"></i>
+        </a>
+        <a class="list_name">
+            <i class="icon_bg liwu_bg"></i>
+            <p class="title">我的保险</p>
+            <div class="infor">有未完成的订单</div>
+            <i class="icon_right mui-icon mui-icon-arrowright"></i>
+        </a>
+        <a class="list_name">
+            <i class="icon_bg licai_bg"></i>
+            <p class="title">我的理财</p>
+            <i class="icon_right mui-icon mui-icon-arrowright"></i>
+        </a>
+        <a class="list_name">
+            <i class="icon_bg daikuan_bg"></i>
+            <p class="title">我的贷款</p>
+            <i class="icon_right mui-icon mui-icon-arrowright"></i>
+        </a>
+        <a class="list_name">
+            <i class="icon_bg hongbao_bg"></i>
+            <p class="title">我的红包</p>
+            <i class="icon_right mui-icon mui-icon-arrowright"></i>
+        </a>
+    </div>
+</section>
+<section class="user_list_box">
+    <div class="list_content_box">
+        <a class="list_name"><i class="icon_bg head_bg"></i>我的伙伴<i class="icon_right mui-icon mui-icon-arrowright"></i></a>
+        <a class="list_name"><i class="icon_bg anquan_bg"></i>安全中心<i class="icon_right mui-icon mui-icon-arrowright"></i></a>
+    </div>
+</section>
+<section class="user_list_box">
+    <div class="list_content_box">
+        <a class="list_name"><i class="icon_bg shezhi_bg"></i>设置<i class="icon_right mui-icon mui-icon-arrowright"></i></a>
+    </div>
+</section>
+@@include('../common/bottom_nav.html',{
+"my":"active"
+})
+</body>
+</html>

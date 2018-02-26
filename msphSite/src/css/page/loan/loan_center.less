@@ -1,0 +1,95 @@
+@import "../../common/init.less";
+@import "../../common/template/page_title.less";
+@import "../../common/template/top_carousel.less";
+.top_calc_btn{
+  position: fixed;
+  top:0px;
+  height:44px;
+  line-height:44px;
+  right:0.3rem;
+  font-size:0.28rem;
+  color:#248fea;
+  z-index:100;
+}
+.carousel_box{
+  width:100%;
+  margin-top:44px;
+}
+.hot_loan_box{
+  width:100%;
+  background:#fff;
+  padding:0 0.3rem;
+  .header_title{
+    position: relative;
+    width:100%;
+    height:1.1rem;
+    line-height:1.1rem;
+    font-size:0.3rem;
+    color:@font-color;
+    padding-left:0.3rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom:@border-color 1px solid;
+    i{
+      .box_left_position(0);
+      width:0.1rem;
+      height:0.3rem;
+      border-radius:0.05rem/0.15rem;
+      background:#248fea;
+    }
+  }
+  .hot_loan_content{
+    width:100%;
+    .hot_loan_list{
+      width:100%;
+      margin-top:0.4rem;
+      border-bottom:@border-color 1px solid;
+      padding-bottom:0.2rem;
+      .img_box{
+        width:100%;
+        height:2.5rem;
+        font-size:0;
+      }
+      .text_box{
+        width:100%;
+        .title_box{
+          width:100%;
+          overflow:hidden;
+          margin:0.2rem 0;
+          .title{
+            width:40%;
+            float:left;
+            font-size:0.28rem;
+            font-weight:400;
+            color:@font-color;
+          }
+          .right_text{
+            position:relative;
+            float:right;
+            font-size:0.22rem;
+            color:#ff801a;
+            padding-left:0.34rem;
+            i{
+              .box_left_position(0);
+              display:inline-block;
+              width:0.26rem;
+              height:0.26rem;
+              background:url(../../../img/icons/loan_t_bg.png) no-repeat;
+              background-size:contain;
+            }
+          }
+        }
+        .note_text{
+          width:100%;
+          font-size:0.22rem;
+          color:@font-fcolor;
+          line-height:0.38rem;
+        }
+      }
+    }
+    .hot_loan_list:last-child{
+      border-bottom:none;
+    }
+  }
+}

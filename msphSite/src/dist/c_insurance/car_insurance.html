@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <title>车险</title>
+    <script type="text/javascript" src="http://cdn.msphcn.com/dist/bin/rem.js"></script>
+<link href="http://cdn.msphcn.com/dist/bin/mui.min.css" rel="stylesheet">
+<link href="http://cdn.msphcn.com/dist/bin/mui.picker.css" rel="stylesheet">
+<link href="http://cdn.msphcn.com/dist/bin/mui.poppicker.css" rel="stylesheet">
+<script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.pullToRefresh.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.picker.min.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/city.data.js"></script>
+
+</head>
+<body>
+<!--轮播模块-->
+<main class="main">
+    <section id="page_content">
+<section class="carousel_box">
+    <div class="mui-slider">
+<div class="mui-slider-group mui-slider-loop">
+<!--支持循环，需要重复图片节点-->
+<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img/></a></div>
+<div class="mui-slider-item"><a href="#"><img/></a></div>
+<div class="mui-slider-item"><a href="#"><img/></a></div>
+<div class="mui-slider-item"><a href="#"><img/></a></div>
+<div class="mui-slider-item"><a href="#"><img/></a></div>
+<!--支持循环，需要重复图片节点-->
+<div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img/></a></div>
+</div>
+<div class="mui-slider-indicator">
+<div class="mui-indicator mui-active"></div>
+<div class="mui-indicator"></div>
+<div class="mui-indicator"></div>
+</div>
+</div>
+</section>
+<section class="query_content_box">
+<div class="query_content_title_box">
+<div class="tit_box">
+<i class="head_icon_bg"></i>
+车险查询
+</div>
+<div class="header_right_text">目前仅支持9座以下非营私家车</div>
+</div>
+<div class="choice_box">
+<div class="city_content">
+<div class="city_left">
+承保城市
+</div>
+<div class="choice_btn" id="cityResult">选择承保城市</div>
+<input type="hidden" id="addressCity" name="addressCity">
+<input type="hidden" id="citycode" name="cityCode">
+</div>
+
+<div class="car_plate">
+<div class="car_left">
+
+<div class="tit">车辆牌照</div>
+<div class="plate_num popup_btn" data-popup="plate_popup" data-move="pull_top">
+<div id="plateNoPrefix">
+浙B
+</div>
+<i class="down_css"></i>
+</div>
+
+</div>
+<input type="hidden" name="platePrefix" id="platePrefix" data-carflag="unnew" value="{$area.lcode}" />
+
+<div class="car_right">
+<input type="text" class="mui-input-clear" id="plateNo" name="plateNo" placeholder="输入车牌号">
+</div>
+<div class="licence">
+<div class="mui-switch mui-switch-blue mui-switch-mini">
+<div class="mui-switch-handle"></div>
+</div>
+<span>未上牌</span>
+</div>
+</div>
+<div class="query_btn">立即查询</div>
+<!--<div class="fun_box">
+<div class="fun_left"><span class="photo_bg"></span>图像识别</div>
+<div class="fun_right"><span class="record_bg"></span>查询记录</div>
+</div>-->
+</section>
+
+<section class="plate_popup">
+<div class="plate_title_box">
+<i class="icon mui-icon mui-icon-arrowleft"></i>
+选择车牌
+</div>
+<div class="content_block">
+<div class="creat_popup_3">
+<div class="creat_popup_1 float_box">
+<!--<a href="javascript:;" data-province="新车未上牌" class="a-no">新车未上牌</a>-->
+<a href="javascript:;" class="active" data-province="浙">浙</a>
+<a href="javascript:;" data-province="苏">苏</a>
+<a href="javascript:;" data-province="粤">粤</a>
+<a href="javascript:;" data-province="鲁">鲁</a>
+<a href="javascript:;" data-province="川">川</a>
+<a href="javascript:;" data-province="皖">皖</a>
+<a href="javascript:;" data-province="沪">沪</a>
+<a href="javascript:;" data-province="豫">豫</a>
+<a href="javascript:;" data-province="京">京</a>
+<a href="javascript:;" data-province="翼">翼</a>
+<a href="javascript:;" data-province="渝">渝</a>
+<a href="javascript:;" data-province="贵">贵</a>
+<a href="javascript:;" data-province="赣">赣</a>
+<a href="javascript:;" data-province="津">津</a>
+<a href="javascript:;" data-province="云">云</a>
+<a href="javascript:;" data-province="湘">湘</a>
+<a href="javascript:;" data-province="鄂">鄂</a>
+<a href="javascript:;" data-province="辽">辽</a>
+<a href="javascript:;" data-province="吉">吉</a>
+<a href="javascript:;" data-province="黑">黑</a>
+<a href="javascript:;" data-province="陕">陕</a>
+<a href="javascript:;" data-province="甘">甘</a>
+<a href="javascript:;" data-province="晋">晋</a>
+<a href="javascript:;" data-province="桂">桂</a>
+<a href="javascript:;" data-province="闽">闽</a>
+<a href="javascript:;" data-province="蒙">蒙</a>
+<a href="javascript:;" data-province="琼">琼</a>
+<a href="javascript:;" data-province="青">青</a>
+<a href="javascript:;" data-province="宁">宁</a>
+<a href="javascript:;" data-province="藏">藏</a>
+<a href="javascript:;" data-province="新">新</a>
+</div>
+</div>
+<div class="creat_popup_9">
+<div class="float_box">
+<a href="javascript:;" data-city="A">A</a>
+<a href="javascript:;" class="active" data-city="B">B</a>
+<a href="javascript:;" data-city="C">C</a>
+<a href="javascript:;" data-city="D">D</a>
+<a href="javascript:;" data-city="E">E</a>
+<a href="javascript:;" data-city="F">F</a>
+<a href="javascript:;" data-city="G">G</a>
+<a href="javascript:;" data-city="H">H</a>
+<a href="javascript:;" data-city="I">I</a>
+<a href="javascript:;" data-city="J">J</a>
+<a href="javascript:;" data-city="K">K</a>
+<a href="javascript:;" data-city="L">L</a>
+<a href="javascript:;" data-city="M">M</a>
+<a href="javascript:;" data-city="N">N</a>
+<a href="javascript:;" data-city="O">O</a>
+<a href="javascript:;" data-city="P">P</a>
+<a href="javascript:;" data-city="Q">Q</a>
+<a href="javascript:;" data-city="R">R</a>
+<a href="javascript:;" data-city="S">S</a>
+<a href="javascript:;" data-city="T">T</a>
+<a href="javascript:;" data-city="U">U</a>
+<a href="javascript:;" data-city="V">V</a>
+<a href="javascript:;" data-city="W">W</a>
+<a href="javascript:;" data-city="X">X</a>
+<a href="javascript:;" data-city="Y">Y</a>
+<a href="javascript:;" data-city="Z">Z</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="partner_box">
+    <div class="content_title_box">
+        <div class="tit_box">
+            <i class="head_icon_bg"></i>
+            <div class="title">合作伙伴</div>
+            <span class="see_more" style="display:none">查看全部
+                <i class="icon mui-icon mui-icon-arrowright"></i>
+            </span>
+        </div>
+    </div>
+    <div class="scroll_box">
+    <div class="company_move_box mui-scroll-wrapper">
+        <ul class="mui-scroll">
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+        </ul>
+    </div>
+    </div>
+</section></section>
+    <section class="company_befire_box">
+        <div class="left_img">
+        </div>
+        <div class="right_img">
+        </div>
+    </section>
+</main>
+<!--弹出订单模块-->
+<section class="car_order_popup_box">
+
+    <section class="car_order_popup">
+        <div class="close_btn"></div>
+        <div class="pos_img"><img width="100%" height="100%" src="../../img/insurance_order_r_img.png"></div>
+        <header class="top_content"><img width="100%" height="100%" src="../../img/insurance_order_top_img.jpg"></header>
+        <div class="order_table_box">
+            <div class="order_list_box">
+                <p class="name">订单号</p>
+                <div class="order_val">1050806055</div>
+            </div>
+            <div class="order_list_box">
+                <p class="name">车主</p>
+                <div class="order_val">周杰伦</div>
+            </div>
+            <div class="order_list_box">
+                <p class="name">车牌号</p>
+                <div class="order_val">浙BJ5804</div>
+            </div>
+            <div class="order_list_box">
+                <p class="name">联系方式</p>
+                <div class="order_val">155584444101</div>
+            </div>
+            <div class="order_list_box">
+                <p class="name">保费合计</p>
+                <div class="order_val">￥3500</div>
+            </div>
+            <div class="order_list_box">
+                <p class="name">保单截止日期</p>
+                <div class="order_val">2017-10-20</div>
+            </div>
+            <div class="order_aplay_btn">立即支付</div>
+        </div>
+    </section>
+    <div class="mask_box"></div>
+</section>
+<nav class="nav_bottom_box">
+    <span class="nav_list_box ">
+        <a href="">
+            <span class="home"></span>
+            <span class="nav_text">首页</span>
+        </a>
+    </span>
+    <span class="nav_list_box active">
+        <a href="">
+            <span class="cx"></span>
+            <span class="nav_text">车险</span>
+        </a>
+    </span>
+    <span class="nav_list_box ">
+        <a href="">
+            <span class="my"></span>
+            <span class="nav_text">我的</span>
+        </a>
+    </span>
+</nav>
+
+
+
+
+</body>
+</html>

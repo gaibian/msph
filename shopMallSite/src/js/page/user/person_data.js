@@ -1,0 +1,1 @@
+require('../../../css/page/user/person_data.less');

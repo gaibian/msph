@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <title>贷款计算器</title>
+    <script type="text/javascript" src="http://cdn.msphcn.com/dist/bin/rem.js"></script>
+<link href="http://cdn.msphcn.com/dist/bin/mui.min.css" rel="stylesheet">
+<link href="http://cdn.msphcn.com/dist/bin/mui.picker.css" rel="stylesheet">
+<link href="http://cdn.msphcn.com/dist/bin/mui.poppicker.css" rel="stylesheet">
+<script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.pullToRefresh.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.picker.min.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/city.data.js"></script>
+
+</head>
+<body>
+<header class="page_header_title">
+    <a class="page_return_btn"><i></i></a>
+    <h1 class="page_title">贷款计算器</h1>
+    <a class='page_right_box'></a>
+</header>
+<section class="data_show_box">
+    <div class="repayment_box">
+        <div class="repayment_num_box">
+            <div class="num" id="each_repayment">0.00</div>
+            <p class="note_text">每月还款(元)</p>
+        </div>
+        <div class="repayment_num_box">
+            <div class="num" id="late_repayment">0.00</div>
+            <p class="note_text">末期还款(元)</p>
+        </div>
+    </div>
+    <div class="interest_box">
+        <div class="interest_num_box">
+            <div class="pos_box">
+                <div class="num" id="all_interest">0.00</div>
+                <p class="note_text">总支付利息(元)</p>
+            </div>
+        </div>
+        <div class="interest_num_box">
+            <div class="pos_box">
+                <div class="num" id="all_interest_money">0.00</div>
+                <p class="note_text">本息合计(元)</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="calc_content_box">
+    <header class="header_title"><i></i>贷款计算</header>
+    <div class="form_box">
+        <div class="input_box">
+            <label>贷款金额</label>
+            <div class="input">
+                <input type="text" id="all_money">
+                <em class="dw">元</em>
+            </div>
+        </div>
+        <div class="input_box">
+            <label>贷款期数</label>
+            <div class="input">
+                <input type="text" id="month">
+                <em class="dw">月</em>
+            </div>
+        </div>
+        <div class="input_box">
+            <label>贷款月利率</label>
+            <div class="input">
+                <input type="text" id="inter_month">
+                <em class="dw">‰</em>
+            </div>
+        </div>
+        <div class="input_box">
+            <label>还款方式</label>
+            <div class="active_box">
+                <div class="inter_box">
+                    <em class="crl"></em>
+                    <span class="text">先息后本</span>
+                    <i class="wh"></i>
+                </div>
+                <div class="inter_box">
+                    <em class="crl"></em>
+                    <span class="text">等本等息</span>
+                    <i class="wh"></i>
+                </div>
+            </div>
+        </div>
+        <div class="btn_box">
+            <div class="calc_btn btn">计算</div>
+            <div class="reset_btn btn">重置</div>
+        </div>
+    </div>
+</section>
+<section class="page_bottom_text_box">
+    <p class="text"><i class="wh"></i>等本等息：每个月平均偿还本金和利息，利息一直按总本金计算</p>
+    <p class="text"><i class="wh"></i>先息后本：在贷款到期日一次性归还贷款本金，利息按月归还</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+@font-color:#333; /*字体主色*/
+@font-fcolor:#999; /*字体副色*/
+@border-color:#e5e5e5;  /*框颜色*/
+@main-color:#248fea; /*网站主色*/
+.plate_popup{
+  position:fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background:#fff;
+  z-index:10000;
+  display:none;
+  .plate_title_box{
+    position:relative;
+    width:100%;
+    height:44px;
+    line-height:44px;
+    border-bottom:@border-color 1px solid;
+    font-size:0.28rem;
+    color:@font-color;
+    text-align:center;
+    .icon{
+      display:inline-block;
+      height:44px;
+      line-height:44px;
+      position:absolute;
+      top:0px;
+      left:0.2rem;
+    }
+  }
+  .content_block{
+    width:100%;
+    .creat_popup_3{
+      width:7.2rem;
+      margin:0 auto;
+      margin-bottom:0.4rem;
+      margin-top:0.4rem;
+    }
+    .creat_popup_9{
+      overflow:hidden;
+      width:7.2rem;
+      margin:0 auto;
+    }
+    .float_box{
+      overflow: hidden;
+      margin-right:-0.266rem;
+      font-size:0px;
+    }
+    a{
+      float:left;
+      display:block;
+      width:0.8rem;
+      height:0.8rem;
+      line-height:0.8rem;
+      text-align: center;
+      border:#ccc 1px solid;
+      font-size:0.28rem;
+      border-radius: 0.04rem;
+      margin-right:0.266rem;
+      margin-bottom: 0.266rem;
+      color:#666;
+    }
+    a.active{
+      border:#248fea 1px solid;
+    }
+  }
+}

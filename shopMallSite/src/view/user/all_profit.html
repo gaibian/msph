@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>累计收益</title>
+    @@include('../common/layout.inc')
+    <link rel="stylesheet" href="../../bin/fonts/iconfont.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/3.8.5/echarts.min.js"></script>
+</head>
+<body>
+<section class="page">
+    <header class="page_header_title">
+        <a class="page_return_btn"><i></i></a>
+        <h1 class="page_title">累计收益</h1>
+    </header>
+    <section class="page_content">
+        <div class="top_content_box">
+            <div class="title_or_num">
+                <p class="tit_label">累计收益</p>
+                <div class="profit_num">￥<span>273239.00</span></div>
+            </div>
+            <p class="note_text">您在购得小超平台因销售产生的相关收入、奖励，不包括因交易、货品产生的补偿金以及退款（账户余额中可查看）</p>
+        </div>
+
+        <div class="all_profit_list_box">
+            <div class="profit_list">
+                <p class="tit_label">今日收益</p>
+                <p class="price">￥<span>50.00</span></p>
+            </div>
+            <div class="profit_list">
+                <p class="tit_label">本周收益</p>
+                <p class="price">￥<span>50.00</span></p>
+            </div>
+            <div class="profit_list">
+                <p class="tit_label">本月收益</p>
+                <p class="price">￥<span>50.00</span></p>
+            </div>
+            <div class="profit_list">
+                <p class="tit_label">上月收益</p>
+                <p class="price">￥<span>50.00</span></p>
+            </div>
+        </div>
+        <!--图表-->
+        <div id="echarts_main" class="echarts_box" style="width:100%;height:6rem;background-image:-webkit-linear-gradient(to bottom,#fc7322 ,#fd965a);background-image:-moz-linear-gradient(to bottom,#fc7322 ,#fd965a);background-image:linear-gradient(to bottom,#fc7322 ,#fd965a);">
+        </div>
+        <div class="echarts_title"><span>七日收益柱状图</span></div>
+    </section>
+</section>
+</body>
+
+</html>

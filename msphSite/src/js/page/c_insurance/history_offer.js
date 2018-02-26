@@ -1,0 +1,1 @@
+require('../../../css/page/c_insurance/history_offer.less');

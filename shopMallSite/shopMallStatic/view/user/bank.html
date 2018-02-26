@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>银行卡</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+<script type="text/javascript" src="http://cdn.msphcn.com/dist/bin/rem.js"></script>
+
+<link rel="shortcut icon" href="/shopMallStatic/users_ico.ico"><link href="/shopMallStatic/css/user\bank.css?3f55efaa3b933584313c" rel="stylesheet"></head>
+<body>
+<section class="page">
+    <header class="page_header_title">
+        <a class="page_return_btn"><i></i></a>
+        <h1 class="page_title">添加银行卡</h1>
+    </header>
+    <section class="page_content">
+        <!--没有银行卡-->
+        <div class="none_bank_box">
+            <div class="img_box">
+                <img width="100%" height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAB+CAYAAABhy172AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NjQ3RkEyMzRFMzkyMTFFN0I0MUVBRUNFNTMzQUQwODEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NjQ3RkEyMzVFMzkyMTFFN0I0MUVBRUNFNTMzQUQwODEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo2NDdGQTIzMkUzOTIxMUU3QjQxRUFFQ0U1MzNBRDA4MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo2NDdGQTIzM0UzOTIxMUU3QjQxRUFFQ0U1MzNBRDA4MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PioqNEoAAAVbSURBVHja7N1LbxtVGMbxcQmpkAApXeGEBQob9hMWEStCoq4qUlRX4gskGy4tSA3wAVBCJUKQWMTfoAmoQbCgioVYZTUWEhLqhnpVYlZ4URY0qArvcZ6DTszYngTXGTz/n/TKnosvOp7H55wZSy4lSRKlGLdaVM1aTWodMCr+sLpv9aPVbauv4zg+6NzpXMoDL1v9bHXL6k2rFwgHRtDTVi/pGN9yx3y9Xn+jc6dS0IM8YfWx1Q0tf2+1Y/Wt1b7VQ9oUI+QZq+etFqxet5rT+k+sPrLe5JFbGAseEIbjfatPaUOMsAdWdy0Id+32c+s9ruuY9xlYCYdYV4INrxAOFI0FZV3HvnPDAnPFB8TNL9a14ZrVHs2FgoZkTxlwPrOQjLuAVDQWc3OODZoJBQ/JhrIwZXXVBWRR27ZpHqBtS7eLLiAva+E72gVou6PbGReQ57TwG+0CtDV1W3YBOa+FP2kXoD0P8df8xs/RHEB3BAQgIAABAQgIQEAAAgIQEICAAAQEICAACAhAQAACAhAQgIAABAT4fxmjCVBk+/v79CDAf+5ByuXyIc0B0IMABAQgIAABAQgIQEAAAgIQEICAAASEJgAICEBAAAICEBCAgAAEBCAgAAEBCAgAAgIQEICAAAQEICAAAQEICEBAAAICEBAABAQ4uX/+/qDZbJZoDhRNuVzutunwWECAIpqcnExdbx1GREBQePwFGzCIOQh/wQbQgwAEBCAgwDDnIFwHQRFxHQTood91EIZYAHMQgIAABAQgIAABAQgIQEAAAgIQEAAEBCAgAAEBCAhAQAACAhAQgIAABAQgIAAICEBAAAICEBCAgAAEBCAgAAEBCAgAAgIQEICAIGeS6OjPZ6Z77FPRPpvBOre8m7LvvNb/rn3u6XG9nn9C+x7qtQgIcqMahKCbpY59u/HhiK1q2r+lxyda3+v5O+8TEJy57T4H5rQO/Lqql00F4kWrq1bLVjMq99hGj4C09F7m+/Q2Aw+I777yvg1no6Vveh+Ebt/uaxmea1ohaHWsd+FYSFkfBYGoBj3U0rACkugNNPSiuzndhnwMs1b6fLtn6Y1ifbYVfSH2sxK8h1pwfAwlIK6LW1VCK1rO4zacLT986hze+IO8eoLjrabn2dJEfTfD8K0WDL+qes2lYQRkNejyJrScx23I52Q96+Q8HK4taA7yQRCWTY0gJjJM/vvNiQYakDVNliJNlKo53YZ8BKQVHJhp3+5ZNfR5u7Bc0HPHKUO4tOFbQ68ZR93Peg0sIDW9geVgOY/bkJ+Q+GCctPeIusw5ws88Thm+hddAfM2fthcpJUnizwKV+DwxYC4c94JvcH/KNs2h9lsIwpEoUJ1nvCqak6xp6OVP2sTqPdLObvkAXQi3x3F6p1Kv19u5GOMzxGPUCOYNUZTt1G5nb7GqoZQfMfgeqRX0Rn74VA+G3WnPtaKgZO7FuFCIYU3WTzq8amluuayg+WGav8YxE8xlsgzfTnVNhB4Ej9t2xuF7qceB3S9Yy1H/0/yN00wj6EGAPgF5oPvP0hxAe4J+XncPXECaWijTNMCxLDRdQH7Swqu0C9B2UbeJC8iOFiq0C3AsCzsuIO4sw32rOat3aBsUfP7hMvCa1a8uGy4gB1bvafuG1SzNhIKGY1YZcK7HcfzQn+Z1vchN3d+zukZzoWDheFfHvnPTwtH+wWN4ofBDq6es3rJat7qk4NxRd3NAM2KEjFtNWTAuas4xp/VfKAtRZ0AeWb1t9UN09PuXueBBwKj7xQXDeo4vw5VpPzX5yuobpepydPQjsCmrJ2lDjJC/NDJyP3C87UZLFo5/jZL+FmAA6rBecJ8uMxsAAAAASUVORK5CYII=">
+            </div>
+            <p class="none_bank_text">
+                添加银行卡<br>即可享受安全便捷的移动支付体验
+            </p>
+        </div>
+        <ul class="bank_list_box">
+            <li class="bank_list">
+                <div class="bank_img">
+                    <img width="100%" height="100%" src="/shopMallStatic/img/40e6c15dc402d510e20d3e2d26edfdd3.jpg">
+                    <div class="bank_content">
+                        <p class="name">周杰伦</p>
+                        <p class="bank_name">中国银行</p>
+                        <div class="bank_num">****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;<span>6222</span></div>
+                    </div>
+                </div>
+            </li>
+            <li class="bank_list">
+                <div class="bank_img">
+                    <img width="100%" height="100%" src="/shopMallStatic/img/40e6c15dc402d510e20d3e2d26edfdd3.jpg">
+                    <div class="bank_content">
+                        <p class="name">周杰伦</p>
+                        <p class="bank_name">中国银行</p>
+                        <div class="bank_num">****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;<span>6222</span></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="btn_box">
+            <button class="add_bank_btn">添加银行卡</button>
+        </div>
+    </section>
+</section>
+<script type="text/javascript" src="/shopMallStatic/js/user\bank.js?3f55efaa3b933584313c"></script></body>
+</html>

@@ -1,0 +1,267 @@
+body {
+  font-size: 0.28rem;
+  overflow-x: hidden;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", Arial, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+em {
+  font-style: normal;
+}
+ul li {
+  list-style: none;
+}
+img {
+  border: 0;
+  outline: none;
+}
+img[src=""],
+img:not([src]) {
+  opacity: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+input,
+button,
+textarea {
+  background: none;
+  border: 0;
+  outline: none;
+  -webkit-appearance: none;
+}
+a {
+  text-decoration: none;
+}
+i {
+  font-style: normal;
+}
+/*自定义样式*/
+.text_hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box_position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.box_vertical_position {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.w_box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.page_header_title {
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  -o-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  height: 44px;
+  line-height: 44px;
+  max-width: 7.5rem;
+  background: #fff;
+  border-bottom: #e5e5e5 1px solid;
+  z-index: 99;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  opacity: 1;
+}
+.page_header_title .page_title {
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 0.32rem;
+  margin: 0px;
+  padding: 0px;
+  font-weight: 400;
+  color: #333;
+}
+.page_header_title .page_return_btn {
+  position: absolute;
+  top: 0px;
+  left: 0.3rem;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+}
+.page_header_title .page_return_btn i {
+  width: 10px;
+  height: 10px;
+  border-top: 1px solid #333;
+  border-left: 1px solid #333;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 16px;
+  z-index: 10;
+}
+body {
+  background: #f6f6f6;
+}
+.page {
+  width: 100%;
+  max-width: 7.5rem;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.page_content {
+  width: 100%;
+  margin-top: 44px;
+}
+.page_content .record_list_box {
+  width: 100%;
+}
+.page_content .record_list_box .time_title {
+  position: relative;
+  width: 100%;
+  height: 0.62rem;
+  line-height: 0.62rem;
+  padding: 0 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 0.22rem;
+  color: #666;
+  background: #f6f6f6;
+}
+.page_content .record_list_box .time_title .all_input_reset {
+  position: absolute;
+  top: 50%;
+  left: -0.4rem;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  width: 0.36rem;
+  height: 0.36rem;
+  border: #cccccc 1px solid;
+  border-radius: 50%;
+  -webkit-appearance: none;
+}
+.page_content .record_list_box .list_content {
+  width: 100%;
+  background: #fff;
+  padding: 0 0.3rem;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.page_content .record_list_box .list_content .list_border {
+  position: relative;
+  width: 100%;
+  height: 1.6rem;
+  border-bottom: #e5e5e5 1px solid;
+  padding: 0.4rem 0;
+}
+.page_content .record_list_box .list_content .list_border .input_reset {
+  position: absolute;
+  top: 50%;
+  left: -0.7rem;
+  -webkit-transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  width: 0.36rem;
+  height: 0.36rem;
+  border: #cccccc 1px solid;
+  border-radius: 50%;
+  -webkit-appearance: none;
+}
+.page_content .record_list_box .list_content .list_border:last-child {
+  border-bottom: none;
+}
+.page_content .record_list_box .list_content .img_box {
+  float: left;
+  width: 1.6rem;
+  height: 1.6rem;
+  font-size: 0px;
+}
+.page_content .record_list_box .list_content .right_content {
+  position: relative;
+  float: right;
+  width: 5rem;
+  height: 1.6rem;
+}
+.page_content .record_list_box .list_content .right_content .title_box {
+  width: 100%;
+}
+.page_content .record_list_box .list_content .right_content .title_box .t_title {
+  display: inline-block;
+  font-size: 0.22rem;
+  color: #ff422e;
+  border: #ff422e 1px solid;
+  padding: 0 0.12rem;
+  margin-right: 0.1rem;
+}
+.page_content .record_list_box .list_content .right_content .title_box .title {
+  font-size: 0.28rem;
+  color: #333;
+}
+.page_content .record_list_box .list_content .right_content .note_price_box {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  overflow: hidden;
+}
+.page_content .record_list_box .list_content .right_content .note_price_box .price_box {
+  float: left;
+  width: 50%;
+}
+.page_content .record_list_box .list_content .right_content .note_price_box .price_box .price {
+  font-size: 0.3rem;
+  color: #333;
+  font-weight: bold;
+}
+.page_content .record_list_box .list_content .right_content .note_price_box .price_box .n_price {
+  font-size: 0.22rem;
+  color: #f8640c;
+  margin-left: 0.16rem;
+}
+.page_content .record_list_box .list_content .right_content .note_price_box .look_btn {
+  float: right;
+  width: 50%;
+  font-size: 0.28rem;
+  color: #333;
+  text-align: right;
+}
+#b_btn {
+  position: absolute;
+  top: 0px;
+  right: 0.3rem;
+  font-size: 0.28rem;
+  color: #f8640c;
+}

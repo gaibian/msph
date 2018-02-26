@@ -1,0 +1,136 @@
+@import "../../common/init.less";
+@import "../../common/template/page_title.less";
+
+body{
+  background:#f6f6f6;
+  padding-bottom:1.2rem;
+}
+.page{
+  width:100%;
+  max-width: 7.5rem;
+  overflow:hidden;
+  margin:0 auto;
+}
+.page_content{
+  width:100%;
+  margin-top:44px;
+  .insurance_list_box{
+    width:100%;
+    .insurance_content{
+      width:100%;
+      background:#fff;
+      margin-bottom:0.2rem;
+      .pad_box{
+        width:100%;
+        padding:0 0.3rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      .content_details{
+        width:100%;
+        background:#f9f9f9;
+        .details_box{
+          position: relative;
+          width:100%;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          padding:0.2rem 0.3rem 0.6rem 0.3rem;
+          .details_list{
+            width:100%;
+            padding:0.2rem 0;
+            font-size:0;
+            span{
+              display:inline-block;
+              width:25%;
+              font-size:0.22rem;
+              color:#999;
+            }
+            .span1{
+              width:35%;
+            }
+            .span2{
+              width:25%;
+            }
+            .span3{
+              width:20%;
+            }
+            .span4{
+              width:20%;
+              text-align:right;
+            }
+          }
+          .look_more_btn{
+            position: absolute;
+            bottom:0.3rem;
+            right:0.3rem;
+            font-size:0.24rem;
+            color:#ed5f14;
+          }
+        }
+      }
+      .title_state_box{
+        width:100%;
+        overflow:hidden;
+        padding:0.3rem 0;
+        height:0.6rem;
+        line-height:0.6rem;
+        border-bottom:#e5e5e5 1px solid;
+        .insurance_title{
+          float:left;
+          width:60%;
+          .img_box{
+            float:left;
+            width:1.48rem;
+            height:0.6rem;
+            font-size:0;
+            border:#ccc 1px solid;
+          }
+          .title{
+            float:left;
+            font-size:0.28rem;
+            color:#333;
+            margin-left:0.2rem;
+          }
+        }
+        .state{
+          position: relative;
+          float:right;
+          width:40%;
+          height:0.6rem;
+          font-size:0.28rem;
+          color:#333;
+          text-align: right;
+          .update{
+            .box_vertical_position();
+            right:0;
+            display:inline-block;
+            width:0.37rem;
+            height:0.37rem;
+            background:url('../../../img/icons/update_bg.png') no-repeat;
+            background-size:contain;
+          }
+        }
+      }
+      .insurance_money_box{
+        width:100%;
+        padding:0.3rem 0;
+        overflow:hidden;
+        .num_box{
+          float:left;
+          width:50%;
+          font-size:0.28rem;
+          color:#333;
+        }
+        .money_box{
+          float:left;
+          width:50%;
+          text-align: right;
+          font-size:0.28rem;
+          color:#333;
+        }
+      }
+    }
+  }
+}

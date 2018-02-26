@@ -1,0 +1,1 @@
+require('../../../css/page/user/withdrawals_apply_record.less');

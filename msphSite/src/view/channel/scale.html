@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>分层比例</title>
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+	@@include('../common/layout.html')
+</head>
+<body>
+@@include('../common/page_title.html',{"title": "分层比例","txt":""})
+@@include('../common/remind_popup.html')
+<div class='keep_btn'>保存</div>
+<main>
+	<section class='scale_page_content'>
+		<div class='level_list_box'>
+			<div class="level_title">
+				<h1 class="title">LV.<span class="title_num">1</span></h1>
+				<div class="delete_btn">删除</div>
+			</div>
+			<div class="level_content">
+				<div class="input_box">
+					<label class="input_title">月订单总额</label>
+					<input class="money_input" value="1" type="text">
+					<em class="unit">万元</em>
+				</div>
+				<div class="input_box">
+					<label class="input_title">返佣</label>
+					<input class="unit_input" value="20" type="text">
+					<em class="unit">%</em>
+				</div>
+			</div>
+		</div>
+		<div class='level_list_box'>
+			<div class="level_title">
+				<h1 class="title">LV.<span class="title_num">1</span></h1>
+				<div class="delete_btn">删除</div>
+			</div>
+			<div class="level_content">
+				<div class="input_box">
+					<label class="input_title">月订单总额</label>
+					<input class="money_input" value="2" type="text">
+					<em class="unit">万元</em>
+				</div>
+				<div class="input_box">
+					<label class="input_title">返佣</label>
+					<input class="unit_input" value="30" type="text">
+					<em class="unit">%</em>
+				</div>
+			</div>
+		</div>
+		<div class='level_list_box'>
+			<div class="level_title">
+				<h1 class="title">LV.<span class="title_num">1</span></h1>
+				<div class="delete_btn">删除</div>
+			</div>
+			<div class="level_content">
+				<div class="input_box">
+					<label class="input_title">月订单总额</label>
+					<input class="money_input" value="5" type="text">
+					<em class="unit">万元</em>
+				</div>
+				<div class="input_box">
+					<label class="input_title">返佣</label>
+					<input class="unit_input" value="50" type="text">
+					<em class="unit">%</em>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+<footer class='footer_btn' data-content="scale_page_content">新增分成级别</footer>
+</body>
+</html>

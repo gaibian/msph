@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>收藏列表</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+<script type="text/javascript" src="http://cdn.msphcn.com/dist/bin/rem.js"></script>
+
+<link rel="shortcut icon" href="/shopMallStatic/users_ico.ico"><link href="/shopMallStatic/css/user\collect_list.css?3f55efaa3b933584313c" rel="stylesheet"></head>
+<body>
+<section class="page">
+    <header class="page_header_title">
+        <a class="page_return_btn"><i></i></a>
+        <h1 class="page_title">收藏列表</h1>
+    </header>
+    <section class="page_content">
+        <!--您还没有收藏-->
+        <div class="collect_none_box">
+            <div class="pos">
+                <div class="img_box"><img width="100%" height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAABhCAYAAABI3IbfAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MDJERTQ4RkJFMkNCMTFFN0ExOTg4QTNDMzc0NjIxMkMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MDJERTQ4RkNFMkNCMTFFN0ExOTg4QTNDMzc0NjIxMkMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowMkRFNDhGOUUyQ0IxMUU3QTE5ODhBM0MzNzQ2MjEyQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowMkRFNDhGQUUyQ0IxMUU3QTE5ODhBM0MzNzQ2MjEyQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Po/pQlgAAApbSURBVHja7F0JkBbF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"></div>
+                <p class="img_note_text">亲,您还没有收藏哦!</p>
+            </div>
+        </div>
+        <!--有收藏-->
+        <div class="collect_content_box">
+            <div class="collect_list">
+                <div class="time">12月08号</div>
+                <div class="list_content">
+                    <div class="c_list">
+                        <div class="img_box">
+                            <img width="100%" height="100%" src="/shopMallStatic/img/5c7221bca8b4a42045841b3f88ed49f6.jpg">
+                        </div>
+                        <div class="right_content_box">
+                            <div class="title_box">
+                                <div class="title">
+                                    <span>特卖</span>
+                                    ONLY2017冬季新款可拆卸帽子风衣外套女
+                                </div>
+                                <div class="delete_btn"></div>
+                            </div>
+                            <div class="price_bottom_box">
+                                <div class="price_box">
+                                    ￥349<span>赚￥10</span>
+                                </div>
+                                <div class="look_product">看相似 ></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--猜你喜欢-->
+        <section class="you_like_box">
+            <header class="header_box">
+                <div class="title">
+                    <i></i>猜你喜欢
+                </div>
+            </header>
+            <div class="product_list_box">
+                <div class="list_content">
+                    <div class="img_box">
+                        <div class="brand">ONLY</div>
+                        <img width="100%" height="100%" src="/shopMallStatic/img/99bb4035575f279a4db0bcbb545e7275.jpg">
+                    </div>
+                    <div class="name_box">ONLY2017冬季新款可拆卸帽子风衣外套女</div>
+                    <div class="price_box">
+                        <p class="price">￥<span>349</span></p>
+                        <p class="n_price">赚￥<span>10</span></p>
+                    </div>
+                    <div class="a_page_box">
+                        <div class="share_box a_box">
+                            <i></i>
+                            <span>分享</span>
+                        </div>
+                        <div class="shop_car_box a_box">
+                            <i></i>
+                            <span>购物车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_content">
+                    <div class="img_box">
+                        <div class="brand">ONLY</div>
+                        <img width="100%" height="100%" src="/shopMallStatic/img/99bb4035575f279a4db0bcbb545e7275.jpg">
+                    </div>
+                    <div class="name_box">ONLY2017冬季新款可拆卸帽子风衣外套女</div>
+                    <div class="price_box">
+                        <p class="price">￥<span>349</span></p>
+                        <p class="n_price">赚￥<span>10</span></p>
+                    </div>
+                    <div class="a_page_box">
+                        <div class="share_box a_box">
+                            <i></i>
+                            <span>分享</span>
+                        </div>
+                        <div class="shop_car_box a_box">
+                            <i></i>
+                            <span>购物车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_content">
+                    <div class="img_box">
+                        <div class="brand">ONLY</div>
+                        <img width="100%" height="100%" src="/shopMallStatic/img/99bb4035575f279a4db0bcbb545e7275.jpg">
+                    </div>
+                    <div class="name_box">ONLY2017冬季新款可拆卸帽子风衣外套女</div>
+                    <div class="price_box">
+                        <p class="price">￥<span>349</span></p>
+                        <p class="n_price">赚￥<span>10</span></p>
+                    </div>
+                    <div class="a_page_box">
+                        <div class="share_box a_box">
+                            <i></i>
+                            <span>分享</span>
+                        </div>
+                        <div class="shop_car_box a_box">
+                            <i></i>
+                            <span>购物车</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_content">
+                    <div class="img_box">
+                        <div class="brand">ONLY</div>
+                        <img width="100%" height="100%" src="/shopMallStatic/img/99bb4035575f279a4db0bcbb545e7275.jpg">
+                    </div>
+                    <div class="name_box">ONLY2017冬季新款可拆卸帽子风衣外套女</div>
+                    <div class="price_box">
+                        <p class="price">￥<span>349</span></p>
+                        <p class="n_price">赚￥<span>10</span></p>
+                    </div>
+                    <div class="a_page_box">
+                        <div class="share_box a_box">
+                            <i></i>
+                            <span>分享</span>
+                        </div>
+                        <div class="shop_car_box a_box">
+                            <i></i>
+                            <span>购物车</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</section>
+<script type="text/javascript" src="/shopMallStatic/js/user\collect_list.js?3f55efaa3b933584313c"></script></body>
+</html>

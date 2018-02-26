@@ -1,0 +1,92 @@
+.footer_nav_box{
+  position: fixed;
+  left:50%;
+  bottom:0px;
+  width:100%;
+  -webkit-transform: translate(-50%,0);
+  -moz-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  max-width: 7.5rem;
+  height:0.98rem;
+  background:#fff;
+  border-top:#dedede 1px solid;
+  z-index:999;
+  .nav_box{
+    width:100%;
+    display: -moz-box;
+    display: -webkit-box;
+    display: box;
+    text-align:center;
+    .box_vertical_position();
+    font-size:0;
+    a{
+      display:block;
+      -moz-box-flex:1;
+      -webkit-box-flex:1;
+      box-flex:1;
+      text-align:center;
+      width:0;
+      .sy{
+        display:block;
+        width:0.36rem;
+        height:0.32rem;
+        margin:0 auto;
+        background:url('../../../img/icons/nav_sy.png') no-repeat;
+        background-size:contain;
+      }
+      .tm{
+        display:block;
+        width:0.36rem;
+        height:0.32rem;
+        margin:0 auto;
+        background:url('../../../img/icons/nav_tm.png') no-repeat;
+        background-size:contain;
+      }
+      .gwc{
+        display:block;
+        width:0.36rem;
+        height:0.32rem;
+        margin:0 auto;
+        background:url('../../../img/icons/nav_gwc.png') no-repeat;
+        background-size:contain;
+      }
+      .wd{
+        display:block;
+        width:0.32rem;
+        height:0.34rem;
+        margin:0 auto;
+        background:url('../../../img/icons/nav_wd.png') no-repeat;
+        background-size:contain;
+      }
+      .nav_text{
+        display:inline-block;
+        font-size:0.22rem;
+        color:#999;
+        margin-top:0.06rem;
+      }
+    }
+    a.active{
+      .nav_text{
+        color:#333;
+      }
+      .sy{
+        background:url('../../../img/icons/nav_sy_active.png') no-repeat;
+        background-size:contain;
+      }
+      .tm{
+        background:url('../../../img/icons/nav_tm_active.png') no-repeat;
+        background-size:contain;
+      }
+      .gwc{
+        background:url('../../../img/icons/nav_gwc_active.png') no-repeat;
+        background-size:contain;
+      }
+      .wd{
+        background:url('../../../img/icons/nav_wd_active.png') no-repeat;
+        background-size:contain;
+      }
+    }
+  }
+}

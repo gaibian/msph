@@ -1,0 +1,109 @@
+@import "../../common/init.less";
+@import "../../common/template/page_title.less";
+
+body{
+  background:#f6f6f6;
+}
+.page{
+  width:100%;
+  max-width: 7.5rem;
+  overflow:hidden;
+  margin:0 auto;
+}
+.page_content{
+  width:100%;
+  margin-top:44px;
+  .top_content_box{
+    width:100%;
+    padding:0.3rem 0;
+    background:#fff;
+    .title_or_num{
+      width:100%;
+      overflow:hidden;
+      margin-bottom:0.3rem;
+      padding:0 0.3rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .tit_label{
+        float:left;
+        width:50%;
+        font-size:0.28rem;
+        color:#333;
+      }
+      .profit_num{
+        float:left;
+        width:50%;
+        text-align: right;
+        font-size:0.28rem;
+        color:#ea4c02;
+      }
+    }
+    .note_text{
+      padding:0 0.3rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size:0.22rem;
+      color:#999;
+      line-height:0.34rem;
+    }
+  }
+  .all_profit_list_box{
+    width:100%;
+    padding:0 0.3rem;
+    background:#fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top:0.2rem;
+    .profit_list{
+      width:100%;
+      overflow: hidden;
+      padding:0.4rem 0;
+      border-bottom:#ccc 1px solid;
+      .tit_label{
+        float:left;
+        width:50%;
+        font-size:0.28rem;
+        color:#333;
+      }
+      .price{
+        float:left;
+        width:50%;
+        text-align: right;
+        font-size:0.28rem;
+        color:#ea4c02;
+      }
+    }
+    .profit_list:last-child{
+      border-bottom:none;
+    }
+  }
+}
+
+#echarts_main{
+  canvas{
+    left:-6px !important;
+  }
+  background-image:-webkit-linear-gradient(to bottom,#fc7322 ,#fd965a) !important;
+  background-image:-moz-linear-gradient(to bottom,#fc7322 ,#fd965a) !important;
+  background-image:linear-gradient(to bottom,#fc7322 ,#fd965a) !important;
+}
+.echarts_title{
+  width:100%;
+  background:#fd965a;
+  padding:0 0.39rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  span{
+    display:inline-block;
+    width:100%;
+    border-top:rgba(255,255,255,0.5) 1px solid;
+    text-align: center;
+    font-size:0.22rem;
+    color:#fff;
+    padding:0.2rem 0;
+  }
+}

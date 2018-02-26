@@ -1,0 +1,137 @@
+@import "../../common/init.less";
+@import "../../common/template/page_title.less";
+body{
+  background:#f6f6f6;
+  padding-bottom:1.2rem;
+}
+.page{
+  width:100%;
+  max-width: 7.5rem;
+  margin:0 auto;
+  overflow:hidden;
+}
+.page_content{
+  width:100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top:44px;
+  .address_list{
+    width:100%;
+    background:#fff;
+    padding:0 0.3rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom:0.2rem;
+    .header_title{
+      width:100%;
+      border-bottom:#e5e5e5 1px solid;
+      padding:0.36rem 0;
+      .namePhone{
+        width:100%;
+        overflow:hidden;
+        .name{
+          float:left;
+          width:30%;
+          font-size:0.28rem;
+          color:#333;
+        }
+        .phone{
+          float:left;
+          width:70%;
+          text-align: right;
+          font-size:0.28rem;
+          color:#333;
+        }
+      }
+      .address_text{
+        width:100%;
+        font-size:0.22rem;
+        color:#333;
+        margin-top:0.12rem;
+        .text_hidden();
+      }
+    }
+    .poerate_box{
+      width:100%;
+      overflow:hidden;
+      padding:0.2rem 0;
+      .active_box{
+        position: relative;
+        float:left;
+        width:50%;
+        height:0.58rem;
+        line-height:0.58rem;
+        padding-left:0.5rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        .state{
+          position: absolute;
+          top:50%;
+          left:0px;
+          -webkit-transform: translate(0,-50%);
+          -moz-transform: translate(0,-50%);
+          -ms-transform: translate(0,-50%);
+          -o-transform: translate(0,-50%);
+          transform: translate(0,-50%);
+          float:left;
+          width:0.36rem;
+          height:0.36rem;
+          border-radius:50%;
+          overflow:hidden;
+          border:#cccccc 1px solid;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+        }
+        .state.active{
+          width:0.36rem;
+          height:0.36rem;
+          background:url('../../../img/icons/active_input_bg.png') no-repeat;
+          background-size:contain;
+          border:none;
+        }
+        .text{
+          float:left;
+          font-size:0.28rem;
+          color:#333;
+        }
+      }
+      .btn_box{
+        float:left;
+        width:50%;
+        .btn{
+          float:right;
+          height:0.58rem;
+          width:1.38rem;
+          line-height:0.58rem;
+          text-align: center;
+          border:#333333 1px solid;
+          border-radius:0.06rem;
+          font-size:0.28rem;
+          color:#333;
+          margin-left:0.2rem;
+        }
+      }
+    }
+  }
+}
+.footer_btn{
+  position: fixed;
+  bottom:0;
+  left:50%;
+  -webkit-transform: translate(-50%,0);
+  -moz-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  -o-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  width:100%;
+  height:0.98rem;
+  line-height:0.98rem;
+  text-align: center;
+  background:#ea4c02;
+  font-size:0.28rem;
+  color:#fff;
+}

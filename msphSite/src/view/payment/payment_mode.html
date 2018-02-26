@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <title>支付方式</title>
+    @@include('../common/layout.html')
+</head>
+<body>
+<div class="stage_li">弹出</div>
+<!--分期支付弹窗-->
+<section class="by_stages_popup">
+    <div class="mask_box"></div>
+    <section class="stages_popup_content popup_content">
+        <header class="top_header">
+            <div class="cancel_btn close_btn">取消</div>
+            <h1 class="header_title">分期方案(零手续费)</h1>
+        </header>
+        <div class="stages_mode_content tab_box">
+            <!--切换选择的按钮-->
+            <header class="stage_tab">
+                <div class="tab_btn active">
+                    <div class="stage_active"></div>
+                    <div class="btn_title">
+                        <h1 class="tit">全保费分期</h1>
+                        <p class="note_tit">(仅支持信用卡还款)</p>
+                    </div>
+                </div>
+                <div class="tab_btn">
+                    <div class="stage_active"></div>
+                    <div class="btn_title">
+                        <h1 class="tit">商业险分期</h1>
+                        <p class="note_tit">(支持银行卡还款)</p>
+                    </div>
+                </div>
+            </header>
+            <!--切换的内容区域-->
+            <div class="tab_content_box">
+                <div class="tab_content">
+                    <h1 class="content_title">全保费分期总计</h1>
+                    <div class="stage_list_box">
+                        <h2 class="list_title">分期方案详情：</h2>
+                        <div class="list_box">
+                            <div class="list">
+                                <i class="tit_icon"></i>
+                                <div class="left_list">分6期支付</div>
+                                <div class="right_list">每月支付<span>￥500.00</span></div>
+                            </div>
+                            <div class="list">
+                                <i class="tit_icon"></i>
+                                <div class="left_list">分12期支付</div>
+                                <div class="right_list">每月支付<span>￥1200.00</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="note_content_box">
+                        <h3 class="note_tit">注：</h3>
+                        <div class="note_list">
+                            <p class="text">1.仅支持商业险分期，首付需立即支付交强险以及第一期分期用以提交
+                                订单信息。2.江苏地区车辆，投保人与持卡人身份需一致</p>
+                        </div>
+                    </div>
+                    <div class="agree_btn">
+                        <input type="checkbox">
+                        <div class="active_text">我已阅读并同意<a>《分期支付业务客户广告书》</a></div>
+                    </div>
+                    <div class="sure_stage_btn">确认分期方案</div>
+                </div>
+                <div class="tab_content">
+                    <h1 class="content_title">分期方案</h1>
+                    <div class="stage_list_box">
+                        <div class="sy_list active">
+                            <div class="stage_num">3期</div>
+                            <div class="first_payment">首期支付￥<span>1666.67</span></div>
+                            <div class="monthly_payment">此后每月支付￥<span>400.00</span></div>
+                        </div>
+                        <div class="sy_list">
+                            <div class="stage_num">5期</div>
+                            <div class="first_payment">首期支付￥<span>1400.00</span></div>
+                            <div class="monthly_payment">此后每月支付￥<span>400.00</span></div>
+                        </div>
+                        <div class="sy_list">
+                            <div class="stage_num">10期</div>
+                            <div class="first_payment">首期支付￥<span>1666.67</span></div>
+                            <div class="monthly_payment">此后每月支付￥<span>400.00</span></div>
+                        </div>
+                    </div>
+                    <div class="note_content_box">
+                        <h3 class="note_tit">注：</h3>
+                        <div class="note_list">
+                            <p class="text">1.仅支持商业险分期，首付需立即支付交强险以及第一期分期用以提交
+                                订单信息。2.江苏地区车辆，投保人与持卡人身份需一致</p>
+                        </div>
+                    </div>
+                    <div class="agree_btn">
+                        <input class="sy_agree" type="checkbox">
+                        <div class="active_text">我已阅读并同意<a>《分期支付业务客户广告书》</a></div>
+                    </div>
+                    <div class="sure_stage_btn sy_btn">确认分期方案</div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!--确认支付弹出层-->
+<div class="sure_popup_box">
+    <div class="popup_top">
+        <div class="pre_btn top_btn">上一步</div>
+    </div>
+    <!--客户分期确认书-->
+    <div class="infor_box">
+        <h1 class="tit">客户分期确认书</h1>
+
+        <div class="list_box">
+            <div class="title">您的分期期数</div>
+            <div class="periods_box">
+                <span>10期</span>
+            </div>
+        </div>
+
+        <div class="list_box">
+            <div class="title">每期还款金额</div>
+            <div class="periods_box">
+                <span>300元</span>
+            </div>
+        </div>
+        <div class="list_box">
+            <div class="title">您的还款日期</div>
+            <div class="periods_box">
+                <span>2017/10/24</span>
+                <span>2017/10/24</span>
+                <span>2017/10/24</span>
+                <span>2017/10/24</span>
+                <span>2017/10/24</span>
+                <span>2017/10/24</span>
+            </div>
+        </div>
+        <div class="list_box">
+            <div class="title">最后一次还款日期</div>
+            <div class="periods_box">
+                <span>2018/06/24</span>
+            </div>
+        </div>
+
+        <div class="sure_payment_btn">确认支付</div>
+    </div>
+</div>
+
+</body>
+</html>

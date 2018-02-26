@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <title>使用红包</title>
+    <script type="text/javascript" src="http://cdn.msphcn.com/dist/bin/rem.js"></script>
+<link href="http://cdn.msphcn.com/dist/bin/mui.min.css" rel="stylesheet">
+<link href="http://cdn.msphcn.com/dist/bin/mui.picker.css" rel="stylesheet">
+<link href="http://cdn.msphcn.com/dist/bin/mui.poppicker.css" rel="stylesheet">
+<script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.pullToRefresh.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.picker.min.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/city.data.js"></script>
+
+</head>
+<body>
+<header class="page_header_title">
+    <a class="page_return_btn"><i></i></a>
+    <h1 class="page_title">使用红包</h1>
+    <a class='page_right_box'>确定</a>
+</header>
+<main class="page_content">
+    <div class="envelopes_list_box" data-type="default">
+        <div class="spot top"></div>
+        <div class="spot bottom"></div>
+        <div class="line"></div>
+        <div class="top_content_box">
+            <div class="img_box">
+                <img width="100%" height="100%" src="../../img/cx_img.jpg">
+            </div>
+            <div class="price_content_box">
+                <div class="price_box">
+                    <div class="price_num"><span>￥</span>50</div>
+                    <div class="type_box">车险红包</div>
+                </div>
+                <p class="time">截止日期：2018-12-31</p>
+            </div>
+            <div class="right_num_box">
+                <div class="pos">
+                    <div class="add_num">
+                        <div class="reduce">-</div>
+                        <div class="num_val" data-num="10">
+                            <input class="input" type="number" data-num="0">
+                        </div>
+                        <div class="add">+</div>
+                    </div>
+                    <p class="text">目前拥有<span>8</span>个</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_content_box">
+            *本活动最终解释权归民商普惠金融商城所有
+        </div>
+    </div>
+    <div class="envelopes_list_box" data-type="not_default">
+        <div class="spot top"></div>
+        <div class="spot bottom"></div>
+        <div class="line"></div>
+        <div class="top_content_box">
+            <div class="img_box">
+                <img width="100%" height="100%" src="../../img/cx_img.jpg">
+            </div>
+            <div class="price_content_box">
+                <div class="price_box">
+                    <div class="price_num"><span>￥</span>1000</div>
+                    <div class="type_box">车险红包</div>
+                </div>
+                <p class="time">截止日期：2018-12-31</p>
+            </div>
+            <div class="right_num_box">
+                <div class="pos">
+                    <div class="add_num">
+                        <div class="reduce">-</div>
+                        <div class="num_val" data-num="10">
+                            <input class="input" type="number" data-num="0">
+                        </div>
+                        <div class="add">+</div>
+                    </div>
+                    <p class="text">目前拥有<span>8</span>个</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_content_box">
+            *本活动最终解释权归民商普惠金融商城所有
+        </div>
+    </div>
+</main>
+<div class="infor_box">
+    <p class="title"><span>宁波</span>地区 商业险部分</p>
+    <p class="price_num_box">每满<span>￥500</span>，可使用<span>￥50</span>红包</p>
+    <p class="price_num_box">本次最多可使用红包金额:<span class="max_enve_num">￥1500</span>，当前拥有红包金额:<span class="all_enve_num">￥500</span></p>
+</div>
+<div class="bottom_btn">
+    <p class="btn_note_text">红包数量不够?</p>
+    <a class="share_btn">分享好友</a>
+</div>
+<!--!弹窗提醒-->
+<section class="remind_popup">超过已有该红包数量</section>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(function(){
+      var ids = '{$red_packet_id_list}';
+      var ids = {"not_default":["4"],"default":["5","6","8","9"]};
+
+      $("#sumbit").on('click',function(){
+        var defaultArr = [];
+        var notDefaultArr = [];
+        $('.envelopes_list_box').each(function(){
+          "use strict";
+          var $this = $(this);
+          var attr = $this.attr('data-type');
+          if(attr == 'default'){
+            var inputVal = $this.find('.input').val();
+            for(var i =0;i<inputVal;i++){
+              defaultArr.push(ids.default[i]);
+            }
+          }else if(attr == 'not_default'){
+            var inputVal = $this.find('.input').val();
+            for(var i =0;i<inputVal;i++){
+              notDefaultArr.push(ids.not_default[i]);
+            }
+          }
+        });
+        var arr = defaultArr.concat(notDefaultArr);
+        var newAds = arr.join(",");
+        location.href = '{:U("fourth_step_pay_select",array("tid"=>$_GET["tid"]))}'+'&red_packet_id='+newAds;
+      });
+    })
+
+</script>
+</html>

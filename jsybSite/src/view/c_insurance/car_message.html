@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <title>补充车辆信息</title>
+    @@include('../common/layout.inc')
+</head>
+<body>
+<section class="page_form_box">
+<section class="form_box">
+    <h1 class="form_header_box">
+        <span>信息补充</span>
+        <em>保险公司要求补充以下必填信息</em>
+    </h1>
+    <form class="form" data-btn="sendBtn">
+        <div class="input_box">
+            <p class="input_title">被保人身份证有效止期</p>
+            <div class="input">
+                <input type="text" data-toggle="true" checkType="ownerIDCardValidDate" placeholder="请输入被保人身份证有效止期">
+            </div>
+        </div>
+        <div class="input_box">
+            <p class="input_title">被保人身份证地址</p>
+            <div class="input">
+                <input type="text" data-toggle="true" checkType="insuredAddress" placeholder="请输入被保人身份证有效止期">
+            </div>
+        </div>
+        <div class="input_box">
+            <p class="input_title">被保人邮箱</p>
+            <div class="input">
+                <input type="text" data-toggle="true" checkType="insuredEmail" placeholder="请输入被保人邮箱">
+            </div>
+        </div>
+    </form>
+</section>
+<section class="load_img_box">
+    <header class="load_img_title">
+        <h2 class="title">图像补充</h2>
+        <p class="note_text">小提示： 过户车以及过保车请上传带有当日验车码的车辆图像。</p>
+    </header>
+    <article class="load_img" action="{:U('Wap/User/real_name_save')}" method="post" onsubmit="return check_upload_form()">
+        <ul class="load_ul">
+            <li class="load_li upload_area">
+                <img class="lazy used_img xsz_img" width="100%" height="100%" src="../../img/lazy.png" data-src="../../img/car_load_img1.jpg">
+                <input class="input xsz_file" type="file" value="" style="display: none;">
+                <input type="hidden" name="idcard_yq_img" id="idcard_yq_img" value=""/>
+                <div class="load_text_show">右前侧视图</div>
+            </li>
+            <li class="load_li upload_area">
+                <img class="lazy used_img xsz_img" width="100%" height="100%" src="../../img/lazy.png" data-src="../../img/car_load_img2.jpg">
+                <input class="input xsz_file" type="file" value="" style="display: none;">
+                <input type="hidden" name="idcard_zq_img" id="idcard_zq_img" value=""/>
+                <div class="load_text_show">右前侧视图</div>
+            </li>
+            <li class="load_li upload_area">
+                <img class="lazy used_img xsz_img" width="100%" height="100%" src="../../img/lazy.png" data-src="../../img/car_load_img3.jpg">
+                <input class="input xsz_file" type="file" value="" style="display: none;">
+                <input type="hidden" name="idcard_zh_img" id="idcard_zh_img" value=""/>
+                <div class="load_text_show">右前侧视图</div>
+            </li>
+            <li class="load_li upload_area">
+                <img class="lazy used_img xsz_img" width="100%" height="100%" src="../../img/lazy.png" data-src="../../img/car_load_img4.jpg">
+                <input class="input xsz_file" type="file" value="" style="display: none;">
+                <input type="hidden" name="idcard_yh_img" id="idcard_yh_img" value=""/>
+                <div class="load_text_show">右前侧视图</div>
+            </li>
+            <li class="load_li upload_area">
+                <img class="lazy used_img xsz_img" width="100%" height="100%" src="../../img/lazy.png" data-src="../../img/car_load_img5.jpg">
+                <input class="input xsz_file" type="file" value="" style="display: none;">
+                <input type="hidden" name="idcard_ch_img" id="idcard_ch_img" value=""/>
+                <div class="load_text_show">右前侧视图</div>
+            </li>
+        </ul>
+    </article>
+</section>
+    <div class="sumbit_infor_btn sendBtn">提交补充信息</div>
+</section>
+<section class="prompt_text_box">
+    <h2 class="title">温馨提示</h2>
+    <article class="text_infor_box">
+        <div class="text_box">
+            1.拍照时在前后车身45度角，距离车辆2米左右的位置对车辆进行整体拍摄，连带车辆前后牌照拍摄4张（左前角、左后角、后前角、右后角），同时拍摄车架号；
+        </div>
+        <div class="text_box">
+            2.拍摄照片要求：<br>
+            a.在光线充足的环境下拍摄;<br>
+            b.不得遮挡整体车身（包括车牌号）;<br>
+            c.照片能反应车辆整体情况、车辆受损部位和程度的情况、车辆特殊设备的情况、验车日期（验车码);<br>
+            d.照片要清晰、完整;<br>
+            e.验车照片仅限当天使用，隔日登录系统会自动清空之前拍摄过的照片;
+        </div>
+    </article>
+</section>
+</body>
+<script>
+    console.log(verify);
+    /*$(function(){
+        //上传照片
+        $(".upload_area").each(function(){
+            var xsz_upload = $(this).find(".xsz_upload");
+            var xsz_file = $(this).find(".xsz_file");
+            var xsz_img = $(this).find(".xsz_img");
+            var input_img = $(this).find("input[type=hidden]");
+            xsz_upload.on("click",function(){
+                xsz_file.trigger("click");
+            });
+            var insure_img_upload;
+            var MODULE_COROLLER_METHOD = "{:U('Wap/User/upload_idcard')}";
+            xsz_file.on("change", function() {
+                insure_img_upload = new mui.PicUpload({"MODULE_COROLLER_METHOD":MODULE_COROLLER_METHOD, "FILE_ID":xsz_file, "IMG_ID":xsz_img,
+                    'callback':function(data){
+                        var data_res = data;
+                        if(data_res.status) {
+                            input_img.val(data.msg);
+                        } else {
+                            mui.toast(data_res.msg);
+                        }
+                        loadClose();
+                    }
+                });
+            });
+        });
+    });
+    function check_upload_form(){
+        var validate_msg;
+        if($("#idcard_yq_img").val() == ""){
+            validate_msg = "请上传右前侧视图";
+        }else if($("#idcard_zq_img").val() == ""){
+            validate_msg = "请上传左前侧视图";
+        }else if($("#idcard_zh_img").val() == ""){
+            validate_msg = '请上传左后侧视图';
+        }else if($("#idcard_yh_img").val() == ""){
+            validate_msg = '请上传右后侧视图';
+        }else if($("#idcard_ch_img").val() == ""){
+            validate_msg = '请上传车辆车架号';
+        }
+        if(validate_msg==''){
+            return true;
+        }else{
+            mui.toast(validate_msg);
+            return false;
+        }
+    }*/
+</script>
+</html>

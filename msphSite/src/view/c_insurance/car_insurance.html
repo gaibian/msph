@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <title>车险</title>
+    @@include('../common/layout.html')
+</head>
+<body>
+<!--轮播模块-->
+<main class="main">
+    <section id="page_content">
+<section class="carousel_box">
+    @@include('../common/top_carousel.html')
+</section>
+@@include('../common/car_query.html')
+
+@@include('../common/plate_number.html')
+<section class="partner_box">
+    <div class="content_title_box">
+        <div class="tit_box">
+            <i class="head_icon_bg"></i>
+            <div class="title">合作伙伴</div>
+            <span class="see_more" style="display:none">查看全部
+                <i class="icon mui-icon mui-icon-arrowright"></i>
+            </span>
+        </div>
+    </div>
+    <div class="scroll_box">
+    <div class="company_move_box mui-scroll-wrapper">
+        <ul class="mui-scroll">
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+            <li>
+                <div class="img"><img src="../../img/company_logo.jpg"></div>
+                <div class="text">民生银行</div>
+            </li>
+        </ul>
+    </div>
+    </div>
+</section></section>
+    <section class="company_befire_box">
+        <div class="left_img">
+        </div>
+        <div class="right_img">
+        </div>
+    </section>
+</main>
+<!--弹出订单模块-->
+<section class="car_order_popup_box">
+
+    <section class="car_order_popup">
+        <div class="close_btn"></div>
+        <div class="pos_img"><img width="100%" height="100%" src="../../img/insurance_order_r_img.png"></div>
+        <header class="top_content"><img width="100%" height="100%" src="../../img/insurance_order_top_img.jpg"></header>
+        <div class="order_table_box">
+            <div class="order_list_box">
+                <p class="name">订单号</p>
+                <div class="order_val">1050806055</div>
+            </div>
+            <div class="order_list_box">
+                <p class="name">车主</p>
+                <div class="order_val">周杰伦</div>
+            </div>
+            <div class="order_list_box">
+                <p class="name">车牌号</p>
+                <div class="order_val">浙BJ5804</div>
+            </div>
+            <div class="order_list_box">
+                <p class="name">联系方式</p>
+                <div class="order_val">155584444101</div>
+            </div>
+            <div class="order_list_box">
+                <p class="name">保费合计</p>
+                <div class="order_val">￥3500</div>
+            </div>
+            <div class="order_list_box">
+                <p class="name">保单截止日期</p>
+                <div class="order_val">2017-10-20</div>
+            </div>
+            <div class="order_aplay_btn">立即支付</div>
+        </div>
+    </section>
+    <div class="mask_box"></div>
+</section>
+@@include('../common/bottom_nav.html',{
+"car":"active"
+})
+
+
+
+</body>
+</html>

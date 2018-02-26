@@ -1,0 +1,68 @@
+
+body{
+  font-size:0.28rem;
+  overflow-x: hidden;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+*{
+  margin:0;
+  padding:0;
+}
+em{
+  font-style:normal;
+}
+ul li{
+  list-style:none
+}
+img{
+  border:0;
+  outline: none;
+}
+img[src=""],img:not([src]){
+  opacity:0;
+}
+h1,h2,h3,h4,h5{
+  font-weight:normal;
+}
+input,button,textarea{
+  background:none;
+  border:0;
+  outline: none;
+  -webkit-appearance:none;
+}
+a{
+  text-decoration: none;
+}
+i{
+  font-style:normal;
+}
+/*自定义样式*/
+.text_hidden{  //单行字体超出宽度省略号...
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.box_position{  //元素水平和垂直居中于父元素
+  position: absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+.box_vertical_position{  //元素只垂直居中于父元素
+  position: absolute;
+  top:50%;
+  -webkit-transform: translate(0,-50%);
+  -moz-transform: translate(0,-50%);
+  -ms-transform: translate(0,-50%);
+  -o-transform: translate(0,-50%);
+  transform: translate(0,-50%);
+}
+.w_box{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex
+}

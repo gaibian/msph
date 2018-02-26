@@ -1,0 +1,1 @@
+require('../../../css/page/user/add_bank.less');

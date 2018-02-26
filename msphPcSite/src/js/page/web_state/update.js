@@ -1,0 +1,1 @@
+require('../../../css/page/web_state/update.less');

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <title>使用红包</title>
+    <script type="text/javascript" src="http://cdn.msphcn.com/dist/bin/rem.js"></script>
+<link href="http://cdn.msphcn.com/dist/bin/mui.min.css" rel="stylesheet">
+<link href="http://cdn.msphcn.com/dist/bin/mui.picker.css" rel="stylesheet">
+<link href="http://cdn.msphcn.com/dist/bin/mui.poppicker.css" rel="stylesheet">
+<script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.pullToRefresh.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/mui.picker.min.js"></script>
+<script src="http://cdn.msphcn.com/dist/bin/city.data.js"></script>
+
+<link rel="shortcut icon" href="/msphStatic/users_ico.ico"><link href="/msphStatic/css/user\use_red_envelopes.css?559f99711b7ec3bf416f" rel="stylesheet"></head>
+<body>
+<header class="page_header_title">
+    <a class="page_return_btn"><i></i></a>
+    <h1 class="page_title">使用红包</h1>
+    <a class='page_right_box'>确定</a>
+</header>
+<main class="page_content">
+    <div class="envelopes_list_box" data-type="default">
+        <div class="spot top"></div>
+        <div class="spot bottom"></div>
+        <div class="line"></div>
+        <div class="top_content_box">
+            <div class="img_box">
+                <img width="100%" height="100%" src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QMqaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjUtYzAxNCA3OS4xNTE0ODEsIDIwMTMvMDMvMTMtMTI6MDk6MTUgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0UwQTUyMzRGMUREMTFFN0E4ODNCQ0M4OTZEODhFNzYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0UwQTUyMzVGMUREMTFFN0E4ODNCQ0M4OTZEODhFNzYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3RTBBNTIzMkYxREQxMUU3QTg4M0JDQzg5NkQ4OEU3NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3RTBBNTIzM0YxREQxMUU3QTg4M0JDQzg5NkQ4OEU3NiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAYEBAQFBAYFBQYJBgUGCQsIBgYI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">
+            </div>
+            <div class="price_content_box">
+                <div class="price_box">
+                    <div class="price_num"><span>￥</span>50</div>
+                    <div class="type_box">车险红包</div>
+                </div>
+                <p class="time">截止日期：2018-12-31</p>
+            </div>
+            <div class="right_num_box">
+                <div class="pos">
+                    <div class="add_num">
+                        <div class="reduce">-</div>
+                        <div class="num_val" data-num="10">
+                            <input class="input" type="number" data-num="0">
+                        </div>
+                        <div class="add">+</div>
+                    </div>
+                    <p class="text">目前拥有<span>8</span>个</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_content_box">
+            *本活动最终解释权归民商普惠金融商城所有
+        </div>
+    </div>
+    <div class="envelopes_list_box" data-type="not_default">
+        <div class="spot top"></div>
+        <div class="spot bottom"></div>
+        <div class="line"></div>
+        <div class="top_content_box">
+            <div class="img_box">
+                <img width="100%" height="100%" src="data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QMqaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjUtYzAxNCA3OS4xNTE0ODEsIDIwMTMvMDMvMTMtMTI6MDk6MTUgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6N0UwQTUyMzRGMUREMTFFN0E4ODNCQ0M4OTZEODhFNzYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6N0UwQTUyMzVGMUREMTFFN0E4ODNCQ0M4OTZEODhFNzYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3RTBBNTIzMkYxREQxMUU3QTg4M0JDQzg5NkQ4OEU3NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3RTBBNTIzM0YxREQxMUU3QTg4M0JDQzg5NkQ4OEU3NiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAYEBAQFBAYFBQYJBgUGCQsIBgYI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">
+            </div>
+            <div class="price_content_box">
+                <div class="price_box">
+                    <div class="price_num"><span>￥</span>1000</div>
+                    <div class="type_box">车险红包</div>
+                </div>
+                <p class="time">截止日期：2018-12-31</p>
+            </div>
+            <div class="right_num_box">
+                <div class="pos">
+                    <div class="add_num">
+                        <div class="reduce">-</div>
+                        <div class="num_val" data-num="10">
+                            <input class="input" type="number" data-num="0">
+                        </div>
+                        <div class="add">+</div>
+                    </div>
+                    <p class="text">目前拥有<span>8</span>个</p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom_content_box">
+            *本活动最终解释权归民商普惠金融商城所有
+        </div>
+    </div>
+</main>
+<div class="infor_box">
+    <p class="title"><span>宁波</span>地区 商业险部分</p>
+    <p class="price_num_box">每满<span>￥500</span>，可使用<span>￥50</span>红包</p>
+    <p class="price_num_box">本次最多可使用红包金额:<span class="max_enve_num">￥1500</span>，当前拥有红包金额:<span class="all_enve_num">￥500</span></p>
+</div>
+<div class="bottom_btn">
+    <p class="btn_note_text">红包数量不够?</p>
+    <a class="share_btn">分享好友</a>
+</div>
+<!--!弹窗提醒-->
+<section class="remind_popup">超过已有该红包数量</section>
+<script type="text/javascript" src="/msphStatic/js/user\use_red_envelopes.js?559f99711b7ec3bf416f"></script></body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $(function(){
+      var ids = '{$red_packet_id_list}';
+      var ids = {"not_default":["4"],"default":["5","6","8","9"]};
+
+      $("#sumbit").on('click',function(){
+        var defaultArr = [];
+        var notDefaultArr = [];
+        $('.envelopes_list_box').each(function(){
+          "use strict";
+          var $this = $(this);
+          var attr = $this.attr('data-type');
+          if(attr == 'default'){
+            var inputVal = $this.find('.input').val();
+            for(var i =0;i<inputVal;i++){
+              defaultArr.push(ids.default[i]);
+            }
+          }else if(attr == 'not_default'){
+            var inputVal = $this.find('.input').val();
+            for(var i =0;i<inputVal;i++){
+              notDefaultArr.push(ids.not_default[i]);
+            }
+          }
+        });
+        var arr = defaultArr.concat(notDefaultArr);
+        var newAds = arr.join(",");
+        location.href = '{:U("fourth_step_pay_select",array("tid"=>$_GET["tid"]))}'+'&red_packet_id='+newAds;
+      });
+    })
+
+</script>
+</html>

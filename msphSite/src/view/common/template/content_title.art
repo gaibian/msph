@@ -1,0 +1,9 @@
+<div class="content_title_box">
+<div class="tit_box">
+<i class="head_icon_bg"></i>
+{{title}}
+<span class="see_more" style="display:{{dataMore}}">查看全部
+<i class="icon mui-icon mui-icon-arrowright"></i>
+</span>
+</div>
+</div>

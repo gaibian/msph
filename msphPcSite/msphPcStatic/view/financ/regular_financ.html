@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定期理财</title>
+    <script src="http://cdn.msphcn.com/msphStatic/bin/jquery-2.1.3.min.js"></script>
+<link rel="shortcut icon" href="http://cdn.upingou.com/msphPcStatic/users_ico.ico"><link href="http://cdn.upingou.com/msphPcStatic/css/financ\regular_financ.css?6a55efac0936d3a675d9" rel="stylesheet"></head>
+<body>
+
+<div class="page_top_nav_box">
+    <div class="top_nav_content">
+        <div class="top_left_content"><i class="index_bg"></i>新华网首页</div>
+        <div class="top_right_content">
+            <span class="wel_text">您好,欢迎来到民商普惠金融商城!</span>
+            <a class="login_btn">登录</a>
+            <a class="register_btn">注册</a>
+            <div class="contact_custom hover_box" data-class="active">
+                <div class="custom hover_btn">
+                    <i class="phone_bg"></i>联系客服<i class="up_down"></i>
+                </div>
+                <div class="contact_popup hover_popup">
+                    <p class="tel">客服热线：<span>400-880-2068</span></p>
+                    <p class="time">周一至周五：9:00-17:30</p>
+                    <div class="qq_bg"></div>
+                </div>
+            </div>
+            <a class="help_center">帮助中心</a>
+            <div class="wx hover_box">
+                <div class="hover_btn wx_bg"></div>
+                <div class="wx_popup hover_popup">
+                    <img width="100%" height="100%" src="http://cdn.upingou.com/msphPcStatic/img/1502265ee43454ecc6c8867216e349b9.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="page_nav_box">
+    <div class="nav_box">
+        <div class="img_box">
+            <img width="100%" height="100%" src="http://cdn.upingou.com/msphPcStatic/img/2c3ada2d0c235ced38e65f4cba7a183f.jpg">
+        </div>
+        <div class="account_btn hover_box">
+            <div class="account hover_btn">
+                <i class="preson_bg"></i>我的账户<i class="up_down_bg"></i>
+            </div>
+            <div class="account_popup hover_popup">
+                <div class="no_login">
+                    <div class="pad_box">
+                        <div class="header_box">
+                            <div class="img_box">
+                                <img width="100%" height="100%" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6NzBBMzdDODRFNkVEMTFFNzg4MUJDMEU4NzI2MUYxQTIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6NzBBMzdDODVFNkVEMTFFNzg4MUJDMEU4NzI2MUYxQTIiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo3MEEzN0M4MkU2RUQxMUU3ODgxQkMwRTg3MjYxRjFBMiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo3MEEzN0M4M0U2RUQxMUU3ODgxQkMwRTg3MjYxRjFBMiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PkINFCYAAAVWSURBVHjaxFo9UFtHEF49gf7RDxIS/7/GYDwee5ikcJVxkqHIDFWGYE8KT7q4iSu3LuLSTdLESZPxMJM/Z9IkVZgk7pIiTuLKDnEAGQzGkkBCEgIEiOw+HbYivwd3905iZ75Gene7393t3e7e2X78+VdQJF2IC4hXEEOIXkQE4UXYEHlEChFHzCDuIe4iFlUob7DYvhtxGXERMXLEt80MJxFjFb8/QHyNmEI8ljVEk2x3FnEHMY/4kIPEYTLC+phjfZ6tB5Eo4jbiL8SEhYEws2WC9X2b6aoJkQm2ti+zNV8rsTEdM0ynMiIOxCds2oNQPwkynbeYDZac3Yf4rso5DxWX0wEBvxf8TV5wuRzgaGwEm80Ge3t7UNjchrV0FpKrGRFC7yP6EW+znU+YiAcxjTjPo83haITujhiEm/2G/9vtmv5NMOCDlkgQ/p17AsWdXV4yY8yWNxEFESI0lT/wkggFm+BEXydoGp/rNPk8cO7MIGRzBUik0voscQjZ8j3iLUSR10c+QrzO0zstoZMDXdwknns0LjdagoP9ndDT1crb7A3Ex7zOPom4wmvM0Iluy17dGm2GtlhYxGcuHkWkHfEpb48dbS3CM2EaInTGoLGBO9C4xWw1JXKTd4ul2RAYRS6JRUMiW/NNMyKjiEu8PXk9LmWzUblpCMglZvNLRK6LnNget0v5Ceh0OPSZFogArlcToZB7XEips1E5ETprnA6hfsnmvkoi74oGgJqmQS2kocEuGiu+V01ESPZL+7WJGG3Cfjd5QIQyu1OirYu7uzUhQjGZoFCi1q/xnuDVsrW1rZzE/v4+bBd3ZJpe0FiOLSy5fEFXrFI2Cls4IyWZpuc0NjXiTmm3g2IeYMcNRMJHSIaIyIBMSwr0VB+IbrdTj7skRPeRFqnDy+moibNLnk9BIuKXWs8bmzUhkssVZJo1SZ9qlBCplhI63VomJ12Cyco0zOOMPF5cUUaC0t6HM3HZnTBPRJKyylcSa5BezykhsriU0AdHUtJEZNaKASvPVtUsqfS6lS7miMg/VnqgAkJq1ZIR8Gh2EUrWYrcZInLP6ojOxpf0k15GniwnIbOet2rCfSLyi4o1/gAdNZPlN4icmvxi6WlShfq7RITuJx6q6G12fok/6NwuwvJKSoXaRwc+QvKFmgzPDscg31QmVkSkZLVHm63uJMjmzyuJxKFcIq2b2NSwJpvnq6soN8gHrfQqUGDTq/RW8zAo33S9VA76A/GVlZ67OvgvmSgF6O1us6KObP3TiAjJNURGtEe3ywnDgz16lV1EYi0hGOht168bBCXDbH2R6FV9sAzlAjbXzJDh0UgIIuGA9LBGwkEINwcgmcpAam2d92C9wmw1JUJCV8WvQbnqbZjFhUN+XblLUXJFjh/F2SHQ+bK6ltXvTAqbW0aff8ZshKOIkFxlufzzCgvVZSkNpfuQWgoNTkdbREc2twGJZBpWX1wEURTygWENwSw9gHI58ifs+HxPdysE/b66HxI0aIQIxmLxhae/bRd3xsHgtsrI2Sul4PW4x86MDEwfB4n/JeQB3zTaMeZxOwuHZYjG+zzuJKeHe/O4TY6zdXlcQrrH7XYtf3q4Ty8ZCRGhuz12+haZ478jszVbENI1yXQXy2ePBn097fxEaFv1ed3VP38L5Vc/U1YjAI4Te4rpulP9p9n1tyGR5pBphSgB5ecVo4xYSSGBEutzlOlIGH5kkkka7lqhwJHOfZ8ttYNnTnQNdkqSwN+IL4HzmZNZdbPBLB7nLCYvsGDzBiNFD89eZWdQL5Qfnh2MSuXDM6oT/A7lh2cLIqz3SsZ2/SfAAEuNVyiZuvtqAAAAAElFTkSuQmCC">
+                            </div>
+                            <div class="name_right_box">
+                                <div class="name_box">
+                                    <p class="name">尊敬的用户</p>
+                                    <p class="note_text">欢迎来到民商普惠</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--没用登录-->
+                    <p class="no_login_box">
+                        请您先<a>登录</a> <a>注册</a>
+                    </p>
+                    <!--已经登录-->
+                    <ul class="nav_list_box">
+                        <li>个人中心</li>
+                        <li>我的车险</li>
+                        <li>活期理财</li>
+                        <li>定期理财</li>
+                        <li>我的贷款</li>
+                        <li>保险产品</li>
+                        <li>账户卡包</li>
+                        <li>个人设置</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nav_content">
+            <a href="../index/index.html" class="nav_tit ">首页</a>
+            <a href="../car_insurance/index.html" class="nav_tit ">车险</a>
+            <a href="../insurance/leading.html" class="nav_tit ">保险</a>
+            <a href="../credit_card/index.html" class="nav_tit ">信用卡</a>
+            <a href="../loan/index.html" class="nav_tit ">贷款</a>
+            <a href="../financ/live_financ.html" class="nav_tit ">活期理财</a>
+            <a href="../financ/regular_financ.html" class="nav_tit active">定期理财</a>
+        </div>
+    </div>
+</div>
+<div class="page_top_banner">
+    <img width="100%" height="100%" src="http://cdn.upingou.com/msphPcStatic/img/672d1812b3f14e41cc5f369940a91a57.jpg">
+    <div class="banner_carousel_box">
+        <div class="top_bg_status"></div>
+        <div class="carousel_container">
+            <div class="carousel_content_box">
+                <h2 class="title">如意宝 | 民生加银基金1</h2>
+                <div class="ul_content_box">
+                    <div class="float">
+                        <span class="num">4.70%</span>
+                        <span class="text">预计七日年化</span>
+                    </div>
+                    <div class="float">
+                        <span class="num">500<em>天</em></span>
+                        <span class="text">投资期限</span>
+                    </div>
+                    <div class="float">
+                        <span class="num">20<em>元</em></span>
+                        <span class="text">起投金额</span>
+                    </div>
+                    <div class="float">
+                        <button class="buy_btn">立即购买</button>
+                        <p class="btn_note_text"><span>266人</span>查看</p>
+                    </div>
+                </div>
+                <p class="note_text">预期收益不承诺等于实际收益</p>
+            </div>
+            <div class="carousel_content_box">
+                <h2 class="title">如意宝 | 民生加银基金2</h2>
+                <div class="ul_content_box">
+                    <div class="float">
+                        <span class="num">4.70%</span>
+                        <span class="text">预计七日年化</span>
+                    </div>
+                    <div class="float">
+                        <span class="num">5<em>天</em></span>
+                        <span class="text">投资期限</span>
+                    </div>
+                    <div class="float">
+                        <span class="num">0<em>元</em></span>
+                        <span class="text">起投金额</span>
+                    </div>
+                    <div class="float">
+                        <button class="buy_btn">立即购买</button>
+                        <p class="btn_note_text"><span>266人</span>查看</p>
+                    </div>
+                </div>
+                <p class="note_text">预期收益不承诺等于实际收益</p>
+            </div>
+            <div class="carousel_content_box">
+                <h2 class="title">如意宝 | 民生加银基金3</h2>
+                <div class="ul_content_box">
+                    <div class="float">
+                        <span class="num">4.70%</span>
+                        <span class="text">预计七日年化</span>
+                    </div>
+                    <div class="float">
+                        <span class="num">5<em>天</em></span>
+                        <span class="text">投资期限</span>
+                    </div>
+                    <div class="float">
+                        <span class="num">0<em>元</em></span>
+                        <span class="text">起投金额</span>
+                    </div>
+                    <div class="float">
+                        <button class="buy_btn">立即购买</button>
+                        <p class="btn_note_text"><span>266人</span>查看</p>
+                    </div>
+                </div>
+                <p class="note_text">预期收益不承诺等于实际收益</p>
+            </div>
+            <div class="carousel_content_box">
+                <h2 class="title">如意宝 | 民生加银基金4</h2>
+                <div class="ul_content_box">
+                    <div class="float">
+                        <span class="num">4.70%</span>
+                        <span class="text">预计七日年化</span>
+                    </div>
+                    <div class="float">
+                        <span class="num">5<em>天</em></span>
+                        <span class="text">投资期限</span>
+                    </div>
+                    <div class="float">
+                        <span class="num">0<em>元</em></span>
+                        <span class="text">起投金额</span>
+                    </div>
+                    <div class="float">
+                        <button class="buy_btn">立即购买</button>
+                        <p class="btn_note_text"><span>266人</span>查看</p>
+                    </div>
+                </div>
+                <p class="note_text">预期收益不承诺等于实际收益</p>
+            </div>
+        </div>
+        <div class="indicator"></div>
+    </div>
+</div>
+<!--筛选列表-->
+<div class="screen_list_box">
+    <ul class="list_box">
+        <li class="list">
+            <label class="tit">产品来源:</label>
+            <div class="list_content">
+                <span class="active">全部</span>
+                <span>中民i投</span>
+                <span>陆金所</span>
+                <span>民生直销银行</span>
+                <span>平安银行</span>
+            </div>
+        </li>
+        <li class="list">
+            <label class="tit">起投金额:</label>
+            <div class="list_content">
+                <span class="active">全部</span>
+                <span>1万元以下</span>
+                <span>1万-5万元</span>
+                <span>5万-10万元</span>
+                <span>10万元以上</span>
+            </div>
+        </li>
+        <li class="list">
+            <label class="tit">投资期限:</label>
+            <div class="list_content">
+                <span class="active">全部</span>
+                <span>30天以下</span>
+                <span>30天-90天</span>
+                <span>90天-180天</span>
+                <span>180天以上</span>
+            </div>
+        </li>
+        <li class="list">
+            <label class="tit">投资利率:</label>
+            <div class="list_content">
+                <span class="active">全部</span>
+                <span>5%以下</span>
+                <span>5%-7%</span>
+                <span>7%-8%</span>
+                <span>8%以上</span>
+            </div>
+        </li>
+        <li class="list">
+            <label class="tit">排序方式:</label>
+            <div class="list_content">
+                <span class="active">全部</span>
+                <span>期限</span>
+                <span>收益</span>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--筛选内容列表-->
+<div class="screen_content_box">
+    <div class="header_box">
+        <div class="title_label">产品名称</div>
+        <div class="title_label act">
+            <div class="title">
+                投资期限
+                <div class="btn">
+                    <span class="up_btn"></span>
+                    <span class="down_btn active"></span>
+                </div>
+            </div>
+        </div>
+        <div class="title_label">
+            <div class="title">
+                起投金额
+                <div class="btn">
+                    <span class="up_btn"></span>
+                    <span class="down_btn active"></span>
+                </div>
+            </div>
+        </div>
+        <div class="title_label">
+            <div class="title">
+                预计七日年化
+                <div class="btn">
+                    <span class="up_btn"></span>
+                    <span class="down_btn active"></span>
+                </div>
+            </div>
+        </div>
+        <div class="title_label">操作</div>
+    </div>
+    <div class="content_list_container">
+        <div class="content_list">
+            <div class="bg_box">
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title tit">现金宝</h2>
+                        <p class="note_text">陆金所</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">30天</h2>
+                        <p class="note_text">投资期限</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">10000元</h2>
+                        <p class="note_text">起投金额</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title num">4.27%-4.58%</h2>
+                        <p class="note_text">七日年化</p>
+                    </div>
+                </div>
+                <button class="buy_btn label_btn">立刻购买</button>
+            </div>
+        </div>
+        <div class="content_list">
+            <div class="bg_box">
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title tit">融通宝·禧业17A204期</h2>
+                        <p class="note_text">中民i投</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">30天</h2>
+                        <p class="note_text">投资期限</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">10000元</h2>
+                        <p class="note_text">起投金额</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title num">5%</h2>
+                        <p class="note_text">七日年化</p>
+                    </div>
+                </div>
+                <button class="buy_btn label_btn sold_out">已售罄</button>
+            </div>
+        </div>
+        <div class="content_list">
+            <div class="bg_box">
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title tit">财富汇-12M928G号</h2>
+                        <p class="note_text">陆金所</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">363天</h2>
+                        <p class="note_text">投资期限</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">1000000元</h2>
+                        <p class="note_text">起投金额</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title num">4.58%</h2>
+                        <p class="note_text">预期年化收益</p>
+                    </div>
+                </div>
+                <button class="buy_btn label_btn">立刻购买</button>
+            </div>
+        </div>
+        <div class="content_list">
+            <div class="bg_box">
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title tit">财富汇-12M928G号</h2>
+                        <p class="note_text">陆金所</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">363天</h2>
+                        <p class="note_text">投资期限</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">1000000元</h2>
+                        <p class="note_text">起投金额</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title num">4.58%</h2>
+                        <p class="note_text">预期年化收益</p>
+                    </div>
+                </div>
+                <button class="buy_btn label_btn">立刻购买</button>
+            </div>
+        </div>
+        <div class="content_list">
+            <div class="bg_box">
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title tit">财富汇-12M928G号</h2>
+                        <p class="note_text">陆金所</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">363天</h2>
+                        <p class="note_text">投资期限</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">1000000元</h2>
+                        <p class="note_text">起投金额</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title num">4.58%</h2>
+                        <p class="note_text">预期年化收益</p>
+                    </div>
+                </div>
+                <button class="buy_btn label_btn">立刻购买</button>
+            </div>
+        </div>
+        <div class="content_list">
+            <div class="bg_box">
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title tit">财富汇-12M928G号</h2>
+                        <p class="note_text">陆金所</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">363天</h2>
+                        <p class="note_text">投资期限</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">1000000元</h2>
+                        <p class="note_text">起投金额</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title num">4.58%</h2>
+                        <p class="note_text">预期年化收益</p>
+                    </div>
+                </div>
+                <button class="buy_btn label_btn">立刻购买</button>
+            </div>
+        </div>
+        <div class="content_list">
+            <div class="bg_box">
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title tit">财富汇-12M928G号</h2>
+                        <p class="note_text">陆金所</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">363天</h2>
+                        <p class="note_text">投资期限</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">1000000元</h2>
+                        <p class="note_text">起投金额</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title num">4.58%</h2>
+                        <p class="note_text">预期年化收益</p>
+                    </div>
+                </div>
+                <button class="buy_btn label_btn">立刻购买</button>
+            </div>
+        </div>
+        <div class="content_list">
+            <div class="bg_box">
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title tit">财富汇-12M928G号</h2>
+                        <p class="note_text">陆金所</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">363天</h2>
+                        <p class="note_text">投资期限</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">1000000元</h2>
+                        <p class="note_text">起投金额</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title num">4.58%</h2>
+                        <p class="note_text">预期年化收益</p>
+                    </div>
+                </div>
+                <button class="buy_btn label_btn">立刻购买</button>
+            </div>
+        </div>
+        <div class="content_list">
+            <div class="bg_box">
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title tit">财富汇-12M928G号</h2>
+                        <p class="note_text">陆金所</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">363天</h2>
+                        <p class="note_text">投资期限</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">1000000元</h2>
+                        <p class="note_text">起投金额</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title num">4.58%</h2>
+                        <p class="note_text">预期年化收益</p>
+                    </div>
+                </div>
+                <button class="buy_btn label_btn">立刻购买</button>
+            </div>
+        </div>
+        <div class="content_list">
+            <div class="bg_box">
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title tit">财富汇-12M928G号</h2>
+                        <p class="note_text">陆金所</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">363天</h2>
+                        <p class="note_text">投资期限</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title">1000000元</h2>
+                        <p class="note_text">起投金额</p>
+                    </div>
+                </div>
+                <div class="label_box">
+                    <div class="pos">
+                        <h2 class="title num">4.58%</h2>
+                        <p class="note_text">预期年化收益</p>
+                    </div>
+                </div>
+                <button class="buy_btn label_btn">立刻购买</button>
+            </div>
+        </div>
+    </div>
+    <div class="paging_box">
+    <div class="result_num_box">共<span>202</span>个结果</div>
+    <div class="a_paging_box">
+        <a class="a_btn"><span><</span>上一页</a>
+        <a>1</a>
+        <a>2</a>
+        <a class="active">3</a>
+        <a>4</a>
+        <a>...</a>
+        <a>20</a>
+        <a class="a_btn">下一页<span>></span></a>
+    </div>
+</div>
+</div>
+<!--底部内容-->
+<div class="footer_nav_box" style=background:#fff >
+    <div class="footer_nav_content">
+        <div class="pos">
+            <ul class="a_box">
+                <li><a href="">关于我们</a></li>
+                <li>|</li>
+                <li><a href="">帮助中心</a></li>
+                <li>|</li>
+                <li><a href="">联系我们</a></li>
+                <li>|</li>
+                <li><a href="">市场合作</a></li>
+                <li>|</li>
+                <li><a href="">投诉与建议</a></li>
+            </ul>
+            <p class="record_text">Copyright © 2017 xinhuanet.com Inc. All Rights Reserved. 浙ICP备12000680号-1</p>
+            <p class="page_note_text">新华网-钱江金融商城  版权所有  理财有风险，投资需谨慎</p>
+        </div>
+    </div>
+</div>;
+<script type="text/javascript" src="http://cdn.upingou.com/msphPcStatic/js/financ\regular_financ.js?6a55efac0936d3a675d9"></script></body>
+</html>

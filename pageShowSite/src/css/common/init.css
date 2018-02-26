@@ -1,0 +1,74 @@
+@font-color:#333; /*字体主色*/
+@font-fcolor:#999; /*字体副色*/
+@border-color:#e5e5e5;  /*框颜色*/
+@main-color:#248fea; /*网站主色*/
+body{
+    padding-bottom:0.4rem;
+    font-family:"微软雅黑","Microsoft Yahei", Tahoma, Arial, sans-serif;
+}
+*{
+    margin:0;
+    padding:0;
+}
+em{
+    font-style:normal;
+}
+ul li{
+    list-style:none
+}
+h1,h2,h3,h4,h5{
+    font-weight:normal;
+}
+input,button{
+    background:none;
+    border:0;
+    outline: none;
+}
+/*自定义样式*/
+.text_hidden{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.box_position{
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.box_vertical_position{
+    position: absolute;
+    top:50%;
+    -webkit-transform: translate(0,-50%);
+    -moz-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+.shade_box{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    z-index:1;
+    opacity:1;
+    display:block;
+    -webkit-transition: 0.5s;
+    -moz-transition:  0.5s;
+    -ms-transition:  0.5s;
+    -o-transition:  0.5s;
+    transition:  0.5s;
+    background:rgba(0,0,0,0.8);
+}
+.ts{
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}

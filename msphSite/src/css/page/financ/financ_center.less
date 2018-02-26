@@ -1,0 +1,196 @@
+@import "../../common/init.less";
+@import "../../common/template/top_carousel.less";
+@import "../../common/template/content_title.less";
+@import "../../common/template/page_title.less";
+@font-color:#333;
+@border-color:#ccc;
+.text-overflow{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.carousel_box{
+  margin-top:44px;
+}
+/*热门机构*/
+.tit_box{
+  position: relative;
+  width:100%;
+  height:1.08rem;
+  line-height:1.08rem;
+  font-size:0.3rem;
+  padding-left:0.25rem;
+  color:@font-color;
+  .head_icon_bg{
+    position: absolute;
+    left:0px;
+    top:50%;
+    margin-top:-0.15rem;
+    display:inline-block;
+    width:0.1rem;
+    height:0.3rem;
+    background:#248fea;
+    border-radius: 30% 30%;
+  }
+  .see_more{
+    position: absolute;
+    top:0;
+    right:0;
+    font-size:0.22rem;
+    color:#248fea;
+    .icon{
+      font-size:0.28rem;
+    }
+  }
+}
+.hot_outfit_box{
+  width:100%;
+  background:#fff;
+  padding:0 0.3rem;
+  .outfit_content{
+      width:100%;
+      background:#fff;
+    overflow:hidden;
+    padding:0.4rem 0;
+    margin-top:0;
+      li{
+        float:left;
+        list-style: none;
+        width:25%;
+        margin:0;
+        padding:0;
+        text-align:center;
+        .radius_box{
+          width:1rem;
+          height:1rem;
+          border-radius: 50%;
+          overflow:hidden;
+          font-size:0;
+          margin:0 auto;
+        }
+        .node_text{
+          width:100%;
+          line-height:0.6rem;
+          font-size:0.24rem;
+          color:@font-color;
+        }
+      }
+  }
+}
+/*热门理财*/
+.hot_financ_box{
+  width:100%;
+  background:#fff;
+  padding:0 0.3rem;
+}
+.financ_list_box{
+  width:100%;
+  .list_box{
+    width:100%;
+    border-bottom:@border-color 1px solid;
+    padding-bottom:0.32rem;
+    .list_head_box{
+      width:100%;
+      overflow:hidden;
+      padding:0.4rem 0;
+      .list_title{
+        float:left;
+        width:70%;
+        font-size:0.3rem;
+        color:@font-color;
+        .text_hidden();
+        text-align:left;
+      }
+      .img_name_box{
+        float:left;
+        width:30%;
+        text-align:right;
+        overflow:hidden;
+        margin-top:0.07rem;
+        .img{
+          float:right;
+          width:0.24rem;
+          height:0.24rem;
+          font-size:0;
+          border-radius: 50%;
+          margin-right:0.12rem;
+        }
+        .name{
+          float:right;
+          font-size:0.22rem;
+          color:@font-color;
+          height:0.24rem;
+          line-height:0.24rem;
+        }
+      }
+    }
+    .list_content{
+      width:100%;
+      height:1.2rem;
+      overflow:hidden;
+      margin-top:0.32rem;
+      .left_content{
+        float:left;
+        width:50%;
+        height:1.2rem;
+        position: relative;
+        border-right:@border-color 1px solid;
+        .num_box{
+          position: absolute;
+          top:50%;
+          left:0px;
+          line-height:0.35rem;
+          -webkit-transform: translate(0,-50%);
+          -moz-transform: translate(0,-50%);
+          -ms-transform: translate(0,-50%);
+          -o-transform: translate(0,-50%);
+          transform: translate(0,-50%);
+          span{
+            height:0.7rem;
+            line-height:0.7rem;
+            font-size:0.6rem;
+            color:#ff801a;
+            em{
+              font-size:0.22rem;
+            }
+          }
+          i{
+            margin-top:0.12rem;
+            font-size:0.22rem;
+            color:#999999;
+          }
+        }
+      }
+      .right_content{
+        float:left;
+        width:50%;
+        height:1.2rem;
+        line-height:1.2rem;
+        text-align: left;
+        padding-left:0.2rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size:0;
+        .span1{
+          display:inline-block;
+          height:0.28rem;
+          font-size:0.22rem;
+          line-height:0.28rem;
+          padding-right:0.1rem;
+          border-right:#333 1px solid;
+          color:@font-color;
+          font-weight:500;
+        }
+        .span2{
+          font-size:0.22rem;
+          color:#ff801a;
+          padding-left:0.1rem;
+        }
+      }
+    }
+  }
+  .list_box:last-child{
+    border-bottom:none;
+  }
+}

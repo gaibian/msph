@@ -1,0 +1,131 @@
+@import "../../common/template/top_carousel.less";
+@import "../../common/template/page_title.less";
+@import "../../common/template/content_title.less";
+@font-color:#333;
+@border-color:#ccc;
+.carousel_box{
+  margin-top:44px;
+}
+/*热门机构*/
+.tit_box{
+  position: relative;
+  width:100%;
+  height:1.08rem;
+  line-height:1.12rem;
+  font-size:0.3rem;
+  padding-left:0.25rem;
+  color:@font-color;
+  .head_icon_bg{
+    position: absolute;
+    left:0px;
+    top:50%;
+    margin-top:-0.15rem;
+    display:inline-block;
+    width:0.1rem;
+    height:0.3rem;
+    background:#248fea;
+    border-radius: 30% 30%;
+  }
+  .see_more{
+    position: absolute;
+    top:0;
+    right:0;
+    font-size:0.22rem;
+    color:#248fea;
+    .icon{
+      font-size:0.28rem;
+    }
+  }
+}
+.hot_outfit_box{
+  width:100%;
+  background:#fff;
+  padding:0 0.3rem;
+  .outfit_content{
+    width:100%;
+    background:#fff;
+    overflow:hidden;
+    padding:0.4rem 0;
+    margin-top:0;
+    li{
+      float:left;
+      list-style: none;
+      width:20%;
+      margin:0;
+      padding:0;
+      text-align:center;
+      .radius_box{
+        width:1rem;
+        height:1rem;
+        border-radius: 50%;
+        overflow:hidden;
+        font-size:0;
+        margin:0 auto;
+      }
+      .node_text{
+        width:100%;
+        line-height:0.6rem;
+        font-size:0.24rem;
+        color:@font-color;
+      }
+    }
+  }
+}
+/*热门信用卡*/
+.card_list_box{
+  width:100%;
+  padding:0px;
+  margin-top:0;
+  .card_li_box{
+    width:100%;
+    border-bottom:@border-color 1px solid;
+    overflow:hidden;
+    padding:0.4rem 0;
+    .card_img{
+      float:left;
+      width:1.68rem;
+      height:1.06rem;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      border-radius: 6px;
+      overflow:hidden;
+      font-size:0;
+    }
+    .card_text{
+      float:left;
+      width:3rem;
+      margin-left:0.2rem;
+      .tit{
+        font-size:0.28rem;
+        color:@font-color;
+        line-height:0.35rem;
+        margin:0.03rem 0;
+      }
+      .note_text{
+        font-size:0.22rem;
+        color:#999999;
+        line-height:0.32rem;
+        margin-top:0.14rem;
+      }
+    }
+    .apply_btn{
+      float:right;
+      width:1.4rem;
+      height:0.6rem;
+      line-height:0.6rem;
+      text-align: center;
+      font-size:0.22rem;
+      color:#fff;
+      margin-top:0.23rem;
+      -webkit-border-radius: 0.7rem/0.3rem;
+      -moz-border-radius: 0.7rem/0.3rem;
+      border-radius: 0.7rem/0.3rem;
+      background-image:-webkit-linear-gradient(to left,#238fea ,#2caffa);
+      background-image:-moz-linear-gradient(to left,#238fea ,#2caffa);
+      background-image:linear-gradient(to left,#238fea ,#2caffa);
+    }
+  }
+  .card_li_box:last-child{
+    border-bottom:none
+  }
+}

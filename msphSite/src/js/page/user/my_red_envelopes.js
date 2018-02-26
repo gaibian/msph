@@ -1,0 +1,1 @@
+require('../../../css/page/user/my_red_envelopes.less');

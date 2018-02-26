@@ -1,0 +1,1 @@
+require('../../../css/page/user/news_center.less');

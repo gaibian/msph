@@ -1,0 +1,1 @@
+require('../../../css/page/special_page/new_year.less');

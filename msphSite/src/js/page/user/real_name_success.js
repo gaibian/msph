@@ -1,0 +1,1 @@
+require('../../../css/page/user/real_name_success.less');

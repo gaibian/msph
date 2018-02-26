@@ -1,0 +1,295 @@
+@import "../../common/init.less";
+@import "../../common/template/page_title.less";
+@import "../../common/template/footer_nav.less";
+body{
+  background:#f6f6f6;
+  padding-bottom:1.2rem;
+}
+.page{
+  width:100%;
+  max-width: 7.5rem;
+  overflow:hidden;
+  margin:0 auto;
+}
+.page_content{
+  width:100%;
+  margin-top:44px;
+  /*您还没有*/
+  .collect_none_box{
+    position: relative;
+    width:100%;
+    height:4.56rem;
+    background:#f6f6f6;
+    .pos{
+      .box_position();
+      .img_box{
+        width:0.84rem;
+        height:0.97rem;
+        font-size:0;
+        margin:0 auto;
+      }
+      .img_note_text{
+        width:100%;
+        text-align: center;
+        font-size:0.28rem;
+        color:#999999;
+        margin-top:0.2rem;
+      }
+    }
+  }
+  /*有收藏*/
+  .collect_content_box{
+    width:100%;
+    background:#fff;
+    .collect_list{
+      width:100%;
+      border-bottom:#e5e5e5 1px solid;
+      .time{
+        width:100%;
+        height:0.76rem;
+        line-height:0.76rem;
+        padding:0 0.3rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size:0.22rem;
+        color:#666;
+        border-bottom:#e5e5e5 1px solid;
+      }
+      .list_content{
+        width:100%;
+        padding:0 0.3rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        .c_list{
+          width:100%;
+          height:1.6rem;
+          padding:0.3rem 0;
+          overflow:hidden;
+          border-bottom:#e5e5e5 1px solid;
+          -webkit-box-sizing: content-box;
+          -moz-box-sizing: content-box;
+          box-sizing: content-box;
+          .img_box{
+            float:left;
+            width:1.6rem;
+            height:1.6rem;
+            font-size:0;
+            overflow:hidden;
+          }
+          .right_content_box{
+            float:right;
+            width:5rem;
+            .title_box{
+              width:100%;
+              overflow:hidden;
+              margin-bottom:0.4rem;
+              .title{
+                float:left;
+                width:4.34rem;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
+                font-size:0.28rem;
+                line-height: 0.4rem;
+                color:#333;
+                span{
+                  font-size:0.22rem;
+                  color:#ff422e;
+                  border:#ff422e 1px solid;
+                }
+              }
+              .delete_btn{
+                float:right;
+                width:0.24rem;
+                height:0.24rem;
+                margin-top:0.06rem;
+                background:url('../../../img/icons/delete_bg.png') no-repeat;
+                background-size:contain;
+              }
+            }
+            .price_bottom_box{
+              width:100%;
+              overflow:hidden;
+              .price_box{
+                float:left;
+                width:70%;
+                font-size:0.3rem;
+                color:#333;
+                font-weight:bold;
+                span{
+                  font-size:0.22rem;
+                  color:#f8640c;
+                  font-weight: normal;
+                  margin-left:0.12rem;
+                }
+              }
+              .look_product{
+                float:right;
+                width:30%;
+                text-align: right;
+                font-size:0.28rem;
+                color:#333;
+              }
+            }
+          }
+        }
+        .c_list:last-child{
+          border-bottom:none;
+        }
+      }
+    }
+    .collect_list:last-child{
+        border-bottom:none;
+    }
+  }
+}
+
+/*猜你喜欢*/
+.you_like_box{
+  width:100%;
+  background:#fff;
+  margin-top:0.2rem;
+  padding:0 0.3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  .header_box{
+    position: relative;
+    width:100%;
+    height:1.04rem;
+    .title{
+      .box_position();
+      font-size:0.32rem;
+      height:0.4rem;
+      font-weight:bold;
+      padding-left:0.5rem;
+      line-height:0.4rem;
+      background:url('../../../img/icons/index_you_like.png') no-repeat;
+      background-size:contain;
+
+    }
+
+  }
+  .product_list_box{
+    overflow:hidden;
+    width:7.2rem;
+    .list_content{
+      float:left;
+      width:3.28rem;
+      border:#e5e5e5 1px solid;
+      padding-bottom:0.2rem;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      margin-right:0.34rem;
+      margin-bottom:0.3rem;
+      .img_box{
+        position: relative;
+        width:100%;
+        height:3.38rem;
+        .brand{
+          position: absolute;
+          left:0.2rem;
+          bottom:-0.1rem;
+          height:0.36rem;
+          padding:0 0.12rem;
+          background:#d1a48a;
+          font-size:0.22rem;
+          color:#fff;
+          line-height:0.36rem;
+          max-width: 3.08rem;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .name_box{
+        width:100%;
+        padding:0 0.3rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size:0.28rem;
+        color:#333;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        margin:0.2rem 0;
+      }
+      .price_box{
+        width:100%;
+        padding:0 0.3rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        .price{
+          font-size:0.3rem;
+          color:#333;
+          font-weight: bold;
+        }
+        .n_price{
+          font-size:0.22rem;
+          color:#f8640c;
+          margin-top:0.1rem;
+        }
+      }
+      .a_page_box{
+        width:100%;
+        overflow:hidden;
+        margin-top:0.3rem;
+        .a_box{
+          position: relative;
+          height:0.6rem;
+          line-height:0.6rem;
+          background:#e5f1ff;
+
+
+          span{
+            font-size:0.2rem;
+            color:#7cb5f7;
+            margin-left:0.12rem;
+          }
+          i{
+            .box_vertical_position();
+
+          }
+        }
+        .share_box{
+          float:left;
+          border-top-right-radius:0.3rem;
+          border-bottom-right-radius:0.3rem;
+          padding-left:0.44rem;
+          padding-right:0.2rem;
+          i{
+            left:0.14rem;
+            width:0.24rem;
+            height:0.24rem;
+            background:url('../../../img/icons/index_share.png') no-repeat;
+            background-size:contain;
+          }
+        }
+        .shop_car_box{
+          float:right;
+          border-top-left-radius:0.3rem;
+          border-bottom-left-radius:0.3rem;
+          padding-left:0.44rem;
+          padding-right:0.2rem;
+          i{
+            left:0.14rem;
+            width:0.24rem;
+            height:0.22rem;
+            background:url('../../../img/icons/index_car.png') no-repeat;
+            background-size:contain;
+          }
+        }
+      }
+    }
+    .list_content:nth-child(2n){
+      margin-right:0;
+    }
+  }
+}

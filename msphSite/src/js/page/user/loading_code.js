@@ -1,0 +1,1 @@
+require('../../../css/page/user/loading_code.less');

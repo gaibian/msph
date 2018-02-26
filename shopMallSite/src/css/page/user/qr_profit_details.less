@@ -1,0 +1,56 @@
+@import "../../common/init.less";
+@import "../../common/template/page_title.less";
+
+body{
+  background:#f6f6f6;
+  padding-bottom:1.2rem;
+}
+.page{
+  width:100%;
+  max-width: 7.5rem;
+  overflow:hidden;
+  margin:0 auto;
+}
+.page_content{
+  width:100%;
+  padding:0 0.3rem;
+  margin-top:44px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background:#fff;
+  .list_details_box{
+    width:100%;
+    padding:0.3rem 0;
+    border-bottom:#ccc 1px solid;
+    .title{
+      font-size:0.28rem;
+      color:#333;
+    }
+    .money_box{
+      width:100%;
+      overflow:hidden;
+      margin:0.12rem 0;
+      .tit_label{
+        float:left;
+        width:50%;
+        font-size:0.22rem;
+        color:#999;
+      }
+      .money{
+        float:left;
+        width:50%;
+        text-align: right;
+        font-size:0.28rem;
+        color:#ea4c02;
+      }
+    }
+    .time{
+      font-size:0.22rem;
+      color:#999;
+    }
+  }
+  .list_details_box:last-child{
+    border-bottom:none;
+  }
+}

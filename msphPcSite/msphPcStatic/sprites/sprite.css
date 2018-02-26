@@ -1,0 +1,300 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-up_active_btn {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px 0px;
+  width: 8px;
+  height: 4px;
+}
+.icon-down_active_btn {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -4px;
+  width: 8px;
+  height: 4px;
+}
+.icon-down_btn {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -8px;
+  width: 8px;
+  height: 4px;
+}
+.icon-up_btn {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -12px;
+  width: 8px;
+  height: 4px;
+}
+.icon-up_down_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -16px;
+  width: 9px;
+  height: 5px;
+}
+.icon-car_down_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -21px;
+  width: 10px;
+  height: 5px;
+}
+.icon-up_down_bg1 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -26px;
+  width: 12px;
+  height: 7px;
+}
+.icon-card_details_title_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -33px;
+  width: 12px;
+  height: 8px;
+}
+.icon-right_icon_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -41px;
+  width: 6px;
+  height: 10px;
+}
+.icon-top_house_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -51px;
+  width: 14px;
+  height: 12px;
+}
+.icon-car_box_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -63px;
+  width: 13px;
+  height: 12px;
+}
+.icon-loan_down_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -75px;
+  width: 9px;
+  height: 13px;
+}
+.icon-phone_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -88px;
+  width: 9px;
+  height: 14px;
+}
+.icon-check {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -102px;
+  width: 16px;
+  height: 16px;
+}
+.icon-input_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -118px;
+  width: 16px;
+  height: 16px;
+}
+.icon-person_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -134px;
+  width: 14px;
+  height: 16px;
+}
+.icon-card_carousel_prev_btn {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -150px;
+  width: 22px;
+  height: 22px;
+}
+.icon-card_carousel_next_btn {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -172px;
+  width: 22px;
+  height: 22px;
+}
+.icon-qq_contact_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -194px;
+  width: 92px;
+  height: 22px;
+}
+.icon-wx_active_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -216px;
+  width: 24px;
+  height: 24px;
+}
+.icon-close_btn {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -240px;
+  width: 24px;
+  height: 24px;
+}
+.icon-wx_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -264px;
+  width: 24px;
+  height: 24px;
+}
+.icon-index_partner_next_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -288px;
+  width: 14px;
+  height: 24px;
+}
+.icon-index_partner_prev_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -312px;
+  width: 14px;
+  height: 24px;
+}
+.icon-card_next_btn {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -336px;
+  width: 40px;
+  height: 40px;
+}
+.icon-index_carousel_prev_btn {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -376px;
+  width: 40px;
+  height: 40px;
+}
+.icon-index_carousel_prev_btn_active {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -416px;
+  width: 40px;
+  height: 40px;
+}
+.icon-index_carousel_next_btn {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -456px;
+  width: 40px;
+  height: 40px;
+}
+.icon-index_carousel_next_btn_active {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -496px;
+  width: 40px;
+  height: 40px;
+}
+.icon-card_prev_btn {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -536px;
+  width: 40px;
+  height: 40px;
+}
+.icon-banner_register_btn_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -576px;
+  width: 230px;
+  height: 46px;
+}
+.icon-hot_status_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -622px;
+  width: 50px;
+  height: 50px;
+}
+.icon-user_init_header_img {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -672px;
+  width: 50px;
+  height: 50px;
+}
+.icon-new_year_header_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -722px;
+  width: 248px;
+  height: 52px;
+}
+.icon-process_bg6_active {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -774px;
+  width: 94px;
+  height: 94px;
+}
+.icon-process_bg1 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -868px;
+  width: 94px;
+  height: 94px;
+}
+.icon-process_bg1_active {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -962px;
+  width: 94px;
+  height: 94px;
+}
+.icon-process_bg2_active {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1056px;
+  width: 94px;
+  height: 94px;
+}
+.icon-process_bg2 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1150px;
+  width: 94px;
+  height: 94px;
+}
+.icon-process_bg3_active {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1244px;
+  width: 94px;
+  height: 94px;
+}
+.icon-process_bg3 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1338px;
+  width: 94px;
+  height: 94px;
+}
+.icon-process_bg4_active {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1432px;
+  width: 94px;
+  height: 94px;
+}
+.icon-process_bg4 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1526px;
+  width: 94px;
+  height: 94px;
+}
+.icon-process_bg5_active {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1620px;
+  width: 94px;
+  height: 94px;
+}
+.icon-process_bg5 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1714px;
+  width: 94px;
+  height: 94px;
+}
+.icon-process_bg6 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1808px;
+  width: 94px;
+  height: 94px;
+}
+.icon-recommend_list_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1902px;
+  width: 923px;
+  height: 125px;
+}

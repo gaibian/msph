@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+    <title>实名认证</title>
+    @@include('../common/layout.html')
+</head>
+<body>
+@@include('../common/page_title.html',{"title": "实名认证","txt":""})
+<section class="page_content">
+    <div class="form_box">
+        <form class="form">
+            <div class="form_input input_clean">
+                <input type="text">
+                <label class="title">姓名</label>
+                <i class="iconfont right_icon input_clean_btn"></i>
+            </div>
+            <div class="form_input input_clean">
+                <input type="text">
+                <label class="title">身份证号</label>
+                <i class="iconfont right_icon input_clean_btn"></i>
+            </div>
+            <div class="form_input">
+                <input type="text">
+                <label class="title">身份证起始日期</label>
+                <i class="iconfont data_icon"></i>
+            </div>
+            <div class="form_input">
+                <input type="text">
+                <label class="title">身份证截止日期</label>
+                <i class="iconfont data_icon"></i>
+            </div>
+        </form>
+    </div>
+    <p class="note_text">截止日期不能小于起始日期</p>
+    <button class="next_btn">下一步</button>
+</section>
+
+</body>
+</html>

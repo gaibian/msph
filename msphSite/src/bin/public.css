@@ -1,0 +1,460 @@
+@font-face {font-family: "iconfont";
+  src: url('fonts/iconfont.eot?t=1494297061252'); /* IE9*/
+  src: url('fonts/iconfont.eot?t=1494297061252#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('fonts/iconfont.woff?t=1494297061252') format('woff'), /* chrome, firefox */
+  url('fonts/iconfont.ttf?t=1494297061252') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('fonts/iconfont.svg?t=1494297061252#iconfont') format('svg'); /* iOS 4.1- */
+}
+@font-face {font-family: "Muiicons";
+  src: url('fonts/mui.eot?t=1493175572366'); /* IE9*/
+  src: url('fonts/mui.eot?t=1493175572366#iefix') format('embedded-opentype'), /* IE6-IE8 */ 
+  url('fonts/mui.ttf?t=1493175572366') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('fonts/mui.svg?t=1493175572366#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.icon-xiangji:before { content: "\e601"; }
+
+.icon-friendfamous:before { content: "\e6cb"; }
+
+.icon-shezhi:before { content: "\e6a6"; }
+
+.icon-qiche:before { content: "\e651"; }
+
+.icon-liwu:before { content: "\e64c"; }
+
+.icon-dingdan:before { content: "\e607"; }
+
+.icon-tongxunlu:before { content: "\e610"; }
+
+.icon-dianhua:before { content: "\e603"; }
+
+.icon-bangzhu:before { content: "\e621"; }
+
+.icon-shoucang:before { content: "\e60b"; }
+
+.icon-tubiao207:before { content: "\e618"; }
+
+.icon-shezhi1:before { content: "\e600"; }
+
+.icon-zuanshi:before { content: "\e646"; }
+
+.icon-wancheng:before { content: "\e614"; }
+
+.icon-lingsheng:before { content: "\e625"; }
+
+.icon-weizhi:before { content: "\e632"; }
+
+.icon-liwu-copy:before { content: "\e649"; }
+
+.icon-hongbao1:before { content: "\e67a"; }
+
+.icon-xiaofeifenqi:before { content: "\e684"; }
+
+.icon-cheliang:before { content: "\e642"; }
+
+.icon-fenxiang1:before { content: "\e65a"; }
+
+.icon-copy:before { content: "\e619"; }
+
+.icon-hongbao:before { content: "\e62d"; }
+
+.icon-liwu1:before { content: "\e60e"; }
+
+.icon-date:before { content: "\e64b"; }
+
+.icon-liwu2:before { content: "\e644"; }
+
+.icon-chakan:before { content: "\e60f"; }
+
+.icon-liwu3:before { content: "\e6bd"; }
+
+.icon-icon-gift:before { content: "\e689"; }
+
+.icon-zaixianshenqing:before { content: "\e63d"; }
+
+.icon-wujiaoxing:before { content: "\e645"; }
+
+.icon-triangle:before { content: "\e602"; }
+
+.icon-wujiaoxing1:before { content: "\e679"; }
+
+.icon-fangkuanshenqing:before { content: "\e678"; }
+
+.icon-liwu4:before { content: "\e620"; }
+
+.icon-hongbao2:before { content: "\e63b"; }
+
+.icon-fenxiang:before { content: "\e627"; }
+
+.icon-shenqing:before { content: "\e62c"; }
+
+.icon-xinyongqia:before { content: "\e7e5"; }
+
+.icon-huangguan:before { content: "\e626"; }
+
+.icon-hongbao3:before { content: "\e617"; }
+
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale;
+} 
+
+/*******部分样式重置********/
+body{
+  font-size: 14px;
+  color: #333;
+  /*font-family: "Microsoft YaHei";*/
+  background-color: #efefef;
+}
+h1,h2,h3,h4,h5,h6,em,b{
+  font-weight: normal;
+}
+em,i,b{
+  font-weight: normal;
+  font-style: normal;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: #999;
+  /*font-family: "Microsoft YaHei";*/
+  font-size: 14px;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999;
+  /*font-family: "Microsoft YaHei";*/
+  font-size: 14px;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999;
+  /*font-family: "Microsoft YaHei";*/
+  font-size: 14px;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #999;
+  /*font-family: "Microsoft YaHei";*/
+  font-size: 14px;
+}  
+ 
+input,select,textarea{
+  /*font-family: "Microsoft YaHei";*/
+  font-size: 14px;
+}
+.mui-bar-nav{
+  background-color: #fff;
+  box-shadow: none;
+  border-bottom: 1px #ccc solid;
+}
+.mui-content{
+  background-color: #efefef;
+  padding-bottom: 105px;
+}
+.mui-bar .mui-title{
+  font-size: 16px;
+}
+.msph-btn{
+  padding: 10px 0; 
+  font-size: 15px;
+  background-color: #3668db;
+  border: 1px #3668db solid;
+}
+.msph-btn:focus,.msph-btn:enabled:active{
+    background-color: #487efb !important;
+    border: 1px #5585f3 solid !important;
+}  
+/*底部导航*/
+.mui-bar-tab .mui-tab-items {
+    display: table-cell;
+    overflow: hidden;
+    width: 1%;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #929292;
+}
+.mui-bar-tab .mui-tab-items a {
+    color: #929292;
+}
+.mui-bar-tab .mui-tab-items .mui-icon {
+    top: 3px;
+    width: 24px;
+    height: 24px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.mui-bar-tab .mui-tab-items .mui-icon~.mui-tab-label {
+    font-size: 11px;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
+
+.mui-bar-tab{
+  background-color: #fff;
+  font-size: 13px;
+}
+.mui-bar-nav .mui-action-menu{
+  line-height: 3;
+}
+.mui-tab-items .icon-span{
+  display:block;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-top: 4px;
+}
+
+.mui-tab-items span.home{
+  background: url(../css/images/nav.png) no-repeat 1px -29px;
+  background-size:190px ;
+}
+.mui-active span.home{
+  background: url(../css/images/nav.png) no-repeat 1px 3px;
+  background-size:190px ;
+}
+
+.mui-tab-items span.cx{
+  background: url(../css/images/nav.png) no-repeat -40px -29px;
+  background-size:190px ;
+}
+.mui-active span.cx{
+  background: url(../css/images/nav.png) no-repeat -40px 4px;
+  background-size:190px ;
+}
+
+.mui-tab-items span.xyk{
+  background: url(../css/images/nav.png) no-repeat -83px -29px;
+  background-size:190px ;
+}
+.mui-active span.xyk{
+  background: url(../css/images/nav.png) no-repeat -83px 4px;
+  background-size:190px ;
+}
+
+.mui-tab-items span.lc{
+  background: url(../css/images/nav.png) no-repeat -125px -29px;
+  background-size:190px ;
+}
+.mui-active span.lc{
+  background: url(../css/images/nav.png) no-repeat -125px 3px;
+  background-size:190px ;
+}
+
+.mui-tab-items span.my{
+  background: url(../css/images/nav.png) no-repeat -167px -30px;
+  background-size:190px ;
+}
+.mui-active span.my{
+  background: url(../css/images/nav.png) no-repeat -167px 4px;
+  background-size:190px ;
+} 
+.mui-active .mui-tab-label{
+  color: #285dad;
+}
+.mui-icon-left-nav:before{
+  color: #666;
+}
+
+/**滚动条**/
+::-webkit-scrollbar{width:4px;}
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-thumb{border-radius:999px;border:4px solid rgba(0,0,0,0.2)} 
+
+#white{
+  background-color: #fff;
+}
+
+/***弹出对话框样式***/
+.mui-popup{
+  text-align: left;
+} 
+.mui-popup h6{
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.5;
+  margin:10px 0;
+}
+.mui-popup h5{
+  text-align: left;
+  color: #3f92e0;
+  margin: 0px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.mui-popup .mui-popup-title{
+  font-size: 14px;
+  position: relative;
+  background-color: #3f92e0;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+  padding: 8px 5px;
+  margin: -15px !important;
+  margin-bottom: 10px !important;
+}
+.mui-popup .mui-popup-button{
+  color: #666;
+}
+.mui-slider-indicator{
+  bottom: 3px;
+}
+.mui-pull-right{
+  position: relative;
+  z-index: 99;
+    line-height:44px;
+}
+/**颜色 #ff712b**/ 
+
+/********* 图片预览样式 *********/
+.mui-preview-image.mui-fullscreen {
+    position: fixed;
+    z-index: 20;
+    background-color: #000;
+}
+.mui-preview-header,
+.mui-preview-footer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 10;
+}
+.mui-preview-header {
+    height: 44px;
+    top: 0;
+}
+.mui-preview-footer {
+    height: 50px;
+    bottom: 0px;
+}
+.mui-preview-header .mui-preview-indicator {
+    display: block;
+    line-height: 25px;
+    color: #fff;
+    text-align: center;
+    margin: 15px auto 4;
+    width: 70px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    font-size: 16px;
+}
+.mui-preview-image {
+    display: none;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.mui-preview-image.mui-preview-in {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+.mui-preview-image.mui-preview-out {
+    background: none;
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+.mui-preview-image.mui-preview-out .mui-preview-header,
+.mui-preview-image.mui-preview-out .mui-preview-footer {
+    display: none;
+}
+.mui-zoom-scroller {
+    position: absolute;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    -webkit-backface-visibility: hidden;
+}
+.mui-zoom {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.mui-android-4-1 .mui-slider .mui-slider-group .mui-slider-item img {
+    width: 100%;
+}
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-slider-group .mui-slider-item {
+    display: inline-table;
+}
+.mui-android-4-1 .mui-slider.mui-preview-image .mui-zoom-scroller img {
+    display: table-cell;
+    vertical-align: middle;
+}
+.mui-preview-loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.mui-preview-loading.mui-active {
+    display: block;
+}
+.mui-preview-loading .mui-spinner-white {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    height: 50px;
+    width: 50px;
+}
+.mui-preview-image img.mui-transitioning {
+    -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

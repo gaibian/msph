@@ -1,0 +1,1 @@
+require('../../../css/page/user/bank_details.less');

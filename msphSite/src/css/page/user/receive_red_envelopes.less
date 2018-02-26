@@ -1,0 +1,271 @@
+@import "../../common/init.less";
+@import "../../common/template/page_title.less";
+body{
+  background:#f74133;
+  padding-bottom:0;
+}
+.page_header_title .page_return_btn .home:before{
+  display:inline-block;
+  content: "\e606";
+  font-size:0.44rem;
+  color:#888;
+ }
+.page_share_popup{
+  position: fixed;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  background:#eeeef0;
+  z-index:99999;
+  display:none;
+  .note_text{
+    position: absolute;
+    left:0px;
+    top:10.1rem;
+    text-align:center;
+    width:100%;
+    font-size:0.28rem;
+    color:#333;
+    line-height:0.44rem;
+  }
+}
+.share_img_popup{
+  position: absolute;
+  top:0px;
+  left:0px;
+  width:7.5rem;
+  height:10.66rem;
+  background:url('../../../img/share_bg.jpg') no-repeat;
+  background-size:contain;
+  .img_box{
+    position: absolute;
+    top:7.08rem;
+    left:50%;
+    -webkit-transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -ms-transform: translate(-50%,0);
+    -o-transform: translate(-50%,0);
+    transform: translate(-50%,0);
+    width:2.04rem;
+    height:2.08rem;
+    font-size:0;
+    border-radius:0.1rem;
+    overflow:hidden;
+    .logo{
+      position: absolute;
+      top:50%;
+      left:50%;
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      -o-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      width:0.4rem;
+      height:0.4rem;
+      border-radius: 0.06rem;
+      overflow:hidden;
+      font-size:0;
+      z-index:9999;
+    }
+  }
+}
+.page_content{
+  width:7.5rem;
+  max-width:7.5rem;
+  margin:44px auto 0 auto;
+  padding-top:1.1rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background:url('../../../img/receive_red_envelopes_bg.jpg') no-repeat;
+  background-size:contain;
+  .page_title_box{
+    width:100%;
+    font-size:0.3rem;
+    color:#fff;
+    margin-bottom:0.44rem;
+    text-align: center;
+    span{
+      font-size:0.45rem;
+      color:#fddd07;
+      font-weight:bold;
+      margin:0 0.12rem;
+    }
+  }
+  .form_box{
+    width:4.65rem;
+    margin:0 auto;
+    .form{
+      width:100%;
+      .input_box{
+        position: relative;
+        width:4.52rem;
+        height:0.79rem;
+        border:#d3453e 0.06rem solid;
+        border-radius:0.06rem;
+        margin:0 auto;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+        input{
+          width:100%;
+          height:0.79rem;
+          font-size:0.24rem;
+          color:@font-color;
+          text-align: left;
+          border:none;
+          background:#fff;
+          border-radius:0.06rem;
+          overflow:hidden;
+          padding-left:0.12rem;
+        }
+        .input_placeholder(0.24rem,#999);
+        .input_clean_btn{
+          .box_right_position(0.12rem);
+          width:0.34rem;
+          height:0.34rem;
+          font-size:0;
+          background:url('../../../img/icons/input_clean_icon.png') no-repeat;
+          background-size:contain;
+          opacity:0;
+          visibility: hidden;
+        }
+      }
+      .verify_box{
+        width:4.52rem;
+        height:0.79rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-top:0.2rem;
+        .input_box{
+          float:left;
+          width:2.3rem;
+          height:0.79rem;
+          border:#d3453e 0.06rem solid;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          input{
+            margin:0;
+            padding:0;
+            width:100%;
+            height:0.67rem;
+            font-size:0.24rem;
+            color:#333;
+            border:none;
+            background:#fff;
+            border-radius:0.06rem;
+            overflow: hidden;
+            text-align: left;
+            padding-left:0.12rem;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+          }
+        }
+        .verify_btn{
+          float:right;
+          width:2rem;
+          height:0.79rem;
+          line-height:0.79rem;
+          border-radius:0.06rem;
+          background:#fea22f;
+          color:#fff;
+          text-align: center;
+          border-bottom: #d67803 0.06rem solid;
+          font-size:0.28rem;
+        }
+        .verify_btn.click_active{
+          background:#ccc;
+          color:#fff;
+        }
+      }
+      .btn{
+        display:block;
+        width:4.65rem;
+        height:0.8rem;
+        line-height:0.8rem;
+        text-align: center;
+        font-size:0.28rem;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top:0.3rem;
+        border-radius:0.06rem;
+      }
+      .receive_btn{
+        color:#fff;
+        background:#fea22f;
+        border-bottom:#d67803 0.06rem solid;
+      }
+      .share_btn{
+        color:#7a5010;
+        background:#ffe658;
+        border-bottom:#f0b227 0.06rem solid;
+      }
+    }
+  }
+  /*二维码*/
+  .qr_code{
+    width:100%;
+    margin:0.8rem 0;
+    .img_box{
+      width:2rem;
+      height:2rem;
+      margin:0.2rem auto;
+      font-size:0;
+    }
+    .code_text{
+      width:100%;
+      font-size:0.28rem;
+      color:#fff;
+      margin-top:0.2rem;
+      text-align: center;
+      text-shadow: 0px 0px 0.2rem rgba(255,255,255,0.3);
+    }
+  }
+  .rule_content_box{
+    width:6.2rem;
+    margin:0.58rem auto 0 auto;
+    .title_box{
+      position: relative;
+      width:100%;
+      margin-bottom:0.58rem;
+      height:2px;
+      background:#fff;
+      h2{
+        .box_position();
+        font-size:0.34rem;
+        color:#fff;
+        background:#f45339;
+        padding:0 0.12rem;
+        margin:0;
+      }
+    }
+    .rule_list{
+      width:100%;
+      p{
+        width:100%;
+        font-size:0.28rem;
+        color:#fff;
+        line-height:0.5rem;
+        text-align: justify;
+        margin:0;
+        text-shadow:0px 0px 0.06rem rgba(0,0,0,0.3);
+      }
+    }
+  }
+}
+.page_bottom_bg{
+  position:relative;
+  left:0px;
+  bottom:0px;
+  width:7.5rem;
+  max-width:7.5rem;
+  height:3.1rem;
+  background:url('../../../img/receive_red_envelopes_bottom_bg.jpg') no-repeat;
+  background-size:contain;
+  z-index:-1;
+}
+

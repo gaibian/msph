@@ -1,0 +1,74 @@
+<section class="plate_popup">
+<div class="plate_title_box">
+<i class="icon mui-icon mui-icon-arrowleft"></i>
+选择车牌
+</div>
+<div class="content_block">
+<div class="creat_popup_3">
+<div class="creat_popup_1 float_box">
+<!--<a href="javascript:;" data-province="新车未上牌" class="a-no">新车未上牌</a>-->
+<a href="javascript:;" class="active" data-province="浙">浙</a>
+<a href="javascript:;" data-province="苏">苏</a>
+<a href="javascript:;" data-province="粤">粤</a>
+<a href="javascript:;" data-province="鲁">鲁</a>
+<a href="javascript:;" data-province="川">川</a>
+<a href="javascript:;" data-province="皖">皖</a>
+<a href="javascript:;" data-province="沪">沪</a>
+<a href="javascript:;" data-province="豫">豫</a>
+<a href="javascript:;" data-province="京">京</a>
+<a href="javascript:;" data-province="翼">翼</a>
+<a href="javascript:;" data-province="渝">渝</a>
+<a href="javascript:;" data-province="贵">贵</a>
+<a href="javascript:;" data-province="赣">赣</a>
+<a href="javascript:;" data-province="津">津</a>
+<a href="javascript:;" data-province="云">云</a>
+<a href="javascript:;" data-province="湘">湘</a>
+<a href="javascript:;" data-province="鄂">鄂</a>
+<a href="javascript:;" data-province="辽">辽</a>
+<a href="javascript:;" data-province="吉">吉</a>
+<a href="javascript:;" data-province="黑">黑</a>
+<a href="javascript:;" data-province="陕">陕</a>
+<a href="javascript:;" data-province="甘">甘</a>
+<a href="javascript:;" data-province="晋">晋</a>
+<a href="javascript:;" data-province="桂">桂</a>
+<a href="javascript:;" data-province="闽">闽</a>
+<a href="javascript:;" data-province="蒙">蒙</a>
+<a href="javascript:;" data-province="琼">琼</a>
+<a href="javascript:;" data-province="青">青</a>
+<a href="javascript:;" data-province="宁">宁</a>
+<a href="javascript:;" data-province="藏">藏</a>
+<a href="javascript:;" data-province="新">新</a>
+</div>
+</div>
+<div class="creat_popup_9">
+<div class="float_box">
+  <a href="javascript:;" data-city="A">A</a>
+  <a href="javascript:;" class="active" data-city="B">B</a>
+  <a href="javascript:;" data-city="C">C</a>
+  <a href="javascript:;" data-city="D">D</a>
+  <a href="javascript:;" data-city="E">E</a>
+  <a href="javascript:;" data-city="F">F</a>
+  <a href="javascript:;" data-city="G">G</a>
+  <a href="javascript:;" data-city="H">H</a>
+  <a href="javascript:;" data-city="I">I</a>
+  <a href="javascript:;" data-city="J">J</a>
+  <a href="javascript:;" data-city="K">K</a>
+  <a href="javascript:;" data-city="L">L</a>
+  <a href="javascript:;" data-city="M">M</a>
+  <a href="javascript:;" data-city="N">N</a>
+  <a href="javascript:;" data-city="O">O</a>
+  <a href="javascript:;" data-city="P">P</a>
+  <a href="javascript:;" data-city="Q">Q</a>
+  <a href="javascript:;" data-city="R">R</a>
+  <a href="javascript:;" data-city="S">S</a>
+  <a href="javascript:;" data-city="T">T</a>
+  <a href="javascript:;" data-city="U">U</a>
+  <a href="javascript:;" data-city="V">V</a>
+  <a href="javascript:;" data-city="W">W</a>
+  <a href="javascript:;" data-city="X">X</a>
+  <a href="javascript:;" data-city="Y">Y</a>
+  <a href="javascript:;" data-city="Z">Z</a>
+</div>
+</div>
+</div>
+</section>

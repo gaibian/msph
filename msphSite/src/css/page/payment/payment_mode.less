@@ -1,0 +1,523 @@
+@import "../../common/init.less";
+
+/*分期支付弹窗*/
+.by_stages_popup{
+  position: fixed;
+  left:0px;
+  bottom:0px;
+  width:100%;
+  height:100%;
+  z-index:100000;
+  display:none;
+  .mask_box{
+    //position: absolute;
+    //top:0px;
+    //left:0px;
+    //background:rgba(0,0,0,0.6);
+    //width:100%;
+    //height:100%;
+    //z-index:1;
+    //.mask_box;
+  }
+  .stages_popup_content{
+    position: absolute;
+    left:0px;
+    bottom:0px;
+    width:100%;
+    background:#fff;
+    padding-bottom:0.3rem;
+    z-index:2;
+    -webkit-transform: translate(0,100%);
+    -moz-transform: translate(0,100%);
+    -ms-transform: translate(0,100%);
+    -o-transform: translate(0,100%);
+    transform: translate(0,100%);
+    .top_header{
+      position: relative;
+      width:100%;
+      height:1.3rem;
+      line-height:1.3rem;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      border-bottom:@border-color 1px solid;
+      .cancel_btn{
+        position: absolute;
+        top:50%;
+        left:0.3rem;
+        -webkit-transform: translate(0,-50%);
+        -moz-transform: translate(0,-50%);
+        -ms-transform: translate(0,-50%);
+        -o-transform: translate(0,-50%);
+        transform: translate(0,-50%);
+        width:1.2rem;
+        height:0.48rem;
+        text-align: center;
+        line-height:0.48rem;
+        font-size:0.28rem;
+        color:#3668db;
+        border-radius:0.06rem;
+        border:#3668db 1px solid;
+      }
+      .header_title{
+        width:100%;
+        height:100%;
+        line-height:1.3rem;
+        font-size:0.32rem;
+        flex-grow: 1;
+        color:@font-color;
+        font-weight:bold;
+        margin:0;
+        padding:0;
+        text-align:center;
+      }
+    }
+    .stages_mode_content{
+      width:100%;
+      .stage_tab{
+        width:100%;
+        overflow:hidden;
+        height:1.4rem;
+        .tab_btn{
+          position: relative;
+          float:left;
+          width:50%;
+          height:1.4rem;
+          background:#fff;
+          border:none;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          border-bottom:#3668db 2px solid;
+          .stage_active{
+            position: absolute;
+            top:50%;
+            right:0.3rem;
+            display:none;
+            -webkit-transform: translate(0,-50%);
+            -moz-transform: translate(0,-50%);
+            -ms-transform: translate(0,-50%);
+            -o-transform: translate(0,-50%);
+            transform: translate(0,-50%);
+            width:0.34rem;
+            height:0.34rem;
+            background:url('../../../img/icons/active_gou.png') no-repeat;
+            background-size:contain;
+          }
+          .btn_title{
+            position: absolute;
+            top:50%;
+            left:0px;
+            -webkit-transform: translate(0,-50%);
+            -moz-transform: translate(0,-50%);
+            -ms-transform: translate(0,-50%);
+            -o-transform: translate(0,-50%);
+            transform: translate(0,-50%);
+            width:100%;
+            text-align: center;
+            .tit{
+              font-size:0.32rem;
+              color:@font-color;
+              font-weight:bold;
+            }
+            .note_tit{
+              font-size:0.22rem;
+              color:@font-color;
+              padding:0px;
+              margin:0px;
+              margin-top:0.12rem;
+            }
+          }
+        }
+        .tab_btn.active{
+          background:#eff4fe;
+          border-top:#3668db 2px solid;
+          border-bottom:none;
+          .stage_active{
+            display:block;
+          }
+        }
+        .tab_btn:first-child{
+          border-right:#3668db 2px solid;
+        }
+      }
+      .tab_content_box{
+        width:100%;
+        padding:0 0.3rem;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        .tab_content{
+          width:100%;
+          display:none;
+          .content_title{
+            width:100%;
+            height:1.4rem;
+            line-height:1.4rem;
+            font-size:0.32rem;
+            color:#000;
+            margin:0;
+          }
+          .stage_list_box{
+            width:100%;
+            .list_title{
+              width:100%;
+              font-size:0.24rem;
+              color:@font-color;
+            }
+            .list_box{
+              width:100%;
+              .list{
+                position: relative;
+                width:100%;
+                height:0.86rem;
+                line-height:0.86rem;
+                padding-left:0.3rem;
+                overflow:hidden;
+                font-size:0.28rem;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                border-bottom:@border-color 1px solid;
+                .tit_icon{
+                  position: absolute;
+                  top:50%;
+                  left:0px;
+                  -webkit-transform: translate(0,-50%);
+                  -moz-transform: translate(0,-50%);
+                  -ms-transform: translate(0,-50%);
+                  -o-transform: translate(0,-50%);
+                  transform: translate(0,-50%);
+                  width:0.2rem;
+                  height:0.2rem;
+                  background:url('../../../img/icons/cls.png') no-repeat;
+                  background-size:contain;
+                }
+                .left_list{
+                  float:left;
+                  width:50%;
+                  color:@font-color;
+                }
+                .right_list{
+                  float:left;
+                  width:50%;
+                  color:@font-color;
+                  text-align:right;
+                  span{
+                    display:inline-block;
+                    margin-left:0.12rem;
+                    color:@main-color;
+                  }
+                }
+              }
+              .list:last-child{
+                border-bottom:none;
+              }
+
+            }
+            .sy_list{
+              width:100%;
+              height:0.82rem;
+              line-height:0.82rem;
+              background:#fff;
+              border:@border-color 1px solid;
+              border-radius:0.05rem;
+              overflow:hidden;
+              padding:0 0.3rem;
+              -webkit-box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              box-sizing: border-box;
+              margin-bottom:0.2rem;
+              .stage_num{
+                float:left;
+                width:14%;
+                font-size:0.26rem;
+                color:@font-color;
+              }
+              .first_payment{
+                float:left;
+                width:41%;
+                font-size:0.26rem;
+                color:@font-color;
+              }
+              .monthly_payment{
+                float:left;
+                width:45%;
+                font-size:0.26rem;
+                color:@font-color;
+              }
+            }
+            .sy_list.active{
+              background:@main-color;
+              border:@main-color 1px solid;
+              .stage_num{
+                color:#fff;
+              }
+              .first_payment{
+                color:#fff;
+              }
+              .monthly_payment{
+                color:#fff;
+              }
+            }
+          }
+          .note_content_box{
+            width:100%;
+            font-size:0.22rem;
+            color:@font-color;
+            margin-top:0.4rem;
+            .note_tit{
+              font-size:0.22rem;
+              color:@font-color;
+            }
+            .note_list{
+              font-size:0.22rem;
+              color:@font-color;
+              .text{
+                font-size:0.22rem;
+                color:@font-color;
+                margin-bottom:0;
+              }
+            }
+          }
+          .agree_btn{
+            width:100%;
+            overflow:hidden;
+            margin-top:0.55rem;
+            input{
+              float:left;
+              border:none;
+              outline:none;
+              display:block;
+              width:0.26rem;
+              height:0.26rem;
+              border-radius:0.04rem;
+              margin-right:0.12rem;
+              border:@font-color 1px solid;
+            }
+            .active_text{
+              float:left;
+              width:90%;
+              font-size:0.22rem;
+              color:@font-color;
+              a{
+                color:@main-color;
+              }
+            }
+          }
+          .sure_stage_btn{
+            width:100%;
+            height:0.85rem;
+            line-height:0.85rem;
+            background:@main-color;
+            text-align: center;
+            font-size:0.3rem;
+            color:#fff;
+            border-radius:0.08rem;
+            margin-top:0.12rem;
+          }
+        }
+      }
+    }
+  }
+  .stages_popup_content.bottom_move{
+    -webkit-transform: translate(0,0);
+    -moz-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+}
+
+/*确认支付弹出层*/
+
+.show_box{
+  -webkit-transform:translate(0,0);
+  -moz-transform:translate(0,0);
+  transform:translate(0,0);
+  -webkit-transition: transform 300ms ease-out;
+  -moz-transition: transform 300ms ease-out;
+  transition: transform 300ms ease-out;
+}
+.popup_top{
+  width:100%;
+  height:1.3rem;
+  border-bottom:#cccccc 1px solid;
+  padding-top:0.4rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.popup_top .top_btn{
+  width:1.2rem;
+  height:0.5rem;
+  border:#3668db 1px solid;
+  font-size:0.22rem;
+  color:#3668db;
+  line-height:0.5rem;
+  text-align: center;
+  border-radius: 4px;
+  margin-left:0.3rem;
+}
+.payment_popup_box .case_box{
+  width:100%;
+  padding:0 0.3rem;
+
+}
+.case_box .tit{
+  width:100%;
+  height:0.84rem;
+  line-height:0.84rem;
+  font-size:0.28rem;
+  color:#333333;
+}
+.case_box .case_type{
+  width:100%;
+  height:0.83rem;
+  line-height:0.83rem;
+  margin-bottom: 0.2rem;
+  display:-moz-box;
+  display:-webkit-box;
+  display:box;
+
+  font-size:0.22rem;
+  color:#333;
+  background:#fff;
+  border:#666666 1px solid;
+  text-align: left;
+  padding:0 0.26rem;
+}
+.case_box .case_type:last-child{
+  margin-bottom: 0.58rem;
+}
+.case_box .case_type .num{
+  width:0;
+  -moz-box-flex:1;
+  -webkit-box-flex:1;
+  box-flex:1;
+}
+.case_box .case_type .first_payment{
+  width:0;
+  -moz-box-flex:3;
+  -webkit-box-flex:3;
+  box-flex:3;
+}
+.case_box .case_type .every_payment{
+  width:0;
+  -moz-box-flex:3;
+  -webkit-box-flex:3;
+  box-flex:3;
+}
+.case_box .agree_box{
+  width:100%;
+  font-size:0;
+}
+.agree_box input{
+  display:inline-block;
+  width:0.26rem;
+  height:0.26rem;
+  border:#333 1px solid;
+  outline:none;
+  margin-right:0.14rem;
+}
+.agree_box label{
+  font-size:0.22rem;
+  color:#333;
+}
+.agree_box a{
+  color:#3668db;
+  font-size:0.22rem;
+  text-decoration: underline;
+}
+.case_box .active{
+  color:#fff;
+  background:#3668db;
+  border:#3668db 1px solid;
+}
+.payment_btn{
+  width:100%;
+  height:0.86rem;
+  text-align: center;
+  font-size:0.3rem;
+  color:#fff;
+  border-radius: 5px;
+  background:#3668db;
+  margin-top:0.2rem;
+  border:none;
+  outline: none;
+  cursor: pointer;
+}
+.popup_box{
+  position: absolute;
+  bottom:0;
+  left:0px;
+  background:#fff;
+  width:100%;
+  display:block;
+  padding-bottom:0.6rem;
+}
+/*确认支付弹出层*/
+.sure_popup_box{
+  position: absolute;
+  bottom:0;
+  left:0px;
+  width:100%;
+  background:#fff;
+  display:none;
+  padding-bottom:0.6rem;
+  z-index:999999;
+}
+.infor_box{
+  width:100%;
+  padding:0 0.3rem;
+}
+.infor_box .tit{
+  width:100%;
+  text-align: center;
+  font-size:0.3rem;
+  color:#333;
+  line-height:0.8rem;
+  font-weight: bold;
+}
+.infor_box .list_box{
+  width:100%;
+  overflow: hidden;
+  margin:0.1rem 0;
+}
+.infor_box .list_box .title{
+  float:left;
+  width:30%;
+  font-size:0.24rem;
+}
+.infor_box .list_box .periods_box{
+  float:left;
+  width:70%;
+}
+.periods_box span{
+  font-size:0.22rem;
+  color:#3668db;
+  display:inline-block;
+  border:#3668db 1px solid;
+  border-radius: 0.06rem;
+  text-align: center;
+  padding:0 0.1rem;
+  margin-right:0.1rem;
+  margin-bottom:0.1rem;
+}
+
+.sure_payment_btn{
+  width:100%;
+  height:0.86rem;
+  line-height:0.86rem;
+  color:#fff;
+  background:#3668db;
+  border-radius: 5px;
+  text-align: center;
+}

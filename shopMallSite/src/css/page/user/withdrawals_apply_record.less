@@ -1,0 +1,152 @@
+@import "../../common/init.less";
+@import "../../common/template/page_title.less";
+
+body{
+  background:#f6f6f6;
+  padding-bottom:1.2rem;
+}
+.page{
+  width:100%;
+  max-width: 7.5rem;
+  overflow:hidden;
+  margin:0 auto;
+}
+.top_menu_bg_box{
+  position: fixed;
+  top:0;
+  right:0;
+  width:0.33rem;
+  height:44px;
+  z-index:999;
+  .top_menu_bg{
+    .box_vertical_position();
+    right:0.3rem;
+    display:inline-block;
+    width:0.33rem;
+    height:0.17rem;
+    background:url('../../../img/icons/top_menu_bg.png') no-repeat;
+    background-size:cover;
+  }
+}
+.top_menu_popup{
+  position: fixed;
+  top:0;
+  right:0;
+  width:100%;
+  height:100%;
+  z-index:999;
+  display:none;
+  .mask_box{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    z-index:1;
+  }
+  .popup_content{
+    position: absolute;
+    top:54px;
+    right:0.3rem;
+    width:1.5rem;
+    background:#fff;
+    border-radius:0.1rem;
+    z-index:2;
+    .san_bg{
+      position: absolute;
+      top:-0.16rem;
+      right:0.16rem;
+      border-bottom: 0.2rem solid #fff;
+      border-right: 0.14rem solid rgba(0,0,0,0);
+      border-left: 0.14rem solid rgba(0,0,0,0);
+    }
+  }
+  .ul{
+    width:100%;
+    padding:0 0.3rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .li{
+      display:block;
+      height:0.8rem;
+      line-height:0.8rem;
+      border-bottom:#e5e5e5 1px solid;
+      font-size:0.28rem;
+      color:#333;
+      text-align: center;
+    }
+    .li:last-child{
+      border-bottom:none;
+    }
+  }
+}
+
+.page_content{
+  width:100%;
+  background:#fff;
+  margin-top:44px;
+  .apply_record_box{
+    width:100%;
+    padding:0 0.3rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    .record_list{
+      width:100%;
+      border-bottom:#e5e5e5 1px solid;
+      padding:0.3rem 0;
+      .title_box{
+        width:100%;
+        height:0.4rem;
+        line-height:0.4rem;
+        overflow:hidden;
+        .title{
+          float:left;
+          width:50%;
+          font-size:0.22rem;
+          color:#333;
+        }
+        .time{
+          float:left;
+          width:50%;
+          text-align: right;
+          font-size:0.22rem;
+          color:#666;
+        }
+      }
+      .money_box{
+        width:100%;
+        height:0.5rem;
+        line-height:0.5rem;
+        overflow:hidden;
+        .money{
+          float:left;
+          width:50%;
+          font-size:0.32rem;
+          color:#333;
+          font-weight:bold;
+        }
+        .state{
+          float:left;
+          width:50%;
+          text-align: right;
+          font-size:0.28rem;
+        }
+        .state.state_success{
+          color:#43a083;
+        }
+        .state.state_ing{
+          color:#e25817;
+        }
+        .state.state_error{
+          color:#e24a44;
+        }
+      }
+    }
+    .record_list:last-child{
+      border-bottom:none;
+    }
+  }
+}

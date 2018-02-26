@@ -1,0 +1,1 @@
+require('../../../css/page/user/modify_password.less');

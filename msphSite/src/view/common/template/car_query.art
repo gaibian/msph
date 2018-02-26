@@ -1,0 +1,48 @@
+<section class="query_content_box">
+<div class="query_content_title_box">
+<div class="tit_box">
+<i class="head_icon_bg"></i>
+车险查询
+</div>
+</div>
+<div class="choice_box">
+<div class="city_content">
+<div class="city_left">
+承保城市
+</div>
+<div class="choice_btn" id="cityResult">选择承保城市</div>
+<input type="hidden" id="addressCity" name="addressCity">
+<input type="hidden" id="citycode" name="cityCode">
+</div>
+
+<div class="car_plate">
+<div class="car_left">
+
+<div class="tit">车辆牌照</div>
+<div class="plate_num popup_btn" data-popup="plate_popup" data-move="pull_top">
+<div id="plateNoPrefix">
+	浙B
+</div>
+<i class="down_css"></i>
+</div>
+
+</div>
+<input type="hidden" name="platePrefix" id="platePrefix" data-carflag="unnew" value="{$area.lcode}" />
+
+
+<div class="car_right">
+<input type="text" class="mui-input-clear" id="plateNo" name="plateNo" placeholder="输入车牌号">
+</div>
+<div class="licence"> 
+								<div class="mui-switch mui-switch-blue mui-switch-mini">
+									<div class="mui-switch-handle"></div>
+								</div>
+								<span>未上牌</span>
+							</div>
+</div>
+<div class="query_btn">立即查询</div>
+<!--<div class="fun_box">
+<div class="fun_left"><span class="photo_bg"></span>图像识别</div>
+<div class="fun_right"><span class="record_bg"></span>查询记录</div>
+</div>-->
+</section>

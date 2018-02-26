@@ -1,0 +1,264 @@
+/*
+CSS 2.01版本 < m-init.css >
+outher:xiaojun;
+*/
+body {
+  -webkit-overflow-scrolling: touch;
+  font-family: '\5FAE\8F6F\96C5\9ED1', tahoma, arial, 'Hiragino Sans GB', sans-serif;
+  color: #6f7b91;
+  background: #f5f5f5;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+fieldset,
+img {
+  border: 0;
+}
+img[src=""],
+img:not([src]) {
+  opacity: 0;
+}
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+ol,
+ul {
+  list-style: none;
+}
+li {
+  list-style: none;
+}
+caption,
+th {
+  text-align: left;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+q:before,
+q:after {
+  content: '';
+}
+abbr,
+acronym {
+  border: 0;
+  font-variant: normal;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0);
+}
+button {
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0);
+}
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+legend {
+  color: #000;
+}
+label {
+  font-weight: normal;
+}
+/*自定义less样式*/
+.text_hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.box_position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.lazy {
+  opacity: 1;
+  -webkit-transition: opacity 2s ease-out;
+  -moz-transition: opacity 2s ease-out;
+  transition: opacity 2s ease-out;
+  background: #fcfcfc;
+}
+.validationErrorText {
+  width: 100%;
+  text-align: right;
+  font-size: 12px;
+  color: #f50;
+  height: 24px;
+  line-height: 24px;
+  transition: all 300ms ease-out;
+}
+.maskBox {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.clear {
+  clear: both;
+}
+body {
+  background: #ffdb7b;
+}
+.page_top_banner {
+  width: 1920px;
+  height: 555px;
+  position: relative;
+  top: 0;
+  left: 50%;
+  margin-left: -960px;
+  font-size: 0;
+}
+.page_recommend {
+  position: relative;
+  width: 992px;
+  margin: 0 auto;
+  padding-top: 95px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 12px;
+}
+.page_recommend .header_box {
+  position: absolute;
+  left: 50%;
+  top: -9px;
+  -webkit-transform: translate(-50%, 0);
+  -moz-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  width: 248px;
+  height: 52px;
+  line-height: 52px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPgAAAA0CAYAAACn+/XEAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OEIxQjI0OEJFRDE3MTFFN0E1ODZGNUUwMTA4QzNFNDYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OEIxQjI0OENFRDE3MTFFN0E1ODZGNUUwMTA4QzNFNDYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4QjFCMjQ4OUVEMTcxMUU3QTU4NkY1RTAxMDhDM0U0NiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4QjFCMjQ4QUVEMTcxMUU3QTU4NkY1RTAxMDhDM0U0NiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PpkUr7UAAALbSURBVHja7Nw9b9NAHMdx58gIUoVYKZmRWIFXgASIpa+BgQWJzLySvoLujLyBOiRCPImhC88bYqFN41Bi7uIzHGmV+M71+c76fqS/FLmJI/2jX893ca734UFiur19/epzcUFcSgBEZfF78fPz+y935MO0PCZWnjM8PpwRbiBCsyK7Q/OYGfBtWTvz44xOARHKiuzu6CyfCvhjWf1sOqdTQIwBL7Lb11n+L+AXZT0s/wvkOc0CYqIym/27+lZZ3jID/qg8kC/y5NeMURyIicqsyq62VQ7YYnVIL4Z65uFAhPPvZHXKLVYn5cWTGcGBCOffpuWiuQr48PSTGcGBuAJ+ZmaHPfNGl8GNa+XDnqzvsi7TOiB4P2RdkbWchH98++nvH/qDZ8aS+dNB+UgdHMm6S++A4L0ow70cqI1MizUvGtE3IJqAn0m4vAhAUFKXgI/MYR9AkPJ1V9tiw8T9gP4BQTvQWbUOuLJP/4A4L8+rBHxM/4CgjesEnJV0oMMj+GtZU3oIBGmqM+oc8BNZE/oIBGmiM+occC7TgUjn31UDzg0vQITz76oBT+kj0N2Af9UFIByVcikqnoxRHIhs9LYJOAttQFjG5xlwFtqADo/gG79vA+BN5ftTqgZ84x0zALypfIepsDgpC21AGCpPmW0Czi2rQIcDzm/DgTDsNxHwtTtHAPDCaqclm4Cv3fsJgBdWeyUKy5Oz0Aa0y2qXJdHkyQGcu7TJgLOVMtAe62mybcDZShloj/VCt3B4E74uA9phnT2XgPPDE6AdEwIOdFfqI+BspQz45/SDL5eAs5Uy0M7l+YmPgDtdKgCoxWlq7BpwbngB/Br5DDgjOOBX6jPgarvWOT0HvDhMHLcuFzXe9CV9B7x45/rCOgHfo++AF3ttBHw3YSNGoGlvdNa8BzyTdV/WKz4DoBFqAL2ns+Y94Mo3WbdkPUmKL+KP+EyAWo50llSmbuqMOfsjwAD8d76fyiwyRAAAAABJRU5ErkJggg==) no-repeat;
+  background-size: contain;
+}
+.page_recommend .text_content {
+  width: 922px;
+  height: 280px;
+  background: #fff;
+  margin: 0 auto;
+  padding: 0 40px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.page_recommend .text_content .text_box {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 34px;
+}
+.page_recommend .text_content .text_box label {
+  float: left;
+  width: 90px;
+  font-size: 18px;
+  color: #ff6800;
+}
+.page_recommend .text_content .text_box .text {
+  float: left;
+  width: 740px;
+  font-size: 18px;
+  color: #ff6800;
+}
+.page_recommend .text_content .text_box .text a {
+  color: #4370e2;
+  margin-left: 6px;
+}
+.page_recommend .text_content .text_box:last-child {
+  margin-bottom: 0;
+}
+.btn_box {
+  width: 1200px;
+  height: 205px;
+  margin: 0 auto;
+  padding-top: 51px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.btn_box .buy_btn {
+  display: block;
+  width: 268px;
+  height: 91px;
+  background: url(http://cdn.upingou.com/msphPcStatic/img/8c612210ab783f525bc0f5a7033256c2.jpg) no-repeat;
+  margin: 0 auto;
+  cursor: pointer;
+}

@@ -1,0 +1,1 @@
+require('../../../css/page/user/collect_list.less');

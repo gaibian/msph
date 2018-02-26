@@ -1,0 +1,1 @@
+require('../../../css/page/user/qr_profit_details.less');

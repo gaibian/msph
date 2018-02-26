@@ -1,0 +1,1 @@
+require('../../../css/page/user/order_details.less');

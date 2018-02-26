@@ -1,0 +1,61 @@
+@import "../../common/init.less";
+body{
+  background:#eeeef0;
+}
+.page_code_img_box{
+  position: relative;
+  width:7.5rem;
+  height:9.99rem;
+  font-size:0;
+  background:url('../../../img/new_share_bg1.jpg') no-repeat;
+  background-size:contain;
+  .img_box{
+    position:absolute;
+    top:71%;
+    left:36.5%;
+    width:2.04rem;
+    height:2.04rem;
+    font-size:0;
+    .logo{
+      position: absolute;
+      top:50%;
+      left:50%;
+      -webkit-transform: translate(-50%,-50%);
+      -moz-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+      -o-transform: translate(-50%,-50%);
+      transform: translate(-50%,-50%);
+      width:0.4rem;
+      height:0.4rem;
+      border-radius: 0.06rem;
+      overflow:hidden;
+      font-size:0;
+      z-index:9999;
+    }
+  }
+}
+.btm_text{
+  width:100%;
+  text-align: center;
+  font-size:0.24rem;
+  color:#333;
+  margin-top:0.2rem;
+  padding-bottom:0.4rem;
+}
+.btm_text_box{
+  position: fixed;
+  left:0;
+  bottom:0;
+  width:100%;
+  text-align:center;
+  font-size:0.36rem;
+  background:#d2d2d2;
+  padding:0.3rem 0;
+  color:#333;
+  .close_btn:before{
+    .box_right_position(0.3rem);
+    content: "\e625";
+    font-size:0.28rem;
+    color:#333;
+  }
+}

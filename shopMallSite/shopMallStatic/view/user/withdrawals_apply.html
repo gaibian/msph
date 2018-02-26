@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>提现申请</title>
+    <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width"/>
+<script type="text/javascript" src="http://cdn.msphcn.com/dist/bin/rem.js"></script>
+
+    <link rel="stylesheet" href="../../bin/fonts/iconfont.css">
+<link rel="shortcut icon" href="/shopMallStatic/users_ico.ico"><link href="/shopMallStatic/css/user\withdrawals_apply.css?3f55efaa3b933584313c" rel="stylesheet"></head>
+<body>
+<section class="page">
+    <header class="page_header_title">
+        <a class="page_return_btn"><i></i></a>
+        <h1 class="page_title">提现申请</h1>
+    </header>
+    <section class="page_content">
+        <!--表单-->
+        <div class="form_box">
+            <div class="input_box mode_btn">
+                <label class="tit_input">提现方式：</label>
+                <div class="text_mode">请选择</div>
+                <i class="right_icon iconfont"></i>
+            </div>
+            <div class="input_box">
+                <label class="tit_input">卡号：</label>
+                <input type="text" placeholder="0.00">
+                <i class="right_icon iconfont"></i>
+            </div>
+            <div class="input_box">
+                <label class="tit_input">开户行：</label>
+                <input type="text" placeholder="持卡人姓名">
+                <i class="right_icon iconfont"></i>
+            </div>
+            <div class="input_box">
+                <label class="tit_input">银行名称：</label>
+                <input type="text" placeholder="如：工商银行">
+                <i class="right_icon iconfont"></i>
+            </div>
+            <div class="input_box">
+                <label class="tit_input">提现金额：</label>
+                <input type="text" placeholder="可提现金额(元)：670.00">
+                <i class="right_icon iconfont"></i>
+            </div>
+            <div class="input_box">
+                <label class="tit_input">验证码：</label>
+                <input type="text" placeholder="请输入验证码">
+                <div class="verify_img"></div>
+            </div>
+        </div>
+        <div class="footer_btn_box">
+            <button class="apply_btn">提交申请</button>
+        </div>
+    </section>
+    <!--提现方式弹窗-->
+    <div class="mode_popup">
+        <div class="mask_box"></div>
+        <div class="popup_content">
+            <ul class="ul">
+                <li class="mode_list" data-val="yhk">银行卡提现</li>
+                <li class="mode_list" data-val="wx">微信提现</li>
+                <li class="mode_list" data-val="zfb">支付宝提现</li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="/shopMallStatic/js/user\withdrawals_apply.js?3f55efaa3b933584313c"></script></body>
+</html>

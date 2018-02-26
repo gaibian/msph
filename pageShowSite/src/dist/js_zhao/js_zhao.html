@@ -1,0 +1,72 @@
+
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>极速优保</title> <link rel="stylesheet" type="text/css" href="/themes/simplebootx/Public/css/sui.css" /> <link rel="stylesheet" type="text/css" href="/themes/simplebootx/Public/css/public.css" /> <link rel="stylesheet" type="text/css" href="/themes/simplebootx/Public/css/index.css" /> <script type="text/javascript" src="/themes/simplebootx/Public/js/jquery-1.8.2.min.js"></script> <script type="text/javascript" src="/themes/simplebootx/Public/js/sui.js"></script> <script type="text/javascript" src="/themes/simplebootx/Public/js/scrollReveal.js"></script> <script>
+  $(function() {
+    window.scrollReveal = new scrollReveal({
+      //动画
+    });
+    //返回顶部
+    $(window).scroll(function(){
+      if($(window).scrollTop()>800){
+        $("#side-bar").show();
+      }
+      else{
+        $("#side-bar").hide();
+      }
+    });
+    $("#side-bar .gotop").on('click',function(){
+      $('html,body').animate({'scrollTop':0},500);
+    });
+
+    $('.arrow-down').on('click',function(){
+      $('html,body').animate({'scrollTop':980},500);
+    });
+  });
+</script>
+</head>
+<body>
+<!--header-->
+<div class="sui-navbar navbar-inverse navbar-fixed-top"> <div class="navbar-inner header-nav"> <div class="sui-container"> <a href="index.html" class="sui-brand"><img src="/themes/simplebootx/Public/images/logo.png"></a> <ul class="sui-nav"> <li ><a href="/index.php?g=&m=show&a=index">首页</a></li> <li ><a href="/index.php?g=&m=show&a=function">功能</a></li> <li ><a href="/index.php?g=&m=show&a=experience">体验</a></li> <li class="active"><a href="/index.php?g=&m=show&a=attract_investment">招商</a></li> <li ><a href="/index.php?g=&m=show&a=activity">活动</a></li> <li><span><img src="/themes/simplebootx/Public/css/img/kf.png">400-880-2068 </span></li> </ul> </div> </div> </div> <!--header--> <!--banner--> <div class="banner"> <img src="/themes/simplebootx/Public/images/zs.png" data-scroll-reveal="enter top over 1s and move 100px after 0.5s"> <h4 data-scroll-reveal="enter top over 0.8s after 0.8s">致力打造车险行业领航品牌</h4> <div class="arrow-down" data-scroll-reveal="enter bottom over 1s and move 100px after 0.9s"> <a href="javascript:;">了解情况</a><br> <em><i></i><i></i><i></i><i></i></em><br> <i class="sui-icon icon-double-angle-down arrow"></i> </div> </div> <!--主体--> <div class="zs-module zczc"> <div class="sui-container"> <h2 class="h2-title" data-scroll-reveal="enter from the top over 1.5s">政策<span>支持</span></h2> <h4 data-scroll-reveal="enter from the top over 1s">国家出台一系列措施大力支持保险业发展<br>
+    响应国务院关于积极推进“互联网+”行动的指导意见<br>
+    建立数字化、网络化、智能化的产业新生态链<br>
+    全面聚焦国家创新驱动发展战略</h4> <img src="/themes/simplebootx/Public/images/zs_05.png" data-scroll-reveal="enter bottom over 1s and move 300px after 0.8s"> </div> </div> <div class="zs-module jmys"> <div class="sui-container"> <h2 class="h2-title" data-scroll-reveal="enter from the top over 1.5s">加盟<span>优势</span></h2> <div class="sui-row"> <span data-scroll-reveal="enter bottom over 1s and move 200px after 0.3s"><img src="/themes/simplebootx/Public/css/img/1.png"><b>高标准化</b>车险刚需，高标准化，<br>用户基础广泛，市场规模庞大</span> <span data-scroll-reveal="enter bottom over 1s and move 200px after 0.8s"><img src="/themes/simplebootx/Public/css/img/2.png"><b>信息透明</b>信息透明，一站解决车<br>主车险选择困难痛点</span> <span data-scroll-reveal="enter bottom over 1s and move 200px after 1.3s"><img src="/themes/simplebootx/Public/css/img/3.png"><b>超高回报</b>0成本，高回报，<br>入行低门槛，资源高配置</span> <span data-scroll-reveal="enter bottom over 1s and move 200px after 1.8s"><img src="/themes/simplebootx/Public/css/img/4.png"><b>共享数据</b>覆盖32家保险公司，共享大数据，<br>信息全透明。出单快速，更低价格</span> </div> </div> </div> <div class="zs-module hzjg"> <div class="sui-container"> <h2 class="h2-title" data-scroll-reveal="enter from the top over 1.5s">合作<span>机构</span></h2> <div class="sui-row-fluid"> <div class="span3" data-scroll-reveal="enter left over 1s and move 200px after 1s"> <a><img src="/themes/simplebootx/Public/images/zs_09.jpg"></a> <p>新华网</p> <h6>新华网是国家通讯社新华社主办的综合新闻信息服务门户网站，是中国最具影响力的网络媒体和具有全球影响力的中文网站。</h6> </div> <div class="span3" data-scroll-reveal="enter top over 1s"> <a><img src="/themes/simplebootx/Public/images/zs_11.jpg"></a> <p>民商普惠</p> <h6>民商普惠金融商城系浙江民商普惠信息科技有限公司与新华网达成战略合作关系，于2017年6月在新华网上线的综合性金融服务平台。</h6> </div> <div class="span3" data-scroll-reveal="enter right over 1s and move 200px after 1s"> <a><img src="/themes/simplebootx/Public/images/zs_13.jpg"></a> <p>全国32家保险公司</p> <h6>涵盖平安、人保、太平洋、安邦、大地、安盛天平等各大保险公司，覆盖全国，直接连接投保人和险企，精准报价，在线核保，纸质保单邮寄送达。</h6> </div> </div> </div> </div> <div class="zs-module zslc"> <div class="sui-container"> <h2 class="h2-title" data-scroll-reveal="enter from the top over 1.5s">招商流程</h2> <div class="sui-row-fluid"> <div class="span3"> <div data-scroll-reveal="enter bottom over 1s and move 300px after 0.3s"> <img src="/themes/simplebootx/Public/css/img/lc1.png"><span>申请加盟</span> </div> <i class="sui-icon icon-touch-double-angle-right" data-scroll-reveal="enter bottom over 1s and move 300px after 0.5s"></i> </div> <div class="span3"> <div data-scroll-reveal="enter bottom over 1s and move 300px after 0.8s"> <img src="/themes/simplebootx/Public/css/img/lc2.png"><span>签订协议</span> </div> <i class="sui-icon icon-touch-double-angle-right" data-scroll-reveal="enter bottom over 1s and move 300px after 1.1s"></i> </div> <div class="span3"> <div data-scroll-reveal="enter bottom over 1s and move 300px after 1.5s"> <img src="/themes/simplebootx/Public/css/img/lc3.png"><span>渠道准备</span> </div> <i class="sui-icon icon-touch-double-angle-right" data-scroll-reveal="enter bottom over 1s and move 300px after 1.7s"></i> </div> <div class="span3" data-scroll-reveal="enter bottom over 1s and move 300px after 2s"> <img src="/themes/simplebootx/Public/css/img/lc4.png"><span>产品销售</span> </div> </div> </div> </div> <div class="zs-module zsbz"> <div class="sui-container"> <h2 class="h2-title" data-scroll-reveal="enter from the top over 1.5s">招商<span>标准</span></h2> <img src="/themes/simplebootx/Public/images/zs_21.png" data-scroll-reveal="enter bottom over 1s and move 300px after 0.5s"> </div> </div> <!--主体--> <!--底部--> <div class="footer"> <div class="sui-container"> <span>宁波极速优保信息科技有限公司<br>
+  客服电话  400-880-2068<br>
+  公司地址  宁波市鄞州区天童北路和邦大厦C座1605<br>
+  浙ICP备17027001号<br>
+  版权所有©2017</span> <p> <font><img src="/themes/simplebootx/Public/images/erwm_03.jpg">微信服务号</font> <font><img src="/themes/simplebootx/Public/images/erwm_05.jpg">加盟商渠道号</font> </p> </div> </div>
+<!--返回顶部--> <div id="side-bar" class="side-bar"> <a href="javascript:;" class="gotop"><i class="sui-icon icon-double-angle-up"></i></a> </div>
+<script>
+  $(function(){
+    var winWidth = $(window).width();
+    if(winWidth <= 768){
+      $('.m_page_nav_box').find('.nav_show_box').find('a').eq(2).attr('href','http://mp.weixin.qq.com/s/mZWcEza64Qs_MmgFBEJQ1A');
+    }
+  })
+</script>
+<script>
+  $(function() {
+    $('.pages').pagination({
+      pages: 10,
+      styleClass: ['pagination-large'],
+      // showCtrl: true,
+      displayPage: 6,
+      onSelect: function(num) {
+        console.log(num)
+      }
+    })
+
+    //返回顶部
+    $(window).scroll(function(){
+      if($(window).scrollTop()>800){
+        $("#side-bar").show();
+      }
+      else{
+        $("#side-bar").hide();
+      }
+    });
+    $("#side-bar .gotop").on('click',function(){
+      $('html,body').animate({'scrollTop':0},500);
+    });
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.icon-spot_top_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px 0px;
+  width: 24px;
+  height: 22px;
+}
+.icon-company_logo {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -22px;
+  width: 24px;
+  height: 24px;
+}
+.icon-loan_t_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -46px;
+  width: 26px;
+  height: 26px;
+}
+.icon-spot_bottom_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -72px;
+  width: 24px;
+  height: 27px;
+}
+.icon-car {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -99px;
+  width: 37px;
+  height: 31px;
+}
+.icon-index_active_icon {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -130px;
+  width: 36px;
+  height: 32px;
+}
+.icon-index_icon {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -162px;
+  width: 36px;
+  height: 32px;
+}
+.icon-cls {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -194px;
+  width: 32px;
+  height: 32px;
+}
+.icon-cx_icon {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -226px;
+  width: 40px;
+  height: 34px;
+}
+.icon-liwu {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -260px;
+  width: 37px;
+  height: 34px;
+}
+.icon-my_icon {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -294px;
+  width: 34px;
+  height: 34px;
+}
+.icon-input_clean_icon {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -328px;
+  width: 34px;
+  height: 34px;
+}
+.icon-my_active_icon {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -362px;
+  width: 34px;
+  height: 34px;
+}
+.icon-photo {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -396px;
+  width: 40px;
+  height: 34px;
+}
+.icon-cx_active_icon {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -430px;
+  width: 40px;
+  height: 34px;
+}
+.icon-shezhi {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -464px;
+  width: 37px;
+  height: 35px;
+}
+.icon-daikuan {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -499px;
+  width: 34px;
+  height: 35px;
+}
+.icon-right_down_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -534px;
+  width: 35px;
+  height: 35px;
+}
+.icon-man_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -569px;
+  width: 36px;
+  height: 36px;
+}
+.icon-head {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -605px;
+  width: 34px;
+  height: 36px;
+}
+.icon-man_bg1 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -641px;
+  width: 36px;
+  height: 36px;
+}
+.icon-time {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -677px;
+  width: 36px;
+  height: 36px;
+}
+.icon-anquan {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -713px;
+  width: 37px;
+  height: 37px;
+}
+.icon-user_news_icon_bg1 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -750px;
+  width: 36px;
+  height: 38px;
+}
+.icon-licai {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -788px;
+  width: 37px;
+  height: 38px;
+}
+.icon-user_news_icon_bg2 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -826px;
+  width: 40px;
+  height: 40px;
+}
+.icon-popup_close_btn {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -866px;
+  width: 40px;
+  height: 40px;
+}
+.icon-user_news_icon_bg3 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -906px;
+  width: 36px;
+  height: 40px;
+}
+.icon-hb {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -946px;
+  width: 35px;
+  height: 40px;
+}
+.icon-news_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -986px;
+  width: 40px;
+  height: 40px;
+}
+.icon-index_lc {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1026px;
+  width: 56px;
+  height: 40px;
+}
+.icon-index_cx {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1066px;
+  width: 54px;
+  height: 41px;
+}
+.icon-index_xyk {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1107px;
+  width: 54px;
+  height: 41px;
+}
+.icon-index_dk {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1148px;
+  width: 49px;
+  height: 46px;
+}
+.icon-active_gou {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1194px;
+  width: 50px;
+  height: 50px;
+}
+.icon-wenhao {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1244px;
+  width: 50px;
+  height: 50px;
+}
+.icon-loan_details_icon3 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1294px;
+  width: 52px;
+  height: 52px;
+}
+.icon-loan_details_icon2 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1346px;
+  width: 52px;
+  height: 52px;
+}
+.icon-loan_details_icon6 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1398px;
+  width: 52px;
+  height: 52px;
+}
+.icon-loan_details_icon5 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1450px;
+  width: 52px;
+  height: 52px;
+}
+.icon-loan_calc_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1502px;
+  width: 52px;
+  height: 52px;
+}
+.icon-loan_details_icon1 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1554px;
+  width: 52px;
+  height: 52px;
+}
+.icon-loan_details_icon4 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1606px;
+  width: 52px;
+  height: 52px;
+}
+.icon-m_special_new_year_header_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1658px;
+  width: 292px;
+  height: 52px;
+}
+.icon-index_bx {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1710px;
+  width: 47px;
+  height: 53px;
+}
+.icon-jsyb_logo {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1763px;
+  width: 56px;
+  height: 56px;
+}
+.icon-my_envelopes_close_btn {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1819px;
+  width: 57px;
+  height: 57px;
+}
+.icon-form_success_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1876px;
+  width: 64px;
+  height: 64px;
+}
+.icon-form_error_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1940px;
+  width: 64px;
+  height: 64px;
+}
+.icon-red_num_bg1 {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -2004px;
+  width: 87px;
+  height: 80px;
+}
+.icon-red_num_bg {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -2084px;
+  width: 103px;
+  height: 93px;
+}
